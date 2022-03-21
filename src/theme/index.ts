@@ -1,5 +1,7 @@
 import { extendTheme, ThemeConfig } from '@chakra-ui/react';
-import { colors } from './Colors';
+import foundations from './Foundations';
+import typography from './Typography';
+import styles from './Styles/Global';
 
 const config: ThemeConfig = {
   initialColorMode: 'light',
@@ -8,19 +10,9 @@ const config: ThemeConfig = {
 
 const AronawaUI = extendTheme({
   config,
-  colors,
-  fonts: {
-    body: '"Lexend", sans-serif',
-    heading: '"Lexend", sans-serif',
-  },
-  styles: {
-    global: {
-      body: {
-        color: 'font.ink',
-        fontSize: '14px',
-      },
-    },
-  },
+  ...foundations,
+  ...typography,
+  ...styles,
 });
 
 export default AronawaUI;

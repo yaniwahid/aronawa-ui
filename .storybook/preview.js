@@ -11,7 +11,19 @@ import {
   Title,
   Paragraph,
 } from '../src/documentation/Text';
-import { Code } from '@chakra-ui/react';
+
+import { Typography } from '../src/documentation/Typography';
+import {
+  Code,
+  Grid,
+  Box,
+  Text,
+  HStack,
+  VStack,
+  StackDivider,
+  Heading,
+  Alert,
+} from '@chakra-ui/react';
 
 export const parameters = {
   options: {
@@ -36,6 +48,15 @@ export const parameters = {
       ColorPalettes,
       ColorWrapper,
       Code,
+      Grid,
+      Box,
+      Text,
+      HStack,
+      VStack,
+      StackDivider,
+      Heading,
+      Alert,
+      Typography,
     },
     container: ({ children, context }) => (
       <DocsContainer context={context}>

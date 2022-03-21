@@ -1,14 +1,7 @@
 import { Heading, Text } from '@chakra-ui/react';
 
 export const ComponentName = ({ children }) => (
-  <Heading
-    fontSize="6xl"
-    mb="8"
-    fontWeight="normal"
-    borderBottom="1px solid"
-    borderBottomColor="gray.300"
-    pb="4"
-  >
+  <Heading fontSize="6xl" mb="8" fontWeight="normal" borderBottom="1px " pb="4">
     {children}
   </Heading>
 );

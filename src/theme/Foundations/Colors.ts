@@ -1,4 +1,4 @@
-export const colors = {
+const colors = {
   basic: {
     dark: '#121212',
     white: '#ffffff',
@@ -82,4 +82,7 @@ export const colors = {
     success: '#43bf4d',
     danger: '#cc292e',
   },
-};
+} as const;
+
+export type Colors = typeof colors;
+export default colors;

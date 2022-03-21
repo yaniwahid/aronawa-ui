@@ -1,4 +1,11 @@
-import { Box, FlexProps, Grid, GridProps, useTheme } from '@chakra-ui/react';
+import {
+  Box,
+  FlexProps,
+  Grid,
+  GridProps,
+  Flex,
+  useTheme,
+} from '@chakra-ui/react';
 import React from 'react';
 
 type ColorPaletteProps = FlexProps & { color?: string; name?: string };
@@ -19,23 +26,24 @@ export const ColorPalette = (props: ColorPaletteProps) => {
   }
 
   return (
-    <Box {...rest}>
+    <Flex align="center" {...rest}>
       <Box
-        borderRadius="md"
-        boxSize="100%"
+        borderRadius="lg"
+        boxSize="4rem"
         boxShadow="inner"
+        mr="4"
         bg={color}
-        h="128px"
       />
-      <Box mt="2">
-        <Box fontWeight="medium" textTransform="capitalize" fontSize="lg">
+      <Box>
+        <Box fontWeight="medium" textTransform="capitalize" fontSize="md">
           {name}
         </Box>
         <Box textTransform="uppercase" fontSize="sm">
           {colorCode}
         </Box>
+        <Box fontSize="sm">{name.replace(/ /g, '.').toLocaleLowerCase()}</Box>
       </Box>
-    </Box>
+    </Flex>
   );
 };
 
@@ -54,5 +62,12 @@ export const ColorPalettes = (props: { color: string }) => {
 };
 
 export const ColorWrapper: React.FC<GridProps> = (props) => (
-  <Grid gap="6" templateColumns="repeat(5,1fr)" {...props} />
+  <Grid
+    gap="6"
+    templateColumns="repeat(3,1fr)"
+    p="8"
+    border="1px"
+    borderRadius="lg"
+    {...props}
+  />
 );
