@@ -1,0 +1,36 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Foundations/Round Corners" />
+
+### Foundations
+
+# Round Corners
+
+Our design system contains various fixed units for radius of elements corners.
+
+<Alert mt="8" align="center" variant="left-accent">
+  <Box textStyle="heading">🤓 Usage Round Corners:</Box>
+  <Box textStyle="body" ml="4">
+    <Code>&lt;Box borderRadius="md" /&gt;</Code>
+  </Box>
+</Alert>
+
+<Grid
+  bg="gray.50"
+  gap="8"
+  p="10"
+  textAlign="center"
+  rounded="lg"
+  gridTemplateColumns="repeat(4,1fr)"
+  mt="16"
+  justifyItems="center"
+>
+  <RoundCorners title="sm" value="0.125rem" />
+  <RoundCorners title="base" value="0.25rem" />
+  <RoundCorners title="md" value="0.375rem" />
+  <RoundCorners title="lg" value="0.5rem" />
+  <RoundCorners title="xl" value="0.75rem" />
+  <RoundCorners title="2xl" value="1rem" />
+  <RoundCorners title="3xl" value="1.5rem" />
+  <RoundCorners title="Full" value="9999px" />
+</Grid>

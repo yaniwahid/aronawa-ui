@@ -17,6 +17,7 @@ import {
   IconDocWrapper,
 } from '../src/documentation/Icon/Icon';
 import { Typography } from '../src/documentation/Typography/Typography';
+import { RoundCorners } from '../src/documentation/RoundCorners/RoundCorners';
 import {
   Code,
   Grid,
@@ -26,7 +27,8 @@ import {
   VStack,
   StackDivider,
   Heading,
-  Alert,Flex,
+  Alert,
+  Flex,
 } from '@chakra-ui/react';
 
 export const parameters = {
@@ -65,6 +67,7 @@ export const parameters = {
       IconDocs,
       IconDocWrapper,
       Flex,
+      RoundCorners,
     },
     container: ({ children, context }) => (
       <DocsContainer context={context}>

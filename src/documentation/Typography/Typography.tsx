@@ -1,4 +1,4 @@
-import { Box, Grid, Text } from '@chakra-ui/react';
+import { Box, Code, Grid } from '@chakra-ui/react';
 import React from 'react';
 
 type TypographyProps = {
@@ -26,28 +26,36 @@ export const Typography = (props: TypographyProps) => {
       </Box>
       <Grid gap="6" gridTemplateColumns="2fr 1fr 1fr 2fr" mt="4">
         <Box>
-          <Text color="font.pencil">Family</Text>
-          <Text fontSize="md" fontWeight="medium">
+          <Box textStyle="body" color="font.pencil">
+            Family
+          </Box>
+          <Box textStyle="body2" mt="1">
             {family}
-          </Text>
+          </Box>
         </Box>
         <Box>
-          <Text color="font.pencil">Size</Text>
-          <Text fontSize="md" fontWeight="medium">
+          <Box textStyle="body" color="font.pencil">
+            Size
+          </Box>
+          <Box textStyle="body2" mt="1">
             {size}px
-          </Text>
+          </Box>
         </Box>
         <Box>
-          <Text color="font.pencil">Line Height</Text>
-          <Text fontSize="md" fontWeight="medium">
+          <Box textStyle="body" color="font.pencil">
+            Line Height
+          </Box>
+          <Box textStyle="body2" mt="1">
             {lineHeight}px
-          </Text>
+          </Box>
         </Box>
         <Box>
-          <Text color="font.pencil">Code</Text>
-          <Text fontSize="md" fontWeight="medium">
-            {capFirstLetterInSentence(title.replace(/ /g, ''))}
-          </Text>
+          <Box textStyle="body" color="font.pencil">
+            Code
+          </Box>
+          <Box textStyle="body2" mt="1">
+            <Code>{capFirstLetterInSentence(title.replace(/ /g, ''))}</Code>
+          </Box>
         </Box>
       </Grid>
     </Box>

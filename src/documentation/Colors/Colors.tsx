@@ -5,6 +5,7 @@ import {
   GridProps,
   Flex,
   useTheme,
+  Code,
 } from '@chakra-ui/react';
 import React from 'react';
 
@@ -29,19 +30,24 @@ export const ColorPalette = (props: ColorPaletteProps) => {
     <Flex align="center" {...rest}>
       <Box
         borderRadius="lg"
-        boxSize="4rem"
-        boxShadow="inner"
+        boxSize="5rem"
+        boxShadow="base"
         mr="4"
         bg={color}
       />
       <Box>
-        <Box fontWeight="medium" textTransform="capitalize" fontSize="md">
+        <Box
+          textStyle="body"
+          color="font.pencil"
+          textTransform="capitalize"
+          mb="2"
+        >
           {name}
         </Box>
-        <Box textTransform="uppercase" fontSize="sm">
-          {colorCode}
+        <Box textStyle="body2">{colorCode}</Box>
+        <Box textStyle="body2" mt="1">
+          <Code>{name.replace(/ /g, '.').toLocaleLowerCase()}</Code>
         </Box>
-        <Box fontSize="sm">{name.replace(/ /g, '.').toLocaleLowerCase()}</Box>
       </Box>
     </Flex>
   );

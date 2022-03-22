@@ -16,6 +16,7 @@ export const IconDoc = (props: IconDocProps) => {
         align="center"
         bg="gray.50"
         borderRadius="lg"
+        boxShadow="base"
       >
         <Icon name={name} size={40} />
       </Flex>
