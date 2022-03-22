@@ -1,0 +1,86 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Foundations/Breakpoints" />
+
+### Foundations
+
+# Breakpoints
+
+Do you have well-defined breakpoints? Documenting them here can help make it clear when and how to adjust content responsively, e.g.
+
+<Alert mt="8" align="center" variant="left-accent">
+  <Box textStyle="heading">🤓 Usage Breakpoints:</Box>
+  <Box textStyle="body" ml="4">
+    <Code>
+      &lt;Box fontSize=&#123;&#123; base: '24px', md: '40px', lg:
+      '56px'&#125;&#125; /&gt;
+    </Code>
+  </Box>
+</Alert>
+
+<Box
+  p="10"
+  textAlign="center"
+  rounded="lg"
+  gridTemplateColumns="1fr 1fr"
+  bg="gray.50"
+  mt="16"
+>
+  <Flex m="-4" flexWrap="wrap" justify="center">
+    <Box p="4" w="50%">
+      <Box p="8" borderRadius="lg" bg="white" boxShadow="sm">
+        sm
+      </Box>
+      <Box textStyle="caption" mt="4" color="font.pencil">
+        // Small devices (landscape phones, 576px and up)
+      </Box>
+      <Box textStyle="body" mt="2">
+        @media (min-width: 30em)
+      </Box>
+    </Box>
+    <Box p="4" w="50%">
+      <Box p="8" borderRadius="lg" bg="white" boxShadow="sm">
+        md
+      </Box>
+      <Box textStyle="caption" mt="4" color="font.pencil">
+        // Medium devices (tablets, 768px and up)
+      </Box>
+      <Box textStyle="body" mt="2">
+        @media (min-width: 48em)
+      </Box>
+    </Box>
+    <Box p="4" w="50%">
+      <Box p="8" borderRadius="lg" bg="white" boxShadow="sm">
+        lg
+      </Box>
+      <Box textStyle="caption" mt="4" color="font.pencil">
+        // Large devices (desktops, 992px and up)
+      </Box>
+      <Box textStyle="body" mt="2">
+        @media (min-width: 62em)
+      </Box>
+    </Box>
+    <Box p="4" w="50%">
+      <Box p="8" borderRadius="lg" bg="white" boxShadow="sm">
+        xl
+      </Box>
+      <Box textStyle="caption" mt="4" color="font.pencil">
+        // X-Large devices (large desktops, 1200px and up)
+      </Box>
+      <Box textStyle="body" mt="2">
+        @media (min-width: 80em)
+      </Box>
+    </Box>
+    <Box p="4" w="50%">
+      <Box p="8" borderRadius="lg" bg="white" boxShadow="sm">
+        2xl
+      </Box>
+      <Box textStyle="caption" mt="4" color="font.pencil">
+        // XX-Large devices (larger desktops, 1400px and up)
+      </Box>
+      <Box textStyle="body" mt="2">
+        @media (min-width: 96em)
+      </Box>
+    </Box>
+  </Flex>
+</Box>

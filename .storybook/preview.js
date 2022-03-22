@@ -4,15 +4,19 @@ import {
   ColorPalette,
   ColorPalettes,
   ColorWrapper,
-} from '../src/documentation/Colors';
+} from '../src/documentation/Colors/Colors';
 import {
   ComponentName,
   SectionName,
   Title,
   Paragraph,
 } from '../src/documentation/Text';
-
-import { Typography } from '../src/documentation/Typography';
+import {
+  IconDoc,
+  IconDocs,
+  IconDocWrapper,
+} from '../src/documentation/Icon/Icon';
+import { Typography } from '../src/documentation/Typography/Typography';
 import {
   Code,
   Grid,
@@ -22,7 +26,7 @@ import {
   VStack,
   StackDivider,
   Heading,
-  Alert,
+  Alert,Flex,
 } from '@chakra-ui/react';
 
 export const parameters = {
@@ -57,6 +61,10 @@ export const parameters = {
       Heading,
       Alert,
       Typography,
+      IconDoc,
+      IconDocs,
+      IconDocWrapper,
+      Flex,
     },
     container: ({ children, context }) => (
       <DocsContainer context={context}>
