@@ -11,7 +11,7 @@ const theme = create({
     hoverable: 'rgba(80, 52, 255, 0.1)',
   },
   hoverable: 'rgba(80, 52, 255, 0.1)',
-  fontBase: '"Lexend", sans-serif',
+  fontBase: '"Inter", sans-serif',
   fontCode: 'monospace',
   BASE_FONT_FAMILY: 'Menlo, monospace',
 });

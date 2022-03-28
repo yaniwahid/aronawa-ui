@@ -1,6 +1,6 @@
 export default {
   fonts: {
-    body: '"Lexend", sans-serif',
+    body: '"Inter", sans-serif',
     heading: '"geomanistbook", sans-serif',
   },
 };

@@ -1,18 +1,22 @@
 import { extendTheme, ThemeConfig } from '@chakra-ui/react';
-import foundations from './Foundations';
-import typography from './Typography';
-import styles from './Styles/Global';
+import Foundations from './Foundations';
+import Typography from './Typography';
+import Styles from './Styles/Global';
+import Button from './Components/Button';
 
-const config: ThemeConfig = {
+const Config: ThemeConfig = {
   initialColorMode: 'light',
   useSystemColorMode: false,
 };
 
 const AronawaUI = extendTheme({
-  config,
-  ...foundations,
-  ...typography,
-  ...styles,
+  Config,
+  components: {
+    Button,
+  },
+  ...Foundations,
+  ...Typography,
+  ...Styles,
 });
 
 export default AronawaUI;

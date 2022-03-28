@@ -1,9 +1,9 @@
-import colors from './Colors';
-import borders from './Border';
-import textStyles from './TextStyles';
+import Colors from './Colors';
+import Borders from './Borders';
+import TextStyles from './TextStyles';
 
 export default {
-  colors,
-  borders,
-  textStyles,
+  Colors,
+  Borders,
+  TextStyles,
 };

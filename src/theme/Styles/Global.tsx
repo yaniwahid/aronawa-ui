@@ -1,4 +1,4 @@
-const styles = {
+const Styles = {
   global: {
     body: {
       color: 'font.ink',
@@ -7,4 +7,4 @@ const styles = {
   },
 };
 
-export default styles;
+export default Styles;

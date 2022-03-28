@@ -1,4 +1,4 @@
-const borders = {
+const Borders = {
   none: 0,
   '1px': '1px solid #d7dade',
   '2px': '2px solid #d7dade',
@@ -7,4 +7,4 @@ const borders = {
   '5px': '6px solid #d7dade',
 };
 
-export default borders;
+export default Borders;

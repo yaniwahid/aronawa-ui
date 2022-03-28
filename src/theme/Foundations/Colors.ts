@@ -1,4 +1,4 @@
-const colors = {
+const Colors = {
   basic: {
     dark: '#121212',
     white: '#ffffff',
@@ -84,5 +84,5 @@ const colors = {
   },
 } as const;
 
-export type Colors = typeof colors;
-export default colors;
+export type Colors = typeof Colors;
+export default Colors;

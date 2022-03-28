@@ -32,6 +32,7 @@ import {
 } from '@chakra-ui/react';
 
 export const parameters = {
+  controls: { expanded: true },
   options: {
     storySort: {
       method: 'alphabetical',

@@ -1,4 +1,4 @@
-const textStyles = {
+const TextStyles = {
   displayXlarge: {
     fontSize: '2.625rem',
     fontWeight: 'medium',
@@ -51,6 +51,6 @@ const textStyles = {
   },
 };
 
-export type TextStyles = typeof textStyles;
+export type TextStyles = typeof TextStyles;
 
-export default textStyles;
+export default TextStyles;
