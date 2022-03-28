@@ -9,6 +9,7 @@ const Button: React.FC<IButton> = ({ color, children, ...props }) => {
       {...props}
       colorScheme={colorProps(color)}
       iconSpacing={props.size === 'sm' ? '1' : '2'}
+      fontSize="lg"
       {...(color === ColorEnum.Light && { color: 'blue.500' })}
     >
       {children}

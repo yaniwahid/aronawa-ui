@@ -11,7 +11,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint",
-    "prettier": "prettier"
+    "prettier": "prettier",
+    "chromatic": "npx chromatic --project-token=32af9995ea2b"
   },
   "eslintConfig": {
     "extends": [
@@ -45,14 +46,17 @@
     "@storybook/manager-webpack5": "^6.4.19",
     "@storybook/react": "^6.4.19",
     "@storybook/theming": "^6.4.19",
+    "add": "^2.0.6",
     "babel-loader": "^8.2.3",
+    "chromatic": "^6.5.3",
     "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "yarn": "^1.22.18"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.8.6",

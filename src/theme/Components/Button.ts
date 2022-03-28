@@ -3,7 +3,7 @@ const Button = {
     fontWeight: 'bold',
     boxShadow: 'sm',
     _hover: {
-      boxShadow: 'md',
+      boxShadow: 'base',
     },
   },
   sizes: {
