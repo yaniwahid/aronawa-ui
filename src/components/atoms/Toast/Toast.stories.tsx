@@ -6,6 +6,6 @@ export default {
 };
 
 export const Basic = () => {
-  const notify = () => toast.error(toastBody(false, `Rentang Waktu Export Maksimal 5 Hari`));
+  const notify = () => toast.error(toastBody(true, 'Berhasil mereject merchant order'));
   return <button onClick={notify}>Notify!</button>;
 };

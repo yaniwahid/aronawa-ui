@@ -34,6 +34,7 @@ export const ToastStyled = css`
   cursor: pointer;
   direction: ltr;
   z-index: 0;
+  min-width: 360px;
 }
 .Toastify__toast--rtl {
   direction: rtl;
@@ -169,6 +170,7 @@ export const ToastStyled = css`
 @media (max-width: 767.98px) {
   .Toastify .Toastify__toast-container {
     width: calc(100% - 16px);
+    min-width: calc(100% - 16px);
     left: 8px;
     right: 8px;
     bottom: 8px;

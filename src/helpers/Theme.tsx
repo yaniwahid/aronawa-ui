@@ -50,7 +50,7 @@ export const Theme: FC = ({ children }) => {
       <GlobalStyle />
       <ToastContainer
         transition={Slide}
-        autoClose={30000000}
+        autoClose={3000}
         pauseOnFocusLoss={false}
         hideProgressBar
         newestOnTop

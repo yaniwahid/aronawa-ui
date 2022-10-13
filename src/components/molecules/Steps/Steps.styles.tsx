@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import Color from '../../../themes/Color';
+import Radius from '../../../themes/Radius';
 import { IStyle } from './Steps.types';
 
 export const mappingColorStatus = (isSelected: any, isDone: any, isFailed: any) => {
@@ -109,7 +110,7 @@ export const StepsItemStyled = styled.div({
 export const Circle = styled.div<IStyle>(({ isSelected, isDone, isFailed }) => ({
   position: 'relative',
   border: `2px solid ${mappingCircleStatus(isSelected, isDone, isFailed)}`,
-  borderRadius: '50%',
+  borderRadius: Radius.circle,
   backgroundColor: mappingBackgroundStatus(isDone, isFailed),
   width: 16,
   height: 16,

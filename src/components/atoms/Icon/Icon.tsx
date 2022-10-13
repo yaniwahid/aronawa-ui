@@ -10,6 +10,4 @@ const Icon: React.FC<IIcon> = ({ name, color, size, ...props }) => {
   );
 };
 
-Icon.displayName = 'Icon';
-
 export default Icon;
