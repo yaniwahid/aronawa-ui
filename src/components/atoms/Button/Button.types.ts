@@ -13,9 +13,9 @@ export interface IButton extends SpaceProps, React.ButtonHTMLAttributes<HTMLButt
   isDisabled?: boolean;
   isFullWidth?: boolean;
   isLoading?: boolean;
-  leftIcon?: string;
+  icon?: string;
   rightIcon?: string;
   href?: string;
-  as?: string;
+  as?: React.ElementType<any>;
   teid?: string;
 }

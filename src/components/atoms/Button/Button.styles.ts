@@ -1,3 +1,4 @@
+import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 import { space } from 'styled-system';
 import Color from '../../../themes/Color';
@@ -44,6 +45,7 @@ const Solid = (color: any) => {
       '&:disabled': {
         color: `${Color.font.ink}99`,
         backgroundColor: Color.neutral.disabled,
+        boxShadow: Shadow.platform,
       },
     },
     secondary: {
@@ -51,6 +53,7 @@ const Solid = (color: any) => {
       '&:disabled': {
         color: `${Color.font.ink}99`,
         backgroundColor: Color.secondary.disabled,
+        boxShadow: Shadow.platform,
       },
     },
     light: {
@@ -67,14 +70,17 @@ const Solid = (color: any) => {
       '&:disabled': {
         color: `${Color.font.ink}99`,
         backgroundColor: Color.neutral.disabled,
+        boxShadow: Shadow.platform,
       },
     }
   };
   return {
     backgroundColor: Color[color]['default'],
     color: Color.light,
+    boxShadow: Shadow.platform,
     '&:hover': {
       backgroundColor: Color[color]['hover'],
+      boxShadow: Shadow.hover,
     },
     '&:active': {
       backgroundColor: Color[color]['active'],
@@ -87,6 +93,90 @@ const Solid = (color: any) => {
     '&:disabled': {
       color: `${Color.light}CC`,
       backgroundColor: Color[color]['disabled'],
+      boxShadow: Shadow.platform,
+    },
+    ...styleProps[color]
+  }
+}
+
+const Outline = (color: any) => {
+  const styleProps: any = {
+    neutral: {
+      color: Color.font.ink,
+      borderColor: Color.font.ink,
+      '&:hover': {
+        borderColor: Color.font.ink,
+      },
+      '&:active': {
+        borderColor: Color.font.ink,
+      },
+      '&:disabled': {
+        color: `${Color.font.ink}CC`,
+      },
+    },
+    light: {
+      color: Color.primary.default,
+      borderColor: Color.primary.default,
+      '&:hover': {
+        borderColor: Color.primary.default,
+      },
+      '&:active': {
+        borderColor: Color.primary.default,
+      },
+      '&:disabled': {
+        color: `${Color.primary.default}CC`,
+      },
+    }
+  };
+  return {
+    borderColor: Color[color]['default'],
+    color: Color[color]['default'],
+    backgroundColor: Color.light,
+    '&:hover': {
+      borderColor: Color[color]['hover'],
+      backgroundColor: Color[color]['lightest'],
+    },
+    '&:active': {
+      borderColor: Color[color]['active'],
+    },
+    '&:focus': {
+      borderColor: Color[color]['default'],
+      boxShadow:
+        `0px 0px 0px 3px ${Color[color]['default']}2b, 0px 1px 1px 0px rgba(62, 62, 63, 0.2)`,
+    },
+    '&:disabled': {
+      backgroundColor: Color.light,
+      color: `${Color[color]['default']}CC`,
+    },
+    ...styleProps[color]
+  }
+}
+const Ghost = (color: any) => {
+  const styleProps: any = {
+    neutral: {
+      color: Color.font.ink,
+      '&:disabled': {
+        backgroundColor: Color.light,
+        color: `${Color.font.ink}CC`,
+      },
+    },
+    light: {
+      color: Color.primary.default,
+      '&:disabled': {
+        backgroundColor: Color.light,
+        color: `${Color.primary.default}CC`,
+      },
+    }
+  };
+  return {
+    color: Color[color]['default'],
+    backgroundColor: Color.light,
+    '&:hover': {
+      backgroundColor: Color[color]['lightest'],
+    },
+    '&:disabled': {
+      backgroundColor: Color.light,
+      color: `${Color[color]['default']}CC`,
     },
     ...styleProps[color]
   }
@@ -98,6 +188,7 @@ export const ButtonStyled = styled.button<IButton>(
     size = "md",
     variant,
     isDisabled,
+    isFullWidth,
   }) => {
     let cssTmp: object = {
       position: 'relative',
@@ -116,23 +207,23 @@ export const ButtonStyled = styled.button<IButton>(
       verticalAlign: 'middle',
       textDecoration: 'none',
       boxSizing: 'border-box',
-      boxShadow: Shadow.platform,
-      fontWeight: 500,
-      '&:hover': {
-        boxShadow: Shadow.hover,
-      },
       ...isDisabled && {
         cursor: 'not-allowed',
+      },
+      ...isFullWidth && {
+        width: "100%"
       },
       ...Size[size],
     };
     if (variant === 'outline') {
       cssTmp = {
         ...cssTmp,
+        ...Outline(color),
       };
     } else if (variant === 'ghost') {
       cssTmp = {
         ...cssTmp,
+        ...Ghost(color),
       };
     } else {
       cssTmp = {
@@ -145,3 +236,39 @@ export const ButtonStyled = styled.button<IButton>(
   },
   space,
 );
+
+
+const loader = keyframes({
+  from: {
+    transform: 'translateY(-50%) rotate(0deg)',
+  },
+  to: {
+    transform: 'translateY(-50%) rotate(360deg)',
+  },
+});
+
+export const Loading = styled.span(({ hasChild }: any) => ({
+  position: 'relative',
+  width: 14,
+  ...hasChild && {
+    marginRight: 8,
+  },
+  span: {
+    position: 'absolute',
+    height: 14,
+    width: 14,
+    top: '50%',
+    left: 0,
+    backgroundColor: 'transparent',
+    opacity: 1,
+    borderRadius: '50%',
+    borderTop: '2px solid currentColor',
+    borderLeft: '2px solid currentColor',
+    borderBottom: '2px solid currentColor',
+    borderRight: '2px solid transparent',
+    animationName: loader,
+    animationDuration: '0.45s',
+    animationIterationCount: 'infinite',
+    animationTimingFunction: 'linear',
+  },
+}))

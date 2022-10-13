@@ -58,10 +58,75 @@ export default {
         type: 'boolean',
       },
     },
+    isFullWidth: {
+      name: 'isFullWidth',
+      defaultValue: false,
+      description: 'Use the isFullWidth prop to change the isFullWidth of the Button',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+      control: {
+        type: 'boolean',
+      },
+    },
+    isLoading: {
+      name: 'isLoading',
+      defaultValue: false,
+      description: 'Use the isLoading prop to change the isLoading of the Button',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+      control: {
+        type: 'boolean',
+      },
+    },
+    icon: {
+      name: 'icon',
+      description: 'Use the icon prop to change the icon of the Button',
+      table: {
+        type: { summary: 'string' },
+      },
+      control: {
+        type: 'text',
+      },
+    },
+    rightIcon: {
+      name: 'rightIcon',
+      description: 'Use the rightIcon prop to change the rightIcon of the Button',
+      table: {
+        type: { summary: 'string' },
+      },
+      control: {
+        type: 'text',
+      },
+    },
+    href: {
+      name: 'href',
+      description: 'Use the href prop to change the href of the Button',
+      table: {
+        type: { summary: 'string' },
+      },
+      control: {
+        type: 'text',
+      },
+    },
+    teid: {
+      name: 'teid',
+      defaultValue: 'button',
+      description: 'Use the teid prop to change the teid of the Button',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'button' },
+      },
+      control: {
+        type: 'text',
+      },
+    },
   },
 } as ComponentMeta<typeof Button>;
 
-const parameters = ['color', 'variant', 'size', 'isDisabled'];
 const ColorType = ['neutral', 'primary', 'secondary', 'approval', 'danger', 'light'] as any;
 const VariantType = ['solid', 'outline', 'ghost'] as any;
 
@@ -73,7 +138,6 @@ const capFirstLetterInSentence = (sentence: string) => {
 };
 
 export const Basic = (args: IButton) => <Button {...args}>Button</Button>;
-Basic.parameters = { controls: { include: parameters } };
 
 export const Color = (args: IButton) => (
   <div className="hstack">
@@ -84,7 +148,6 @@ export const Color = (args: IButton) => (
     ))}
   </div>
 );
-Color.parameters = { controls: { include: parameters } };
 
 export const Variant = (args: IButton) => (
   <div className="hstack">
@@ -95,7 +158,6 @@ export const Variant = (args: IButton) => (
     ))}
   </div>
 );
-Variant.parameters = { controls: { include: parameters } };
 
 export const Sizes = (args: IButton) => (
   <div className="hstack">
@@ -113,4 +175,20 @@ export const Sizes = (args: IButton) => (
     </Button>
   </div>
 );
-Sizes.parameters = { controls: { include: parameters } };
+
+export const AsLink = (args: IButton) => <Button {...args}>As Link</Button>;
+AsLink.args = {
+  href: '/',
+};
+
+export const WithIcon = (args: IButton) => (
+  <div className="hstack">
+    <Button {...args} icon="plus-circle">
+      Left Icon
+    </Button>
+    <Button {...args} rightIcon="share">
+      Right Icon
+    </Button>
+    <Button {...args} icon="apps" />
+  </div>
+);
