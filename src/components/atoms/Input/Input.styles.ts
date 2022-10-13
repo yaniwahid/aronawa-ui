@@ -22,7 +22,7 @@ const paddingProps = {
 };
 
 export const InputStyled = styled.div<IInput>(
-  ({ size = "md", isInvalid, leftAddon, rightAddon, isDisabled, leftElement, rightElement }) => {
+  ({ size = 'md', isInvalid, leftAddon, rightAddon, isDisabled, leftElement, rightElement }) => {
     let cssTmp: object = {};
     let HEIGHT: number = 32;
     let FONT_SIZE: number = 14;
@@ -91,10 +91,10 @@ export const InputStyled = styled.div<IInput>(
         lineHeight: 1.5,
         color: Color.font.ink,
         ...fontSizeProps[size],
-        ...isDisabled && {
+        ...(isDisabled && {
           cursor: 'not-allowed',
           backgroundColor: Color.slate[200],
-        }
+        }),
       },
     };
     return { ...cssTmp };
@@ -115,10 +115,10 @@ export const InputGroup = styled.div<IInput>(({ isDisabled, isInvalid }) => ({
     borderColor: isInvalid ? Color.danger.default : Color.primary.default,
     boxShadow: `0 0 0 2px ${isInvalid ? Color.danger.default : Color.primary.default}33`,
   },
-  ...isDisabled && {
+  ...(isDisabled && {
     cursor: 'not-allowed',
     backgroundColor: Color.slate[200],
-  }
+  }),
 }));
 
 export const InputAddon = styled.div<IInput>(({ size = 'md', rightAddon }) => ({
@@ -130,13 +130,15 @@ export const InputAddon = styled.div<IInput>(({ size = 'md', rightAddon }) => ({
   paddingRight: paddingProps[size],
   backgroundColor: Color.slate[100],
   ...fontSizeProps[size],
-  ...rightAddon ? {
-    borderTopRightRadius: Radius.blunt,
-    borderBottomRightRadius: Radius.blunt,
-  } : {
-    borderTopLeftRadius: Radius.blunt,
-    borderBottomLeftRadius: Radius.blunt,
-  }
+  ...(rightAddon
+    ? {
+        borderTopRightRadius: Radius.blunt,
+        borderBottomRightRadius: Radius.blunt,
+      }
+    : {
+        borderTopLeftRadius: Radius.blunt,
+        borderBottomLeftRadius: Radius.blunt,
+      }),
 }));
 
 export const InputElement = styled.div<IInput>(({ size = 'md', rightElement }) => ({
@@ -145,10 +147,11 @@ export const InputElement = styled.div<IInput>(({ size = 'md', rightElement }) =
   alignItems: 'center',
   color: Color.slate[800],
   ...fontSizeProps[size],
-  ...rightElement ? {
-    paddingRight: paddingProps[size],
-  } : {
-    paddingLeft: paddingProps[size],
-  }
+  ...(rightElement
+    ? {
+        paddingRight: paddingProps[size],
+      }
+    : {
+        paddingLeft: paddingProps[size],
+      }),
 }));
-

@@ -1,4 +1,3 @@
-
 import { DialogProps } from 'rc-dialog/lib';
 import { ReactNode } from 'react';
 import { TColorButton, TVariantButton } from '../../atoms/Button/button.types';
@@ -19,6 +18,6 @@ export interface IModal extends DialogProps {
   isLoading?: boolean;
   isDisabled?: boolean;
   isNoFooter?: boolean;
-  size?: TSizeModal
+  size?: TSizeModal;
   variant?: TVariantModal;
 }

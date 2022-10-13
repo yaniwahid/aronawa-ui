@@ -1,6 +1,4 @@
-
-export interface ICheckbox
-  extends Omit<React.HTMLAttributes<HTMLInputElement>, 'onChange'> {
+export interface ICheckbox extends Omit<React.HTMLAttributes<HTMLInputElement>, 'onChange'> {
   value?: string;
   label?: string | React.ReactNode;
   isChecked?: boolean;
@@ -12,7 +10,6 @@ export interface ICheckbox
   teid?: string;
   id?: string;
 }
-
 
 export interface IStyle {
   isChecked?: boolean;

@@ -1,4 +1,4 @@
-import { SpaceProps } from "styled-system";
+import { SpaceProps } from 'styled-system';
 
 export interface IIcon extends SpaceProps, React.HTMLAttributes<HTMLDivElement> {
   name?: string;

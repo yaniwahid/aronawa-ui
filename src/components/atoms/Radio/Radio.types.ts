@@ -6,9 +6,7 @@ export interface IRadioData {
   isDisabled?: boolean;
 }
 
-export interface IRadio
-  extends
-  Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
+export interface IRadio extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
   name?: string;
   value?: string;
   isInvalid?: boolean;

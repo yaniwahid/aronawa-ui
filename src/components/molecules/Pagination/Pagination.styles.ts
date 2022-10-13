@@ -6,19 +6,19 @@ export const Wrapper = styled.div({
   '& > button': {
     padding: 0,
     width: 32,
-    "& + *": {
-      marginLeft: 8
-    }
+    '& + *': {
+      marginLeft: 8,
+    },
   },
 });
 
 export const InputWrapper = styled.div({
   display: 'flex',
   alignItems: 'center',
-  "& .aronawa-select": {
+  '& .aronawa-select': {
     flex: 1,
-    minWidth: 64
-  }
+    minWidth: 64,
+  },
 });
 
 export const Dot = styled.div({

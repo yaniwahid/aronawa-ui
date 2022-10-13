@@ -167,12 +167,10 @@ export const Check = styled.div<IStyle>(({ isChecked, isInvalid, isDisabled }) =
   return { ...cssTmp };
 });
 
-export const RadioStyled = styled.div<IStyle>(
-  ({ isSolid }) => ({
-    display: 'flex',
-    alignItems: 'center',
-    '& > * + *': {
-      marginLeft: isSolid ? 8 : 16,
-    },
-  }),
-);
+export const RadioStyled = styled.div<IStyle>(({ isSolid }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  '& > * + *': {
+    marginLeft: isSolid ? 8 : 16,
+  },
+}));

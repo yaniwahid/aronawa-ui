@@ -166,24 +166,26 @@ export const DropdownStyled = css`
   .aronawa-dropdown-placement-bottomRight .aronawa-dropdown-arrow {
     right: 15%;
   }
-
-`
+`;
 
 export const DropdownMenuStyled = styled.div({
   position: 'relative',
   minWidth: 240,
-})
+});
 
-
-export const DropdownItemStyled = styled.div({
-  position: 'relative',
-  cursor: "pointer",
-  fontSize: 14,
-  lineHeight: '26px',
-  padding: '4px 8px',
-  display: "flex",
-  borderRadius: Radius.blunt,
-  "&:hover": {
-    background: Color.slate[50]
-  }
-}, space, color)
+export const DropdownItemStyled = styled.div(
+  {
+    position: 'relative',
+    cursor: 'pointer',
+    fontSize: 14,
+    lineHeight: '26px',
+    padding: '4px 8px',
+    display: 'flex',
+    borderRadius: Radius.blunt,
+    '&:hover': {
+      background: Color.slate[50],
+    },
+  },
+  space,
+  color,
+);

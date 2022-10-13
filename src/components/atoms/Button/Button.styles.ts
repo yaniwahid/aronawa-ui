@@ -34,9 +34,9 @@ const Size = {
     paddingLeft: 32,
     paddingRight: 32,
     height: 48,
-    minWidth: 48
-  }
-}
+    minWidth: 48,
+  },
+};
 
 const Solid = (color: any) => {
   const styleProps: any = {
@@ -64,15 +64,14 @@ const Solid = (color: any) => {
       },
       '&:focus': {
         backgroundColor: Color.light,
-        boxShadow:
-          `0px 0px 0px 3px ${Color.primary.default}2b, 0px 1px 1px 0px rgba(62, 62, 63, 0.2)`,
+        boxShadow: `0px 0px 0px 3px ${Color.primary.default}2b, 0px 1px 1px 0px rgba(62, 62, 63, 0.2)`,
       },
       '&:disabled': {
         color: `${Color.font.ink}99`,
         backgroundColor: Color.neutral.disabled,
         boxShadow: Shadow.platform,
       },
-    }
+    },
   };
   return {
     backgroundColor: Color[color]['default'],
@@ -87,17 +86,16 @@ const Solid = (color: any) => {
     },
     '&:focus': {
       backgroundColor: Color[color]['default'],
-      boxShadow:
-        `0px 0px 0px 3px ${Color[color]['default']}2b, 0px 1px 1px 0px rgba(62, 62, 63, 0.2)`,
+      boxShadow: `0px 0px 0px 3px ${Color[color]['default']}2b, 0px 1px 1px 0px rgba(62, 62, 63, 0.2)`,
     },
     '&:disabled': {
       color: `${Color.light}CC`,
       backgroundColor: Color[color]['disabled'],
       boxShadow: Shadow.platform,
     },
-    ...styleProps[color]
-  }
-}
+    ...styleProps[color],
+  };
+};
 
 const Outline = (color: any) => {
   const styleProps: any = {
@@ -126,7 +124,7 @@ const Outline = (color: any) => {
       '&:disabled': {
         color: `${Color.primary.default}CC`,
       },
-    }
+    },
   };
   return {
     borderColor: Color[color]['default'],
@@ -141,16 +139,15 @@ const Outline = (color: any) => {
     },
     '&:focus': {
       borderColor: Color[color]['default'],
-      boxShadow:
-        `0px 0px 0px 3px ${Color[color]['default']}2b, 0px 1px 1px 0px rgba(62, 62, 63, 0.2)`,
+      boxShadow: `0px 0px 0px 3px ${Color[color]['default']}2b, 0px 1px 1px 0px rgba(62, 62, 63, 0.2)`,
     },
     '&:disabled': {
       backgroundColor: Color.light,
       color: `${Color[color]['default']}CC`,
     },
-    ...styleProps[color]
-  }
-}
+    ...styleProps[color],
+  };
+};
 const Ghost = (color: any) => {
   const styleProps: any = {
     neutral: {
@@ -166,7 +163,7 @@ const Ghost = (color: any) => {
         backgroundColor: Color.light,
         color: `${Color.primary.default}CC`,
       },
-    }
+    },
   };
   return {
     color: Color[color]['default'],
@@ -178,18 +175,12 @@ const Ghost = (color: any) => {
       backgroundColor: Color.light,
       color: `${Color[color]['default']}CC`,
     },
-    ...styleProps[color]
-  }
-}
+    ...styleProps[color],
+  };
+};
 
 export const ButtonStyled = styled.button<IButton>(
-  ({
-    color,
-    size = "md",
-    variant,
-    isDisabled,
-    isFullWidth,
-  }) => {
+  ({ color, size = 'md', variant, isDisabled, isFullWidth }) => {
     let cssTmp: object = {
       position: 'relative',
       display: 'inline-flex',
@@ -207,12 +198,12 @@ export const ButtonStyled = styled.button<IButton>(
       verticalAlign: 'middle',
       textDecoration: 'none',
       boxSizing: 'border-box',
-      ...isDisabled && {
+      ...(isDisabled && {
         cursor: 'not-allowed',
-      },
-      ...isFullWidth && {
-        width: "100%"
-      },
+      }),
+      ...(isFullWidth && {
+        width: '100%',
+      }),
       ...Size[size],
     };
     if (variant === 'outline') {
@@ -237,7 +228,6 @@ export const ButtonStyled = styled.button<IButton>(
   space,
 );
 
-
 const loader = keyframes({
   from: {
     transform: 'translateY(-50%) rotate(0deg)',
@@ -250,9 +240,9 @@ const loader = keyframes({
 export const Loading = styled.span(({ hasChild }: any) => ({
   position: 'relative',
   width: 14,
-  ...hasChild && {
+  ...(hasChild && {
     marginRight: 8,
-  },
+  }),
   span: {
     position: 'absolute',
     height: 14,
@@ -271,4 +261,4 @@ export const Loading = styled.span(({ hasChild }: any) => ({
     animationIterationCount: 'infinite',
     animationTimingFunction: 'linear',
   },
-}))
+}));

@@ -1,17 +1,20 @@
 import styled from '@emotion/styled';
-import { space } from "styled-system";
+import { space } from 'styled-system';
 import Color from '../../../themes/Color';
 import { IStyle } from './Tabs.types';
 
-export const TabsStyled = styled.div({
-  position: 'relative',
-  background: Color.light
-}, space);
+export const TabsStyled = styled.div(
+  {
+    position: 'relative',
+    background: Color.light,
+  },
+  space,
+);
 
 export const TabsList = styled.div({
   display: 'flex',
   flexWrap: 'wrap',
-  "@media (max-width: 767.98px)": {
+  '@media (max-width: 767.98px)': {
     maxWidth: '100%',
     overflow: 'auto hidden',
     whiteSpace: 'nowrap',
@@ -46,16 +49,15 @@ export const Title = styled.div<IStyle>(({ isSelected }) => ({
   '&:hover': {
     color: Color.primary.default,
   },
-  ...isSelected && {
+  ...(isSelected && {
     color: Color.primary.default,
     '& > span:first-of-type': {
       '& + span': {
         backgroundColor: Color.primary.lightest,
-        color: Color.primary.text
+        color: Color.primary.text,
       },
     },
-  }
-
+  }),
 }));
 
 export const Bar = styled.div<IStyle>(({ isSelected }) => ({
@@ -67,9 +69,9 @@ export const Bar = styled.div<IStyle>(({ isSelected }) => ({
   borderTopLeftRadius: 4,
   borderTopRightRadius: 4,
   transition: 'all 0.3s ease',
-  ...isSelected && {
-    background: Color.primary.default
-  }
+  ...(isSelected && {
+    background: Color.primary.default,
+  }),
 }));
 
 export const Content = styled.div({

@@ -29,7 +29,7 @@ export const ModalStyled = css`
     border: none;
     border-radius: 6px 6px;
     background-clip: padding-box;
-    box-shadow:0px 1px 4px rgba(0, 0, 0, 0.06), 0px 8px 12px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.06), 0px 8px 12px rgba(0, 0, 0, 0.16);
   }
   .aronawa-modal-close {
     cursor: pointer;
@@ -131,10 +131,9 @@ export const ModalStyled = css`
       width: 600px;
     }
 
-  .aronawa-modal-body {
-    max-height: calc(100vh - 56px - 64px - 64px);
-  }
-
+    .aronawa-modal-body {
+      max-height: calc(100vh - 56px - 64px - 64px);
+    }
   }
   .aronawa-modal-mask {
     position: fixed;
@@ -142,7 +141,7 @@ export const ModalStyled = css`
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(165, 170, 176,0.48);
+    background-color: rgba(165, 170, 176, 0.48);
     height: 100%;
     z-index: 1050;
   }
@@ -188,9 +187,7 @@ export const ModalStyled = css`
       opacity: 0;
     }
   }
-
-`
-
+`;
 
 export const Close = styled.span({
   cursor: 'pointer',

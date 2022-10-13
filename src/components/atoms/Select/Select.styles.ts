@@ -14,8 +14,7 @@ export const SelectStyled = css`
     background: #e3e5e8 !important;
     cursor: not-allowed !important;
   }
-  .aronawa-select-show-arrow.aronawa-select-loading
-    .aronawa-select-arrow-icon::after {
+  .aronawa-select-show-arrow.aronawa-select-loading .aronawa-select-arrow-icon::after {
     box-sizing: border-box;
     width: 12px;
     height: 12px;
@@ -42,8 +41,7 @@ export const SelectStyled = css`
   .aronawa-select .aronawa-select-selection-search-input {
     appearance: none;
   }
-  .aronawa-select
-    .aronawa-select-selection-search-input::-webkit-search-cancel-button {
+  .aronawa-select .aronawa-select-selection-search-input::-webkit-search-cancel-button {
     display: none;
     appearance: none;
   }
@@ -56,15 +54,11 @@ export const SelectStyled = css`
     left: 8px;
     right: 32px;
   }
-  .aronawa-select-single
-    .aronawa-select-selector
-    .aronawa-select-selection-search-input {
+  .aronawa-select-single .aronawa-select-selector .aronawa-select-selection-search-input {
     width: 100%;
   }
   .aronawa-select-single .aronawa-select-selector .aronawa-select-selection-item,
-  .aronawa-select-single
-    .aronawa-select-selector
-    .aronawa-select-selection-placeholder {
+  .aronawa-select-single .aronawa-select-selector .aronawa-select-selection-placeholder {
     padding: 0;
     line-height: 30px;
     transition: all 0.3s;
@@ -75,8 +69,7 @@ export const SelectStyled = css`
     padding-right: 24px;
     z-index: 1;
   }
-  .aronawa-select-single:not(.aronawa-select-customize-input)
-    .aronawa-select-selector {
+  .aronawa-select-single:not(.aronawa-select-customize-input) .aronawa-select-selector {
     width: 100%;
     min-width: 0;
     outline: 2px solid transparent;
@@ -142,34 +135,24 @@ export const SelectStyled = css`
     padding-right: 8px;
     margin-right: 4px;
   }
-  .aronawa-select-multiple
-    .aronawa-select-selector
-    .aronawa-select-selection-item-disabled {
+  .aronawa-select-multiple .aronawa-select-selector .aronawa-select-selection-item-disabled {
     cursor: not-allowed;
     opacity: 0.5;
   }
-  .aronawa-select-multiple
-    .aronawa-select-selector
-    .aronawa-select-selection-overflow {
+  .aronawa-select-multiple .aronawa-select-selector .aronawa-select-selection-overflow {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
   }
-  .aronawa-select-multiple
-    .aronawa-select-selector
-    .aronawa-select-selection-overflow-item {
+  .aronawa-select-multiple .aronawa-select-selector .aronawa-select-selection-overflow-item {
     flex: none;
     max-width: 100%;
   }
-  .aronawa-select-multiple
-    .aronawa-select-selector
-    .aronawa-select-selection-search {
+  .aronawa-select-multiple .aronawa-select-selector .aronawa-select-selection-search {
     position: relative;
     max-width: 100%;
   }
-  .aronawa-select-multiple
-    .aronawa-select-selector
-    .aronawa-select-selection-search-mirror {
+  .aronawa-select-multiple .aronawa-select-selector .aronawa-select-selection-search-mirror {
     z-index: 999;
     white-space: nowrap;
     position: absolute;
@@ -177,9 +160,7 @@ export const SelectStyled = css`
     top: 0;
     visibility: hidden;
   }
-  .aronawa-select-multiple
-    .aronawa-select-selector
-    .aronawa-select-selection-search-input {
+  .aronawa-select-multiple .aronawa-select-selector .aronawa-select-selection-search-input {
     width: 100%;
     height: 30px;
     border: 0;
@@ -214,7 +195,7 @@ export const SelectStyled = css`
     justify-content: center;
     cursor: pointer;
     background-color: #d7dade;
-    border-radius:50%;
+    border-radius: 50%;
   }
   .aronawa-select-show-arrow.aronawa-select-multiple .aronawa-select-selector {
     padding-right: 32px;
@@ -230,7 +211,7 @@ export const SelectStyled = css`
     justify-content: center;
   }
   .aronawa-select-show-arrow .aronawa-select-arrow-icon::after {
-    content: "";
+    content: '';
     border: 5px solid transparent;
     width: 0;
     height: 0;
@@ -270,7 +251,7 @@ export const SelectStyled = css`
     padding-left: 24px;
   }
   .aronawa-select-item-option-selected {
-    color:#225db2;
+    color: #225db2;
   }
   .aronawa-select-item-option .aronawa-select-item-option-state {
     position: absolute;
@@ -375,5 +356,4 @@ export const SelectStyled = css`
       transform: rotate(360deg);
     }
   }
-
-`
+`;

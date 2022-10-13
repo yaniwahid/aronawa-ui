@@ -3,10 +3,7 @@ import { ReactNode } from 'react';
 type TSizeInput = 'sm' | 'md' | 'lg';
 
 export interface IInput
-  extends Omit<
-    React.InputHTMLAttributes<HTMLInputElement>,
-    'onChange' | 'onBlur' | 'size'
-  > {
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'onBlur' | 'size'> {
   isInvalid?: boolean;
   size?: TSizeInput;
   onChange?: (value: string) => void;
