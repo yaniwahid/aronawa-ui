@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export type TSizeInput = 'sm' | 'md' | 'lg';
+type TSizeInput = 'sm' | 'md' | 'lg';
 
 export interface IInput
   extends Omit<

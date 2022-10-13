@@ -11,7 +11,7 @@ export const SelectStyled = css`
     cursor: not-allowed !important;
   }
   .aronawa-select-disabled .aronawa-select-selector {
-    background: #f5f5f5 !important;
+    background: #e3e5e8 !important;
     cursor: not-allowed !important;
   }
   .aronawa-select-show-arrow.aronawa-select-loading
@@ -30,8 +30,8 @@ export const SelectStyled = css`
   .aronawa-select.aronawa-select-multiple .aronawa-select-selection-placeholder {
     position: absolute;
     top: 50%;
-    right: 12px;
-    left: 12px;
+    right: 8px;
+    left: 8px;
     transform: translateY(-50%);
     transition: all 0.3s;
   }
@@ -113,6 +113,10 @@ export const SelectStyled = css`
     height: 30px;
     line-height: 30px;
     cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
   }
   .aronawa-select-single.aronawa-select-show-search:not(.aronawa-select-customize-input)
     .aronawa-select-selector
@@ -125,14 +129,12 @@ export const SelectStyled = css`
     flex: none;
     box-sizing: border-box;
     max-width: 100%;
-    height: 26px;
+    height: 22px;
     margin-top: 4px;
     margin-bottom: 4px;
-    line-height: 24px;
-    background: #f5f5f5;
+    line-height: 20px;
+    background: #e7f0fd;
     border-radius: 3px;
-    border: 1px solid;
-    border: 1px solid #a5aab0;
     cursor: default;
     transition: font-size 0.3s, line-height 0.3s, height 0.3s;
     user-select: none;
@@ -180,31 +182,42 @@ export const SelectStyled = css`
     .aronawa-select-selection-search-input {
     width: 100%;
     height: 30px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
   }
   .aronawa-select-multiple .aronawa-select-selection-item-remove {
     margin-left: 4px;
+    cursor: pointer;
   }
   .aronawa-select-allow-clear.aronawa-select-multiple .aronawa-select-selector {
-    padding-right: 20px;
+    padding-right: 32px;
   }
   .aronawa-select-allow-clear:hover .aronawa-select-clear {
     opacity: 1;
-    background: #fff;
   }
   .aronawa-select-dropdown .aronawa-select-tree {
     padding: 0 16px;
   }
   .aronawa-select-allow-clear .aronawa-select-clear {
     position: absolute;
-    right: 3;
+    right: 8px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
-    opacity: 0;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    background-color: #d7dade;
+    border-radius:50%;
   }
   .aronawa-select-show-arrow.aronawa-select-multiple .aronawa-select-selector {
-    padding-right: 20px;
+    padding-right: 32px;
   }
   .aronawa-select-show-arrow .aronawa-select-arrow {
     pointer-events: none;
@@ -222,19 +235,18 @@ export const SelectStyled = css`
     width: 0;
     height: 0;
     display: inline-block;
-    border-top-color: #999;
+    border-top-color: #a5aab0;
     transform: translateY(5px);
   }
   .aronawa-select-focused .aronawa-select-selector {
     border-color: #225db2;
   }
   .aronawa-select-dropdown {
-    padding: 8px 0;
+    padding: 8px;
     position: absolute;
     background: #fff;
-    border-radius: 3px;
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.12),
-      0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.12);
     z-index: 9999;
     width: auto !important;
   }
@@ -243,8 +255,8 @@ export const SelectStyled = css`
   }
   .aronawa-select-item {
     font-size: 14px;
-    line-height: 1.5;
-    padding: 4px 16px;
+    line-height: 26px;
+    padding: 4px 8px;
   }
   .aronawa-select-item-group {
     font-weight: 700;
@@ -252,12 +264,13 @@ export const SelectStyled = css`
   .aronawa-select-item-option {
     position: relative;
     cursor: pointer;
+    border-radius: 3px;
   }
   .aronawa-select-item-option-grouped {
     padding-left: 24px;
   }
   .aronawa-select-item-option-selected {
-    font-weight: 700;
+    color:#225db2;
   }
   .aronawa-select-item-option .aronawa-select-item-option-state {
     position: absolute;
@@ -267,15 +280,14 @@ export const SelectStyled = css`
     display: none;
   }
   .aronawa-select-item-option-active {
-    background: #e7f0fd;
-    color: #fff;
+    background: #f5f7fa;
   }
   .aronawa-select-item-option-disabled {
-    color: #999;
+    color: #a5aab0;
   }
   .aronawa-select-item-empty {
     text-align: center;
-    color: #999;
+    color: #a5aab0;
   }
   .aronawa-select-selection__choice-zoom {
     transition: all 0.3s;

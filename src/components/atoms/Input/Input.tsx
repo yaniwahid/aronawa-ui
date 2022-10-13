@@ -10,7 +10,7 @@ const Input: React.FC<IInput> = ({
   isDisabled,
   leftAddon,
   rightAddon,
-  teid,
+  teid = 'input',
   leftElement,
   rightElement,
   ...props

@@ -71,6 +71,8 @@
     "format": "prettier --write src"
   },
   "dependencies": {
+    "rc-dialog": "^9.0.0",
+    "rc-dropdown": "^4.0.1",
     "rc-select": "^14.1.13",
     "react-toastify": "^9.0.8",
     "styled-system": "^5.1.5"

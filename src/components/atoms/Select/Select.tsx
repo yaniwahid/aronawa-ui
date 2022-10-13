@@ -5,14 +5,15 @@ import Icon from '../Icon';
 import { SelectStyled } from './Select.styles';
 import { ISelect } from './Select.types';
 
-const Select: FC<ISelect> = ({ children, ...props }) => {
+const Select: FC<ISelect> = ({ isDisabled, children, ...props }) => {
   return (
     <>
       <Global styles={SelectStyled} />
       <SelectComponent
         prefixCls="aronawa-select"
-        inputIcon={<Icon name="angle-down" size={20} />}
-        clearIcon={<Icon name="cancel" size={18} />}
+        inputIcon={<Icon name="angle-down" size={18} />}
+        clearIcon={<Icon name="times" size={16} />}
+        disabled={isDisabled}
         {...props}
       >
         {children}

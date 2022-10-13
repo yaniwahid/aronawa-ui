@@ -29,3 +29,19 @@ export const Basic = (args: ISelect) => (
     <Option value="yiminghe">yiminghe</Option>
   </Select>
 );
+
+export const Multiple = (args: ISelect) => (
+  <Select placeholder="Select Name" mode="multiple" allowClear showArrow {...args}>
+    <Option value="jack">jack</Option>
+    <Option value="lucy">lucy</Option>
+    <Option value="yiminghe">yiminghe</Option>
+  </Select>
+);
+
+export const Tags = (args: ISelect) => (
+  <Select placeholder="Select Name" mode="tags" allowClear showArrow {...args}>
+    <Option value="jack">jack</Option>
+    <Option value="lucy">lucy</Option>
+    <Option value="yiminghe">yiminghe</Option>
+  </Select>
+);
