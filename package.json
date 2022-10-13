@@ -1,72 +1,82 @@
 {
   "name": "aronawa-ui",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "main": "lib/index.js",
-  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@emotion/eslint-plugin": "^11.10.0",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@storybook/addon-a11y": "^6.5.12",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-controls": "^6.5.12",
+    "@storybook/addon-docs": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/addon-notes": "^5.3.21",
+    "@storybook/addon-viewport": "^6.5.12",
+    "@storybook/addons": "^6.5.12",
+    "@storybook/builder-webpack5": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
+    "@storybook/react": "^6.5.12",
+    "@swc/core": "^1.3.3",
+    "@swc/jest": "^0.2.23",
+    "@testing-library/jest-dom": "^5.0.0",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/node": "^13.1.7",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.3",
+    "@types/styled-system": "^5.1.15",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "jest": "^24.9.0",
+    "prettier": "^2.5.1",
+    "react": "^16.11.0",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "react-dom": "^16.11.0",
+    "react-test-renderer": "^16.12.0",
+    "rollup": "^2.79.1",
+    "rollup-plugin-swc3": "^0.6.0",
+    "storybook-addon-swc": "^1.1.8",
+    "swc-loader": "^0.2.3",
+    "typescript": "4.2.4"
+  },
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@emotion/styled": "^10.0.23",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "lint": "eslint",
-    "prettier": "prettier",
-    "chromatic": "npx chromatic --project-token=32af9995ea2b"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@babel/core": "^7.17.5",
-    "@babel/eslint-parser": "^7.17.0",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
-    "@storybook/addon-actions": "^6.4.19",
-    "@storybook/addon-docs": "^6.4.19",
-    "@storybook/addon-essentials": "^6.4.19",
-    "@storybook/addon-links": "^6.4.19",
-    "@storybook/addons": "^6.4.19",
-    "@storybook/builder-webpack5": "^6.4.19",
-    "@storybook/manager-webpack5": "^6.4.19",
-    "@storybook/react": "^6.4.19",
-    "@storybook/theming": "^6.4.19",
-    "add": "^2.0.6",
-    "babel-loader": "^8.2.3",
-    "chromatic": "^6.5.3",
-    "eslint": "^8.11.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^2.5.1",
-    "yarn": "^1.22.18"
+    "start": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -o public",
+    "build": "rm -rf ./lib && tsc --project tsconfig.production.json && rollup --config rollup.config.ts",
+    "build-publish": "rm -rf ./lib && tsc --project tsconfig.production.json && rollup --config rollup.config.ts && npm version patch && npm publish --registry http://verdaccio.bhinnekalocal.com",
+    "test": "jest",
+    "test-reset": "find . -name '*.snap' -delete",
+    "lint": "eslint . --ext .tsx",
+    "up": "yarn upgrade-interactive",
+    "up-latest": "yarn up --latest",
+    "format": "prettier --write src"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.8.6",
-    "@chakra-ui/react-env": "^1.1.6",
-    "@emotion/cache": "^11.7.1",
-    "@emotion/react": "^11",
-    "@emotion/styled": "^11",
-    "@storybook/addon-a11y": "^6.4.19",
-    "framer-motion": "4.1.17",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-toastify": "^9.0.8",
+    "styled-system": "^5.1.5"
+  },
+  "resolutions": {
+    "@types/react": "^16.9.17",
+    "@types/jest": "25.1.5"
   }
 }
