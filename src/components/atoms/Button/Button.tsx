@@ -4,8 +4,8 @@ import { ButtonStyled, Loading } from './Button.styles';
 import { IButton } from './Button.types';
 
 const Button: FC<IButton> = ({
-  color,
-  variant,
+  color = 'neutral',
+  variant = 'solid',
   size,
   target,
   type,

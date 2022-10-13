@@ -4,7 +4,7 @@ import { IBadge } from './Badge.types';
 
 const Badge: FC<IBadge> = ({
   color = 'neutral',
-  variant = 'basic',
+  variant = 'solid',
   children,
   onClose,
   isClosable,

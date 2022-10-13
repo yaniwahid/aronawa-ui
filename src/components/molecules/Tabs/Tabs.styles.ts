@@ -5,6 +5,7 @@ import { IStyle } from './Tabs.types';
 
 export const TabsStyled = styled.div({
   position: 'relative',
+  background: Color.light
 }, space);
 
 export const TabsList = styled.div({
@@ -30,7 +31,7 @@ export const Title = styled.div<IStyle>(({ isSelected }) => ({
   fontWeight: 600,
   textTransform: 'uppercase',
   fontSize: 12,
-  padding: '8px 16px',
+  padding: 16,
   color: Color.font.ink,
   cursor: 'pointer',
   transition: 'all 0.3s ease',
@@ -58,10 +59,10 @@ export const Title = styled.div<IStyle>(({ isSelected }) => ({
 }));
 
 export const Bar = styled.div<IStyle>(({ isSelected }) => ({
-  height: 2,
+  height: 4,
   position: 'absolute',
   left: 0,
-  bottom: -2,
+  bottom: 0,
   width: '100%',
   borderTopLeftRadius: 4,
   borderTopRightRadius: 4,
@@ -72,9 +73,8 @@ export const Bar = styled.div<IStyle>(({ isSelected }) => ({
 }));
 
 export const Content = styled.div({
-  paddingTop: 24,
-  paddingBottom: 24,
-  borderTop: `2px solid ${Color.slate[200]}`,
+  padding: 16,
+  borderTop: `1px solid ${Color.slate[200]}`,
 });
 
 export const TabsItemStyled = styled.div({

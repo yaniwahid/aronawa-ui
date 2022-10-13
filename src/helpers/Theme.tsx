@@ -39,9 +39,7 @@ const GlobalStyle = () => (
 );
 
 const theme = {
-  colors: {
-    primary: 'hotpink',
-  },
+  space: [0, 4, 8, 12, 16, 24, 32, 40, 48, 56, 66, 72],
 };
 
 export const Theme: FC = ({ children }) => {

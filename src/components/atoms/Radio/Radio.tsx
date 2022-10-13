@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Check, Label, OptionStyled, RadioGroup, WrapperCheck } from './Radio.styles';
+import { Check, Label, OptionStyled, RadioStyled, WrapperCheck } from './Radio.styles';
 import { IRadio } from './Radio.types';
 
 const Radio: React.FC<IRadio> = ({
@@ -55,9 +55,9 @@ const Radio: React.FC<IRadio> = ({
   ));
 
   return (
-    <RadioGroup isSolid={isSolid} {...props}>
+    <RadioStyled isSolid={isSolid} {...props}>
       {options}
-    </RadioGroup>
+    </RadioStyled>
   );
 };
 

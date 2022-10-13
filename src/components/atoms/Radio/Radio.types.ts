@@ -1,5 +1,4 @@
 import { InputHTMLAttributes } from 'react';
-import { SpaceProps } from 'styled-system';
 
 export interface IRadioData {
   label?: React.ReactNode;
@@ -8,8 +7,8 @@ export interface IRadioData {
 }
 
 export interface IRadio
-  extends SpaceProps,
-    Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
+  extends
+  Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
   name?: string;
   value?: string;
   isInvalid?: boolean;

@@ -1,37 +1,28 @@
 import { DocsContainer } from '@storybook/addon-docs';
+import { Box } from '../src/components/atoms/Box';
+import { ColorDoc, ColorDocWrapper } from '../src/documentation/Color/Color';
+import { IconDoc, IconDocs, IconDocWrapper } from '../src/documentation/Icon/Icon';
 import { Theme } from '../src/helpers/Theme';
-
-const sameKindComparator = (a, b) => {
-  console.log(a[1].kind, b[1].kind);
-  console.log(a);
-  const forceOnTop = 'Basic';
-
-  // force anything with "Basic" in the name to be on top
-  if (a[1].name.includes(forceOnTop)) {
-    return -1;
-  }
-
-  // force anything with "Basic" in the name to be on top
-  if (b[1].name.includes(forceOnTop)) {
-    return 1;
-  }
-
-  // sort by name ascending otherwise
-  return a[1].name.localeCompare(b[1].name, undefined, { numeric: true });
-};
 
 export const parameters = {
   controls: { expanded: true },
   options: {
     panelPosition: 'bottom',
     showSearchBox: true,
-    storySort: (a, b) =>
-      a[1].kind === b[1].kind // kind === story parent name
-        ? sameKindComparator(a, b)
-        : a[1].id.localeCompare(b[1].id, undefined, { numeric: true }), // id = automatically generated id from storybook, slugify(parentName+childName)
+    storySort: {
+      method: 'alphabetical',
+      order: ['Foundations', 'Atoms', 'Molecules'],
+    },
   },
-  actions: { argTypesRegex: '^on[A-Z].*' },
   docs: {
+    components: {
+      Box,
+      IconDoc,
+      IconDocs,
+      IconDocWrapper,
+      ColorDocWrapper,
+      ColorDoc,
+    },
     container: ({ children, context }) => (
       <DocsContainer context={context}>
         <Theme>{children}</Theme>

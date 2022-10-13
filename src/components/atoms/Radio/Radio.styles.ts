@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { space } from 'styled-system';
 import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
 import { IStyle } from './Radio.types';
@@ -168,7 +167,7 @@ export const Check = styled.div<IStyle>(({ isChecked, isInvalid, isDisabled }) =
   return { ...cssTmp };
 });
 
-export const RadioGroup = styled.div<IStyle>(
+export const RadioStyled = styled.div<IStyle>(
   ({ isSolid }) => ({
     display: 'flex',
     alignItems: 'center',
@@ -176,5 +175,4 @@ export const RadioGroup = styled.div<IStyle>(
       marginLeft: isSolid ? 8 : 16,
     },
   }),
-  space,
 );

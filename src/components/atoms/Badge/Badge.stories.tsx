@@ -48,7 +48,6 @@ export default {
   },
 } as ComponentMeta<typeof Badge>;
 
-const parameters = ['color', 'variant', 'isClosable'];
 const ColorType = ['neutral', 'primary', 'secondary', 'approval', 'danger'] as any;
 const VariantType = ['solid', 'subtle', 'indicator', 'ghost'] as any;
 
@@ -60,7 +59,6 @@ const capFirstLetterInSentence = (sentence: string) => {
 };
 
 export const Basic = (args: IBadge) => <Badge {...args}>Badge</Badge>;
-Basic.parameters = { controls: { include: parameters } };
 
 export const Color = (args: IBadge) => (
   <div className="hstack">
@@ -71,7 +69,6 @@ export const Color = (args: IBadge) => (
     ))}
   </div>
 );
-Color.parameters = { controls: { include: parameters } };
 
 export const Variant = (args: IBadge) => (
   <div className="hstack">
@@ -82,4 +79,3 @@ export const Variant = (args: IBadge) => (
     ))}
   </div>
 );
-Variant.parameters = { controls: { include: parameters } };
