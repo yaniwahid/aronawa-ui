@@ -4,16 +4,18 @@ import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
 import { IBadge } from './Badge.types';
 
+const Colors = Color as any;
+
 const Solid = (color: any) => {
   return {
-    backgroundColor: Color[color]['contrast'],
+    backgroundColor: Colors[color]['contrast'],
   };
 };
 
 const Subtle = (color: any) => {
   return {
-    backgroundColor: Color[color]['subtle'],
-    color: Color[color]['text'],
+    backgroundColor: Colors[color]['subtle'],
+    color: Colors[color]['text'],
   };
 };
 
@@ -24,7 +26,7 @@ const Ghost = (color: any) => {
     },
   };
   return {
-    color: Color[color]['default'],
+    color: Colors[color]['default'],
     textTransform: 'uppercase',
     fontWeight: 700,
     letterSpacing: '0.2px',

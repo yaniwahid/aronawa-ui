@@ -170,7 +170,6 @@ export const DropdownStyled = css`
 
 export const DropdownMenuStyled = styled.div({
   position: 'relative',
-  minWidth: 240,
 });
 
 export const DropdownItemStyled = styled.div(

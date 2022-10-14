@@ -36,7 +36,7 @@ export const InputStyled = styled.div<IInput>(
       case 'lg':
         HEIGHT = 40;
         PADDING = '4px 12px';
-        FONT_SIZE = 12;
+        FONT_SIZE = 16;
         break;
       default:
         break;
@@ -90,7 +90,6 @@ export const InputStyled = styled.div<IInput>(
         transition: 'all 0.3s',
         lineHeight: 1.5,
         color: Color.font.ink,
-        ...fontSizeProps[size],
         ...(isDisabled && {
           cursor: 'not-allowed',
           backgroundColor: Color.slate[200],
@@ -132,13 +131,13 @@ export const InputAddon = styled.div<IInput>(({ size = 'md', rightAddon }) => ({
   ...fontSizeProps[size],
   ...(rightAddon
     ? {
-        borderTopRightRadius: Radius.blunt,
-        borderBottomRightRadius: Radius.blunt,
-      }
+      borderTopRightRadius: Radius.blunt,
+      borderBottomRightRadius: Radius.blunt,
+    }
     : {
-        borderTopLeftRadius: Radius.blunt,
-        borderBottomLeftRadius: Radius.blunt,
-      }),
+      borderTopLeftRadius: Radius.blunt,
+      borderBottomLeftRadius: Radius.blunt,
+    }),
 }));
 
 export const InputElement = styled.div<IInput>(({ size = 'md', rightElement }) => ({
@@ -149,9 +148,9 @@ export const InputElement = styled.div<IInput>(({ size = 'md', rightElement }) =
   ...fontSizeProps[size],
   ...(rightElement
     ? {
-        paddingRight: paddingProps[size],
-      }
+      paddingRight: paddingProps[size],
+    }
     : {
-        paddingLeft: paddingProps[size],
-      }),
+      paddingLeft: paddingProps[size],
+    }),
 }));

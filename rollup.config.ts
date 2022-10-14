@@ -1,5 +1,5 @@
 import { defineConfig } from 'rollup';
-import { swc, defineRollupSwcOption } from 'rollup-plugin-swc3';
+import { defineRollupSwcOption, swc } from 'rollup-plugin-swc3';
 
 // this override is needed because Module format cjs does not support top-level await
 // eslint-disable-next-line @typescript-eslint/no-var-requires

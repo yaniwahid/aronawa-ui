@@ -6,6 +6,8 @@ import Radius from '../../../themes/Radius';
 import Shadow from '../../../themes/Shadow';
 import { IButton } from './button.types';
 
+const Colors = Color as any;
+
 const Size = {
   sm: {
     fontSize: 12,
@@ -74,23 +76,23 @@ const Solid = (color: any) => {
     },
   };
   return {
-    backgroundColor: Color[color]['default'],
+    backgroundColor: Colors[color]['default'],
     color: Color.light,
     boxShadow: Shadow.platform,
     '&:hover': {
-      backgroundColor: Color[color]['hover'],
+      backgroundColor: Colors[color]['hover'],
       boxShadow: Shadow.hover,
     },
     '&:active': {
-      backgroundColor: Color[color]['active'],
+      backgroundColor: Colors[color]['active'],
     },
     '&:focus': {
-      backgroundColor: Color[color]['default'],
-      boxShadow: `0px 0px 0px 3px ${Color[color]['default']}2b, 0px 1px 1px 0px rgba(62, 62, 63, 0.2)`,
+      backgroundColor: Colors[color]['default'],
+      boxShadow: `0px 0px 0px 3px ${Colors[color]['default']}2b, 0px 1px 1px 0px rgba(62, 62, 63, 0.2)`,
     },
     '&:disabled': {
       color: `${Color.light}CC`,
-      backgroundColor: Color[color]['disabled'],
+      backgroundColor: Colors[color]['disabled'],
       boxShadow: Shadow.platform,
     },
     ...styleProps[color],
@@ -127,23 +129,23 @@ const Outline = (color: any) => {
     },
   };
   return {
-    borderColor: Color[color]['default'],
-    color: Color[color]['default'],
+    borderColor: Colors[color]['default'],
+    color: Colors[color]['default'],
     backgroundColor: Color.light,
     '&:hover': {
-      borderColor: Color[color]['hover'],
-      backgroundColor: Color[color]['lightest'],
+      borderColor: Colors[color]['hover'],
+      backgroundColor: Colors[color]['lightest'],
     },
     '&:active': {
-      borderColor: Color[color]['active'],
+      borderColor: Colors[color]['active'],
     },
     '&:focus': {
-      borderColor: Color[color]['default'],
-      boxShadow: `0px 0px 0px 3px ${Color[color]['default']}2b, 0px 1px 1px 0px rgba(62, 62, 63, 0.2)`,
+      borderColor: Colors[color]['default'],
+      boxShadow: `0px 0px 0px 3px ${Colors[color]['default']}2b, 0px 1px 1px 0px rgba(62, 62, 63, 0.2)`,
     },
     '&:disabled': {
       backgroundColor: Color.light,
-      color: `${Color[color]['default']}CC`,
+      color: `${Colors[color]['default']}CC`,
     },
     ...styleProps[color],
   };
@@ -166,14 +168,14 @@ const Ghost = (color: any) => {
     },
   };
   return {
-    color: Color[color]['default'],
+    color: Colors[color]['default'],
     backgroundColor: Color.light,
     '&:hover': {
-      backgroundColor: Color[color]['lightest'],
+      backgroundColor: Colors[color]['lightest'],
     },
     '&:disabled': {
       backgroundColor: Color.light,
-      color: `${Color[color]['default']}CC`,
+      color: `${Colors[color]['default']}CC`,
     },
     ...styleProps[color],
   };
