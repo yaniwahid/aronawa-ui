@@ -68,6 +68,7 @@ const Input: React.FC<IInput> = ({
       leftElement={leftElement}
       rightElement={rightElement}
       isDisabled={isDisabled}
+      {...props}
     >
       {inputNode()}
     </InputStyled>

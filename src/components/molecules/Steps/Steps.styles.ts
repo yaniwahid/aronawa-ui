@@ -99,8 +99,6 @@ export const Title = styled.div<IStyle>(({ isSelected, isDone, isFailed }) => ({
 }));
 
 export const Content = styled.div({
-  paddingTop: 24,
-  paddingBottom: 24,
 });
 
 export const StepsItemStyled = styled.div({

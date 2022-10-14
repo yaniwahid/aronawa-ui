@@ -12,6 +12,7 @@ const Switch: React.FC<ISwitch> = ({
   checkedLabel,
   unCheckedLabel,
   id = 'switch',
+  label,
   ...props
 }) => {
   const handleKeyPress = (e: any) => {
@@ -35,9 +36,9 @@ const Switch: React.FC<ISwitch> = ({
           {...props}
         />
       </WrapperSwitch>
-      {(checkedLabel || unCheckedLabel) && (
+      {(checkedLabel || unCheckedLabel || label) && (
         <Label isDisabled={isDisabled} onKeyDown={(e) => handleKeyPress(e)} htmlFor={id}>
-          {checkedLabelRender}
+          {label ?? checkedLabelRender}
         </Label>
       )}
     </SwitchStyled>

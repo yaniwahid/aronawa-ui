@@ -16,6 +16,9 @@ export default {
       table: {
         type: { summary: 'text' },
       },
+      control: {
+        type: 'text',
+      },
     },
     isOpen: {
       name: 'isOpen',
@@ -73,6 +76,9 @@ export default {
         type: { summary: 'text' },
         defaultValue: { summary: 'Submit' },
       },
+      control: {
+        type: 'text',
+      },
     },
     okColor: {
       name: 'okColor',
@@ -107,6 +113,9 @@ export default {
       table: {
         type: { summary: 'text' },
         defaultValue: { summary: 'Cancel' },
+      },
+      control: {
+        type: 'text',
       },
     },
     cancelColor: {

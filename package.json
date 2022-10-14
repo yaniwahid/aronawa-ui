@@ -74,6 +74,8 @@
     "rc-dialog": "^9.0.0",
     "rc-dropdown": "^4.0.1",
     "rc-select": "^14.1.13",
+    "rc-tooltip": "^5.2.2",
+    "rc-upload": "^4.3.4",
     "react-toastify": "^9.0.8",
     "styled-system": "^5.1.5"
   },

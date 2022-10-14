@@ -5,6 +5,7 @@ export interface ISwitch extends Omit<React.HTMLAttributes<HTMLInputElement>, 'o
   name?: string;
   onChange?: (data: any | null) => void;
   teid?: string;
+  label?: string;
   checkedLabel?: string;
   unCheckedLabel?: string;
   id?: string;

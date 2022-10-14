@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
-import { Color, Radius } from '../../../themes';
+import Color from '../../../themes/Color';
+import Radius from '../../../themes/Radius';
 import { IStyle } from './Table.types';
 
 
