@@ -82,7 +82,8 @@ export const Basic = (args: IPreview) => <Preview {...args} />;
 
 export const WithImage = (args: IPreview) => <Preview {...args} />;
 WithImage.args = {
-  imageUrl: 'https://static.bmdstatic.com/st/home/442789-CB9.jpg',
+  imageUrl: 'https://static.bmdstatic.com/st/home/eaac05-BTS-Serba-10.-Full-Banner.jpg',
+  boxWidth: '240px',
 };
 
 export const WithIcon = (args: IPreview) => <Preview {...args} />;

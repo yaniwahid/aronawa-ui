@@ -4,7 +4,7 @@ import { SpaceProps } from 'styled-system';
 type TSizeCard = 'sm' | 'md' | 'lg';
 
 export interface ICard extends SpaceProps {
-  size?: TSizeCard
+  size?: TSizeCard;
   footer?: ReactNode;
   title?: ReactNode;
   extra?: ReactNode;

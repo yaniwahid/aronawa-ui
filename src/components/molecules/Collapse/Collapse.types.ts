@@ -5,7 +5,6 @@ export interface ICollapseItem {
   isShow?: boolean;
 }
 
-
 export interface ICollapse extends React.HTMLAttributes<HTMLDivElement> {
   teid?: string;
 }

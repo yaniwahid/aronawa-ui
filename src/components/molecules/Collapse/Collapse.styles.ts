@@ -3,8 +3,7 @@ import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
 import { ICollapse, IStyle } from './Collapse.types';
 
-
-export const CollapseStyled = styled.div<ICollapse>(({
+export const CollapseStyled = styled.div<ICollapse>({
   backgroundColor: Color.light,
   border: `1px solid ${Color.slate[200]}`,
   borderRadius: Radius.curved,
@@ -18,8 +17,7 @@ export const CollapseStyled = styled.div<ICollapse>(({
     borderBottomLeftRadius: 8,
     borderBottomRightRadius: 8,
   },
-}),
-);
+});
 
 export const Wrapper = styled.div({
   borderBottom: `1px solid ${Color.slate[200]}`,

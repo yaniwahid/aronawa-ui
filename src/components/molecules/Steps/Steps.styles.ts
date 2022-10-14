@@ -98,8 +98,7 @@ export const Title = styled.div<IStyle>(({ isSelected, isDone, isFailed }) => ({
   display: 'flex',
 }));
 
-export const Content = styled.div({
-});
+export const Content = styled.div({});
 
 export const StepsItemStyled = styled.div({
   position: 'relative',

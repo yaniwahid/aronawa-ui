@@ -8,4 +8,3 @@ export { default as Input } from './Input';
 export { default as Radio } from './Radio';
 export { default as Select, Option } from './Select';
 export { default as Switch } from './Switch';
-

@@ -5,13 +5,7 @@ export type ColumnRenderFunction = (
   rowValues?: any,
   rowIndex?: number,
 ) => JSX.Element;
-export type ColumnRender =
-  | undefined
-  | null
-  | string
-  | number
-  | JSX.Element
-  | ColumnRenderFunction;
+export type ColumnRender = undefined | null | string | number | JSX.Element | ColumnRenderFunction;
 
 export type SortDirection = '' | 'ascending' | 'descending';
 export interface ISortConfig {
@@ -57,8 +51,6 @@ export interface ITable extends React.HTMLAttributes<HTMLDivElement> {
   emptyData?: ReactNode;
   isStipred?: boolean;
 }
-
-
 
 export interface IStyle {
   layout?: 'top' | 'middle' | 'bottom';

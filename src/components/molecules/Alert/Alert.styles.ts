@@ -3,7 +3,6 @@ import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
 import { IAlert } from './Alert.types';
 
-
 const Colors = Color as any;
 
 const Solid = (color: any) => {
@@ -16,32 +15,30 @@ const Solid = (color: any) => {
   };
 };
 
-export const AlertStyled = styled.div<IAlert>(
-  ({ color }) => ({
-    padding: 16,
-    fontSize: 14,
-    border: '1px solid transparent',
-    color: Color.font.ink,
-    position: 'relative',
-    wordWrap: 'break-word',
-    lineHeight: 1.5,
-    borderRadius: Radius.dull,
-    display: "flex",
-    alignItems: "flex-start",
-    ...Solid(color),
-    p: {
-      ' & + p': {
-        marginTop: 16,
-      },
+export const AlertStyled = styled.div<IAlert>(({ color }) => ({
+  padding: 16,
+  fontSize: 14,
+  border: '1px solid transparent',
+  color: Color.font.ink,
+  position: 'relative',
+  wordWrap: 'break-word',
+  lineHeight: 1.5,
+  borderRadius: Radius.dull,
+  display: 'flex',
+  alignItems: 'flex-start',
+  ...Solid(color),
+  p: {
+    ' & + p': {
+      marginTop: 16,
     },
-  }),
-);
+  },
+}));
 
 export const Close = styled.button({
   cursor: 'pointer',
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
   fontSize: 20,
   lineHeight: '20px',
   backgroundColor: 'transparent',
@@ -58,9 +55,8 @@ export const Title = styled.h4({
   marginBottom: 4,
 });
 
-
 export const IconWrapper = styled.div({
   marginRight: 8,
-  position: "relative",
+  position: 'relative',
   top: 1,
 });

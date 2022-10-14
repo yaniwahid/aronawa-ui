@@ -3,7 +3,6 @@ import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
 import { IStyle } from './Table.types';
 
-
 const tdAlignProps = {
   top: {
     verticalAlign: 'top',
@@ -17,16 +16,13 @@ const tdAlignProps = {
 };
 
 export const TableStyled = styled.table<IStyle>(
-  ({
-    layout = 'middle',
-    isPagination, isStipred,
-  }) => ({
+  ({ layout = 'middle', isPagination, isStipred }) => ({
     borderCollapse: 'collapse',
     width: '100%',
     minWidth: '100%',
     tableLayout: 'fixed',
     '& td': {
-      padding: "12px 16px",
+      padding: '12px 16px',
       ...tdAlignProps[layout],
       borderTop: `1px solid ${Color.slate[200]}`,
       fontSize: 14,
@@ -103,10 +99,10 @@ export const TableStyled = styled.table<IStyle>(
         color: Color.slate[500],
       },
     },
-    "& .row-selection": {
-      "& > div": {
-        display: "flex"
-      }
+    '& .row-selection': {
+      '& > div': {
+        display: 'flex',
+      },
     },
     '& tbody tr': {
       '&:last-of-type td': {
@@ -122,21 +118,21 @@ export const TableStyled = styled.table<IStyle>(
       },
     },
 
-    ...isStipred && {
-      "& tbody tr:nth-of-type(odd) td": {
-        backgroundColor: Color.slate[50]
+    ...(isStipred && {
+      '& tbody tr:nth-of-type(odd) td': {
+        backgroundColor: Color.slate[50],
       },
-      "& tbody tr:nth-of-type(odd):hover td": {
+      '& tbody tr:nth-of-type(odd):hover td': {
         backgroundColor: Color.sky[50],
-      }
-    }
+      },
+    }),
   }),
 );
 
 export const TableWrapper = styled.div({
   borderBottom: `1px solid ${Color.slate[200]}`,
-  borderTop: `1px solid ${Color.slate[200]}`
-})
+  borderTop: `1px solid ${Color.slate[200]}`,
+});
 
 export const TableScroll = styled.div({
   overflow: 'auto',
@@ -157,8 +153,7 @@ export const PaginationStyled = styled.div({
       paddingLeft: '0 !important',
     },
   },
-}
-);
+});
 
 export const ShowItem = styled.div({
   display: 'flex',
@@ -172,7 +167,7 @@ export const ShowItem = styled.div({
       width: '80px !important',
     },
   },
-})
+});
 
 export const RecordInfo = styled.div({
   position: 'relative',
@@ -186,13 +181,13 @@ export const Pagination = styled.div({
       marginLeft: 8,
     },
   },
-})
+});
 
 export const PaginationTotal = styled.div({
   marginRight: 8,
   display: 'flex',
   alignItems: 'center',
-  "& > div": {
+  '& > div': {
     flex: 1,
   },
   span: {

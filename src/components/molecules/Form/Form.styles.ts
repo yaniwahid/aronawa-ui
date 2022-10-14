@@ -3,32 +3,32 @@ import { space } from 'styled-system';
 import Color from '../../../themes/Color';
 import { IForm, IFormItem } from './Form.types';
 
-export const FormStyled = styled.form<IForm>(({ layout, formWidth = "160px 1fr" }) => {
+export const FormStyled = styled.form<IForm>(({ layout, formWidth = '160px 1fr' }) => {
   let cssTmp: object = {
     position: 'relative',
-    "& > * + *": {
+    '& > * + *': {
       marginTop: 16,
-    }
+    },
   };
   if (layout === 'vertical') {
     cssTmp = {
       ...cssTmp,
-      "& .label-item": {
+      '& .label-item': {
         paddingBottom: 4,
-      }
+      },
     };
   } else {
     cssTmp = {
       ...cssTmp,
-      "& .form-item": {
+      '& .form-item': {
         gridTemplateColumns: formWidth,
         gap: 32,
       },
-      "& .label-item": {
-        textAlign: "right",
+      '& .label-item': {
+        textAlign: 'right',
         height: 32,
-        lineHeight: "32px",
-      }
+        lineHeight: '32px',
+      },
     };
   }
   return { ...cssTmp };
@@ -36,16 +36,16 @@ export const FormStyled = styled.form<IForm>(({ layout, formWidth = "160px 1fr" 
 
 export const FormItemStyled = styled.div<IFormItem>(({ isInvalid, formWidth }) => ({
   position: 'relative',
-  display: "grid",
+  display: 'grid',
   p: {
     margin: 0,
   },
-  ...isInvalid && {
-    color: Color.danger.default
-  },
-  ...formWidth && {
+  ...(isInvalid && {
+    color: Color.danger.default,
+  }),
+  ...(formWidth && {
     gridTemplateColumns: `${formWidth} !important`,
-  }
+  }),
 }));
 
 export const Label = styled.div({
@@ -82,13 +82,13 @@ export const InvalidText = styled.div({
 });
 
 export const ContentWrapper = styled.div({
-  display: "flex",
-  flexDirection: "column",
+  display: 'flex',
+  flexDirection: 'column',
 });
 
 export const Content = styled.div({
-  display: "flex",
-  alignItems: "center",
+  display: 'flex',
+  alignItems: 'center',
   flex: 1,
 });
 
