@@ -478,4 +478,6 @@ export const DatepickerIcon = styled.div({
   position: 'absolute',
   top: '50%',
   transform: 'translateY(-50%)',
+  right: 8,
+  display: 'flex',
 });

@@ -27,7 +27,7 @@ const Alert: FC<IAlert> = ({
       </Content>
       {isClosable && (
         <Close onClick={onClose}>
-          <Icon name="times" size={20} />
+          <Icon name="cross" size={20} />
         </Close>
       )}
     </AlertStyled>

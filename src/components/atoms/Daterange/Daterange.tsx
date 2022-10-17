@@ -35,7 +35,7 @@ const Daterange: React.FC<IDaterange> = ({
           {...props}
         />
         <DatepickerIcon>
-          <Icon name="event" size={18} />
+          <Icon name="calender" size={18} />
         </DatepickerIcon>
       </DatepickerWrapper>
     </>

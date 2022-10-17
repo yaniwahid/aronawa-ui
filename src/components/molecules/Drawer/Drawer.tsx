@@ -30,6 +30,7 @@ const Drawer: FC<IDrawer> = ({
   children,
   isCloseLeft,
   size = 'md',
+  isCloseable = true,
   ...props
 }) => {
   const Width = (size?: 'sm' | 'md' | 'lg') => {
@@ -73,15 +74,15 @@ const Drawer: FC<IDrawer> = ({
         {...motionProps}
         {...props}
       >
+        {isCloseable && (
+          <Close isCloseLeft={isCloseLeft}>
+            <Icon name="cross" size={24} color="#7c8187" />
+          </Close>
+        )}
         {title && (
-          <>
-            <Close isCloseLeft={isCloseLeft}>
-              <Icon name="times" size={24} color="#7c8187" />
-            </Close>
-            <DrawerHeaderStyled isCloseLeft={isCloseLeft} className="aronawa-drawer-header">
-              <Title>{title}</Title>
-            </DrawerHeaderStyled>
-          </>
+          <DrawerHeaderStyled isCloseLeft={isCloseLeft} className="aronawa-drawer-header">
+            <Title>{title}</Title>
+          </DrawerHeaderStyled>
         )}
         <DrawerBody className="aronawa-drawer-body">{children}</DrawerBody>
         {!isNoFooter && (

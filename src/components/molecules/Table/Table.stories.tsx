@@ -194,3 +194,16 @@ export const Basic = (args: ITable) => {
     />
   );
 };
+
+export const Empty = (args: ITable) => {
+  return (
+    <Table
+      {...args}
+      columns={columns}
+      data={data}
+      emptyData={<>Kosong</>}
+      meta={meta}
+      rowSelection
+    />
+  );
+};

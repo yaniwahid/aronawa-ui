@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import Icon from '../Icon';
 import { BadgeStyled, Close, IndicatorStyled } from './Badge.styles';
 import { IBadge } from './Badge.types';
 
@@ -13,7 +14,11 @@ const Badge: FC<IBadge> = ({
   <BadgeStyled color={color} variant={variant} {...props}>
     {variant === 'indicator' && <IndicatorStyled color={color} />}
     {children}
-    {isClosable && <Close onClick={onClose}>&times;</Close>}
+    {isClosable && (
+      <Close onClick={onClose}>
+        <Icon name="cross" />
+      </Close>
+    )}
   </BadgeStyled>
 );
 

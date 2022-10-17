@@ -170,6 +170,18 @@ export default {
         options: ['default', 'filled', 'clean'],
       },
     },
+    isCloseable: {
+      name: 'isCloseable',
+      defaultValue: true,
+      description: 'Use the isCloseable prop to change the isCloseable of the Modal',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: true },
+      },
+      control: {
+        type: 'boolean',
+      },
+    },
   },
 } as ComponentMeta<typeof Modal>;
 

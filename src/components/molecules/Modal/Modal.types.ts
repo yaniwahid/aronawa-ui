@@ -20,4 +20,5 @@ export interface IModal extends DialogProps {
   isNoFooter?: boolean;
   size?: TSizeModal;
   variant?: TVariantModal;
+  isCloseable?: boolean;
 }

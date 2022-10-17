@@ -1,6 +1,6 @@
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
-import { space } from 'styled-system';
+import { color, space } from 'styled-system';
 import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
 import Shadow from '../../../themes/Shadow';
@@ -242,6 +242,7 @@ export const ButtonStyled = styled.button<IButton>(
     return { ...cssTmp };
   },
   space,
+  color,
 );
 
 const loader = keyframes({

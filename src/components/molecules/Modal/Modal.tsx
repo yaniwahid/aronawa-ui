@@ -23,6 +23,7 @@ const Modal: FC<IModal> = ({
   children,
   size = 'md',
   variant = 'clean',
+  isCloseable = true,
   ...props
 }) => {
   const classSize = `aronawa-modal-${size}`;
@@ -38,8 +39,8 @@ const Modal: FC<IModal> = ({
         maskAnimation="fade"
         onClose={onClose}
         title={title}
-        closeIcon={<Icon name="times" size={24} color="#7c8187" />}
-        closable={Boolean(title)}
+        closeIcon={<Icon name="cross" size={24} color="#7c8187" />}
+        closable={isCloseable}
         prefixCls="aronawa-modal"
         className={`${classSize} ${classVariant} ${classTitle} ${classFooter}`}
         footer={

@@ -88,4 +88,5 @@ export const IndicatorStyled = styled.span<IBadge>(({ color }) => ({
 export const Close = styled.span({
   marginLeft: 4,
   cursor: 'pointer',
+  display: 'inline-flex',
 });

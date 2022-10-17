@@ -1,12 +1,12 @@
 To get this package, make sure you turn on `bhinneka vpn`
 
-Install tunggal complete with peer dependency, if you are using npm:
+Install aronawa-ui complete with peer dependency, if you are using npm:
 
-    npm install tunggal --registry http://verdaccio.bhinnekalocal.com
+    npm install aronawa-ui --registry http://verdaccio.bhinnekalocal.com
 
 or yarn:
 
-    yarn add tunggal --registry http://verdaccio.bhinnekalocal.com
+    yarn add aronawa-ui --registry http://verdaccio.bhinnekalocal.com
 
 #### Requirements
 

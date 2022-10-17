@@ -56,6 +56,18 @@ export default {
         type: 'boolean',
       },
     },
+    isCloseable: {
+      name: 'isCloseable',
+      defaultValue: true,
+      description: 'Use the isCloseable prop to change the isCloseable of the Drawer',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: true },
+      },
+      control: {
+        type: 'boolean',
+      },
+    },
     isDisabled: {
       name: 'isDisabled',
       defaultValue: false,

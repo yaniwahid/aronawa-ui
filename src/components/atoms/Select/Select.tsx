@@ -12,7 +12,7 @@ const Select: FC<ISelect> = ({ isDisabled, children, ...props }) => {
       <SelectComponent
         prefixCls="aronawa-select"
         inputIcon={<Icon name="angle-down" size={18} />}
-        clearIcon={<Icon name="times" size={16} />}
+        clearIcon={<Icon name="cross" size={16} />}
         disabled={isDisabled}
         {...props}
       >
