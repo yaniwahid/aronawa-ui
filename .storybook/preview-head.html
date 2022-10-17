@@ -1,6 +1,22 @@
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-  rel="stylesheet"
-/>
+<style>
+  .hstack {
+    display: flex;
+    align-items: center;
+  }
+  .hstack > * + * {
+    margin-left: 8px;
+  }
+  .vstack {
+    display: flex;
+    flex-direction: column;
+  }
+  .vstack > * + * {
+    margin-top: 8px;
+  }
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 32px);
+  }
+</style>
