@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { FC, ReactNode, useEffect, useState } from 'react';
 import { Check, Label, OptionStyled, RadioStyled, WrapperCheck } from './Radio.styles';
 import { IRadio } from './Radio.types';
 
-const Radio: React.FC<IRadio> = ({
+const Radio: FC<IRadio> = ({
   name,
   data,
   value = '',
@@ -27,7 +27,7 @@ const Radio: React.FC<IRadio> = ({
     setChecked(value);
   }, [value]);
 
-  const options: React.ReactNode = data.map((item, index) => (
+  const options: ReactNode = data.map((item, index) => (
     <OptionStyled
       htmlFor={name}
       onClick={() => handleChange(item.value)}

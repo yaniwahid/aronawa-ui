@@ -1,10 +1,11 @@
 import { isEmpty } from 'lodash';
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import Button from '../../atoms/Button';
 import Checkbox from '../../atoms/Checkbox';
 import Icon from '../../atoms/Icon';
 import Input from '../../atoms/Input';
 import Select, { Option } from '../../atoms/Select';
+import Spin from '../../atoms/Spin';
 import {
   EmptyBlockStyled,
   Pagination,
@@ -18,7 +19,7 @@ import {
 } from './Table.styles';
 import { ColumnRender, IColumn, ISortConfig, ITable, SortDirection } from './Table.types';
 
-const Table: React.FC<ITable> = ({
+const Table: FC<ITable> = ({
   columns,
   data,
   sortFunction,
@@ -33,6 +34,7 @@ const Table: React.FC<ITable> = ({
   teid = 'table',
   emptyData,
   isStipred = true,
+  isLoading,
   ...props
 }) => {
   const [sortConfig, setSortConfig] = useState<ISortConfig>({
@@ -253,147 +255,147 @@ const Table: React.FC<ITable> = ({
   const colSpanLength = columns.length + 1;
 
   return (
-    <TableWrapper>
-      <TableScroll>
-        <TableStyled
-          layout={layout}
-          isPagination={isPagination}
-          isStipred={isStipred}
-          data-tesid={teid}
-          {...props}
-        >
-          {!isHideTitleRow && (
-            <thead>
-              <tr>
-                {rowSelection && (
-                  <th style={{ width: 48 }} className="row-selection">
-                    <Checkbox
-                      name="select-all"
-                      value="select-all"
-                      onClick={handleSelectAll}
-                      isDisabled={data.length === 0}
-                      isChecked={selectAll.checked}
-                      isIndeterminate={selectAll.indeterminate}
-                    />
-                  </th>
-                )}
-                {columns.map((column: IColumn) => (
-                  <th
-                    key={column.key}
-                    onClick={column.sort ? requestSort(column) : () => {}}
-                    style={{
-                      width: column.width,
-                      backgroundColor: column.bg,
-                      textAlign: column.align,
-                      padding: column.padding,
-                    }}
-                  >
-                    {column.title}
-                    {column.sort && (
-                      <span className="sort">{generateSortIcon(column, sortConfig)}</span>
-                    )}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-          )}
-          <tbody>
-            {emptyData ? (
-              <tr>
-                {rowSelection ? (
-                  <td colSpan={colSpanLength}>
-                    <EmptyBlockStyled>{emptyData}</EmptyBlockStyled>
-                  </td>
-                ) : (
-                  <td colSpan={columns.length}>
-                    <EmptyBlockStyled>{emptyData}</EmptyBlockStyled>
-                  </td>
-                )}
-              </tr>
-            ) : (
-              <>
-                {selectedRow.map((row: any, index: number) => (
-                  <tr key={index}>
-                    {rowSelection && (
-                      <td className="row-selection">
-                        <Checkbox
-                          name="select-row"
-                          value="select-row"
-                          onClick={handleCheckBox(index)}
-                          isChecked={selectedRow[index].checked}
-                          isIndeterminate={selectedRow[index].indeterminate}
-                          isDisabled={selectedRow[index].disabled}
-                        />
-                      </td>
-                    )}
-                    {columns.map((col: IColumn, colIndex: number) => {
-                      let renderData: ColumnRender;
-                      switch (typeof col.render) {
-                        case 'undefined':
-                          renderData = row[col.dataIndex];
-                          break;
-                        case 'function':
-                          renderData = col.render(row[col.dataIndex], row, index);
-                          break;
-                        default:
-                          renderData = col.render;
-                          break;
-                      }
-
-                      return (
-                        <td
-                          key={colIndex}
-                          rowSpan={col.rowSpan}
-                          colSpan={col.rowSpan}
-                          style={{ padding: col.padding }}
-                        >
-                          {renderData}
-                        </td>
-                      );
-                    })}
-                  </tr>
-                ))}
-              </>
+    <Spin isLoading={isLoading}>
+      <TableWrapper>
+        <TableScroll>
+          <TableStyled
+            layout={layout}
+            isPagination={isPagination}
+            isStipred={isStipred}
+            data-tesid={teid}
+            {...props}
+          >
+            {!isHideTitleRow && (
+              <thead>
+                <tr>
+                  {rowSelection && (
+                    <th style={{ width: 48 }} className="row-selection">
+                      <Checkbox
+                        name="select-all"
+                        value="select-all"
+                        onClick={handleSelectAll}
+                        isDisabled={data.length === 0}
+                        isChecked={selectAll.checked}
+                        isIndeterminate={selectAll.indeterminate}
+                      />
+                    </th>
+                  )}
+                  {columns.map((column: IColumn) => (
+                    <th
+                      key={column.key}
+                      onClick={column.sort ? requestSort(column) : () => {}}
+                      style={{
+                        width: column.width,
+                        backgroundColor: column.bg,
+                        textAlign: column.align,
+                        padding: column.padding,
+                      }}
+                    >
+                      {column.title}
+                      {column.sort && (
+                        <span className="sort">{generateSortIcon(column, sortConfig)}</span>
+                      )}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
             )}
-          </tbody>
-        </TableStyled>
-      </TableScroll>
-      {isPagination && (
-        <PaginationStyled>
-          <ShowItem>
-            <span>Show items per page</span>
-            <Select defaultValue={meta.pageSize} onChange={handlePageSizeChange}>
-              {options?.map((item: any) => {
-                return <Option value={item.value}>{item.value}</Option>;
-              })}
-            </Select>
-          </ShowItem>
-          <RecordInfo>{recordsInfoText}</RecordInfo>
-          <Pagination>
-            <PaginationTotal>
-              <Input
-                type="number"
-                value={pageInput}
-                onChange={handleChangePage}
-                onKeyPress={handlePressEnterPageInput}
-                min={1}
-                max={meta.totalPages}
+            <tbody>
+              {emptyData ? (
+                <tr>
+                  {rowSelection ? (
+                    <td colSpan={colSpanLength}>
+                      <EmptyBlockStyled>{emptyData}</EmptyBlockStyled>
+                    </td>
+                  ) : (
+                    <td colSpan={columns.length}>
+                      <EmptyBlockStyled>{emptyData}</EmptyBlockStyled>
+                    </td>
+                  )}
+                </tr>
+              ) : (
+                <>
+                  {selectedRow.map((row: any, index: number) => (
+                    <tr key={index}>
+                      {rowSelection && (
+                        <td className="row-selection">
+                          <Checkbox
+                            name="select-row"
+                            value="select-row"
+                            onClick={handleCheckBox(index)}
+                            isChecked={selectedRow[index].checked}
+                            isIndeterminate={selectedRow[index].indeterminate}
+                            isDisabled={selectedRow[index].disabled}
+                          />
+                        </td>
+                      )}
+                      {columns.map((col: IColumn, colIndex: number) => {
+                        let renderData: ColumnRender;
+                        switch (typeof col.render) {
+                          case 'undefined':
+                            renderData = row[col.dataIndex];
+                            break;
+                          case 'function':
+                            renderData = col.render(row[col.dataIndex], row, index);
+                            break;
+                          default:
+                            renderData = col.render;
+                            break;
+                        }
+
+                        return (
+                          <td
+                            key={colIndex}
+                            rowSpan={col.rowSpan}
+                            colSpan={col.rowSpan}
+                            style={{ padding: col.padding }}
+                          >
+                            {renderData}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  ))}
+                </>
+              )}
+            </tbody>
+          </TableStyled>
+        </TableScroll>
+        {isPagination && (
+          <PaginationStyled>
+            <ShowItem>
+              <span>Show items per page</span>
+              <Select defaultValue={meta.pageSize} onChange={handlePageSizeChange}>
+                {options?.map((item: any) => {
+                  return <Option value={item.value}>{item.value}</Option>;
+                })}
+              </Select>
+            </ShowItem>
+            <RecordInfo>{recordsInfoText}</RecordInfo>
+            <Pagination>
+              <PaginationTotal>
+                <Input
+                  type="number"
+                  value={pageInput}
+                  onChange={handleChangePage}
+                  onKeyPress={handlePressEnterPageInput}
+                  min={1}
+                  max={meta.totalPages}
+                />
+                <span>of {meta.totalPages} pages</span>
+              </PaginationTotal>
+              <Button icon="angle-left" onClick={handlePrev} isDisabled={meta.page === 1} />
+              <Button
+                icon="angle-right"
+                onClick={handleNext}
+                isDisabled={meta.page === meta.totalPages}
               />
-              <span>of {meta.totalPages} pages</span>
-            </PaginationTotal>
-            <Button icon="angle-left" onClick={handlePrev} isDisabled={meta.page === 1} />
-            <Button
-              icon="angle-right"
-              onClick={handleNext}
-              isDisabled={meta.page === meta.totalPages}
-            />
-          </Pagination>
-        </PaginationStyled>
-      )}
-    </TableWrapper>
+            </Pagination>
+          </PaginationStyled>
+        )}
+      </TableWrapper>
+    </Spin>
   );
 };
-
-Table.displayName = 'Table';
 
 export default Table;

@@ -10,6 +10,20 @@ import { ITable } from './Table.types';
 export default {
   title: 'Molecules/Table',
   component: Table,
+  argTypes: {
+    isLoading: {
+      name: 'isLoading',
+      defaultValue: false,
+      description: 'Use the isLoading prop to change the isLoading of the Table',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+      control: {
+        type: 'boolean',
+      },
+    },
+  },
 } as ComponentMeta<typeof Table>;
 
 const menu = (

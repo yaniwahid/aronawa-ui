@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { IconStyled } from './Icon.styles';
 import { IIcon } from './Icon.types';
 
-const Icon: React.FC<IIcon> = ({ name, color, size, ...props }) => {
+const Icon: FC<IIcon> = ({ name, color, size, ...props }) => {
   return (
     <IconStyled color={color} size={size} {...props}>
-      <i className={`icon-${name}`} />
+      <i className={`ika-${name}`} />
     </IconStyled>
   );
 };

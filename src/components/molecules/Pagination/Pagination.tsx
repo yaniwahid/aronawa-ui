@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import Button from '../../atoms/Button';
 import Icon from '../../atoms/Icon';
 import Select, { Option } from '../../atoms/Select';
 import { Dot, InputWrapper, PageOf, Wrapper } from './Pagination.styles';
 import { IPagination } from './Pagination.types';
 
-const Pagination: React.FC<IPagination> = ({
+const Pagination: FC<IPagination> = ({
   defaultCurrent = 1,
   total,
   pageSize = 10,

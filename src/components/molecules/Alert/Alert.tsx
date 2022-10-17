@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Icon } from '../../atoms';
 import { Content } from '../Steps/Steps.styles';
 import { AlertStyled, Close, IconWrapper, Title } from './Alert.styles';
 import { IAlert } from './Alert.types';
 
-const Alert: React.FC<IAlert> = ({
+const Alert: FC<IAlert> = ({
   color = 'primary',
   title,
   isClosable,

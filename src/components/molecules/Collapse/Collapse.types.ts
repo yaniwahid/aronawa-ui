@@ -1,5 +1,7 @@
+import { ReactNode } from 'react';
+
 export interface ICollapseItem {
-  title: React.ReactNode;
+  title: ReactNode;
   defaultShow?: boolean;
   isDisabled?: boolean;
   isShow?: boolean;

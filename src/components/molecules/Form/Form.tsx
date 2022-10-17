@@ -53,7 +53,7 @@ export const FormItem: FC<IFormItem> = ({
   );
 };
 
-const Form: React.FC<IForm> = ({
+const Form: FC<IForm> = ({
   layout = 'horizontal',
   children,
   formWidth = '160px 1fr',

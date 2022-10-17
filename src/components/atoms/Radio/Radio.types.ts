@@ -1,7 +1,7 @@
-import { InputHTMLAttributes } from 'react';
+import { InputHTMLAttributes, ReactNode } from 'react';
 
 export interface IRadioData {
-  label?: React.ReactNode;
+  label?: ReactNode;
   value: string;
   isDisabled?: boolean;
 }

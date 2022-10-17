@@ -1,6 +1,8 @@
+import { ReactNode } from 'react';
+
 export interface ICheckbox extends Omit<React.HTMLAttributes<HTMLInputElement>, 'onChange'> {
   value?: string;
-  label?: string | React.ReactNode;
+  label?: string | ReactNode;
   isChecked?: boolean;
   isInvalid?: boolean;
   isDisabled?: boolean;

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { InputAddon, InputElement, InputGroup, InputStyled } from './Input.styles';
 import { IInput } from './Input.types';
 
-const Input: React.FC<IInput> = ({
+const Input: FC<IInput> = ({
   size,
   onChange,
   onBlur,

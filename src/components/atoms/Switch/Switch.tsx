@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Label, SwitchStyled, WrapperSwitch } from './Switch.styles';
 import { ISwitch } from './Switch.types';
 
-const Switch: React.FC<ISwitch> = ({
+const Switch: FC<ISwitch> = ({
   value = '',
   isChecked = false,
   name,

@@ -14,7 +14,7 @@ export interface ISortConfig {
 }
 
 export interface IColumn {
-  title: React.ReactNode;
+  title: ReactNode;
   dataIndex: string;
   key?: string | number;
   sort?: boolean;
@@ -50,6 +50,7 @@ export interface ITable extends React.HTMLAttributes<HTMLDivElement> {
   teid?: string;
   emptyData?: ReactNode;
   isStipred?: boolean;
+  isLoading?: boolean;
 }
 
 export interface IStyle {

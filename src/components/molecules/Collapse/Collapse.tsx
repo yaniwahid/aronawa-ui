@@ -3,7 +3,7 @@ import { Icon } from '../../atoms';
 import { Body, CollapseStyled, Content, Toggle, Wrapper } from './Collapse.styles';
 import { ICollapse, ICollapseItem } from './Collapse.types';
 
-export const CollapseItem: React.FC<ICollapseItem> = ({
+export const CollapseItem: FC<ICollapseItem> = ({
   title,
   defaultShow,
   isDisabled,

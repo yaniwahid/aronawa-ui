@@ -6,35 +6,32 @@ const GlobalStyle = () => (
   <Global
     styles={`
       @font-face {
-        font-family: 'ika-icons';
-        src: url('https://static.bmdstatic.com/gk/fonts/ika-icons.eot?nlpojv');
-        src: url('https://static.bmdstatic.com/gk/fonts/ika-icons.eot?nlpojv#iefix')
-            format('embedded-opentype'),
-          url('https://static.bmdstatic.com/gk/fonts/ika-icons.ttf?nlpojv')
-            format('truetype'),
-          url('https://static.bmdstatic.com/gk/fonts/ika-icons.woff?nlpojv')
-            format('woff'),
-          url('https://static.bmdstatic.com/gk/fonts/ika-icons.svg?nlpojv#ika-icons')
-            format('svg');
+        font-family: 'ikaicons';
+        src: url('https://static.bmdstatic.com/gk/fonts/ikaicons/ikaicons.eot?8ipg14');
+        src: url('https://static.bmdstatic.com/gk/fonts/ikaicons/ikaicons.eot?8ipg14#iefix') format('embedded-opentype'),
+          url('https://static.bmdstatic.com/gk/fonts/ikaicons/ikaicons.ttf?8ipg14') format('truetype'),
+          url('https://static.bmdstatic.com/gk/fonts/ikaicons/ikaicons.woff?8ipg14') format('woff'),
+          url('https://static.bmdstatic.com/gk/fonts/ikaicons/ikaicons.svg?8ipg14#ikaicons') format('svg');
         font-weight: normal;
         font-style: normal;
         font-display: block;
       }
-      [class^='icon-'],
-      [class*=' icon-'] {
+    
+      i {
         /* use !important to prevent issues with browser extensions that change fonts */
-        font-family: 'ika-icons' !important;
+        font-family: 'ikaicons' !important;
         speak: never;
         font-style: normal;
         font-weight: normal;
         font-variant: normal;
         text-transform: none;
         line-height: 1;
+      
         /* Better Font Rendering =========== */
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
-      `}
+    `}
   />
 );
 

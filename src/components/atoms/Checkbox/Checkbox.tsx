@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Icon from '../Icon';
 import { Check, CheckboxStyled, Label, WrapperCheck } from './Checkbox.styles';
 import { ICheckbox } from './Checkbox.types';
 
-const Checkbox: React.FC<ICheckbox> = ({
+const Checkbox: FC<ICheckbox> = ({
   value = '',
   isChecked = false,
   name,

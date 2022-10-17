@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Wrapper } from './Textarea.styles';
 import { ITextarea } from './Textarea.types';
 
-const Textarea: React.FC<ITextarea> = ({
+const Textarea: FC<ITextarea> = ({
   onChange,
   onBlur,
   isInvalid,

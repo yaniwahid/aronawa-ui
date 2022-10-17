@@ -14,6 +14,9 @@ export default {
       table: {
         type: { summary: 'text' },
       },
+      control: {
+        type: 'text',
+      },
     },
     size: {
       name: 'size',
@@ -22,6 +25,9 @@ export default {
       table: {
         type: { summary: 'number' },
         defaultValue: { summary: 14 },
+      },
+      control: {
+        type: 'number',
       },
     },
     color: {

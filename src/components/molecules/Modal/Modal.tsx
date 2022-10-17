@@ -27,6 +27,8 @@ const Modal: FC<IModal> = ({
 }) => {
   const classSize = `aronawa-modal-${size}`;
   const classVariant = `aronawa-modal-${variant}`;
+  const classTitle = !title ? `aronawa-modal-no-title` : '';
+  const classFooter = isNoFooter ? `aronawa-modal-no-footer` : '';
   return (
     <>
       <Global styles={ModalStyled} />
@@ -37,29 +39,32 @@ const Modal: FC<IModal> = ({
         onClose={onClose}
         title={title}
         closeIcon={<Icon name="times" size={24} color="#7c8187" />}
+        closable={Boolean(title)}
         prefixCls="aronawa-modal"
-        className={`${classSize} ${classVariant}`}
+        className={`${classSize} ${classVariant} ${classTitle} ${classFooter}`}
         footer={
-          <>
-            <Button
-              onClick={onClose}
-              color={cancelColor}
-              variant={cancelVariant}
-              isDisabled={isDisabled}
-            >
-              {cancelText}
-            </Button>
-            <Button
-              color={okColor}
-              ml="2"
-              onClick={onOk}
-              isDisabled={isDisabled}
-              isLoading={isLoading}
-              variant={okVariant}
-            >
-              {okText}
-            </Button>
-          </>
+          isNoFooter ? null : (
+            <>
+              <Button
+                onClick={onClose}
+                color={cancelColor}
+                variant={cancelVariant}
+                isDisabled={isDisabled}
+              >
+                {cancelText}
+              </Button>
+              <Button
+                color={okColor}
+                ml="2"
+                onClick={onOk}
+                isDisabled={isDisabled}
+                isLoading={isLoading}
+                variant={okVariant}
+              >
+                {okText}
+              </Button>
+            </>
+          )
         }
         {...props}
       >
