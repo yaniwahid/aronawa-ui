@@ -1,32 +1,14 @@
-import { Heading, Text } from '@chakra-ui/react';
+import React from 'react';
+import Box from '../components/atoms/Box';
 
-export const ComponentName = ({ children }) => (
-  <Heading fontSize="6xl" mb="8" fontWeight="normal" borderBottom="1px " pb="4">
+export const ComponentName = ({ children }: any) => (
+  <Box fontSize="48px" mb="8" fontWeight="bold" borderBottom="1px solid #e3e5e8" pb="4">
     {children}
-  </Heading>
+  </Box>
 );
 
-export const Title = ({ children }) => (
-  <Heading
-    as="h3"
-    fontSize="sm"
-    textTransform="uppercase"
-    mb="1"
-    color="blue.500"
-    letterSpacing="1px"
-  >
+export const SectionName = ({ children }: any) => (
+  <Box fontSize="24px" mt="72px" mb="6" fontWeight="bold">
     {children}
-  </Heading>
-);
-
-export const SectionName = ({ children }) => (
-  <Heading as="h2" fontSize="3xl" mt="16" mb="6" fontWeight="semibold">
-    {children}
-  </Heading>
-);
-
-export const Paragraph = ({ children }) => (
-  <Text mb="4" fontSize="md">
-    {children}
-  </Text>
+  </Box>
 );

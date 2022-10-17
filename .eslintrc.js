@@ -1,32 +1,23 @@
 module.exports = {
-  parser: '@babel/eslint-parser',
-  extends: [
-    'eslint:recommended',
-    'plugin:jsx-a11y/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:react/recommended',
-    'prettier',
-  ],
   env: {
     browser: true,
-    node: true,
-    jest: true,
     es6: true,
   },
+  extends: ['airbnb', 'airbnb-typescript'],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-    requireConfigFile: false,
     ecmaFeatures: {
       jsx: true,
     },
+    ecmaVersion: 2018,
+    sourceType: 'module',
   },
+  plugins: ['react', '@typescript-eslint', '@emotion/eslint-plugin'],
   rules: {
-    'react/prop-types': 0,
-  },
-  settings: {
-    react: {
-      version: '16.3',
-    },
-  },
+    '@emotion/pkg-renaming': 'error'
+  }
 };

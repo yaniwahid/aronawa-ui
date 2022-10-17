@@ -1,78 +1,40 @@
 import { DocsContainer } from '@storybook/addon-docs';
-import { ThemeProvider } from '../src/index';
-import {
-  ColorPalette,
-  ColorPalettes,
-  ColorWrapper,
-} from '../src/documentation/Colors/Colors';
-import {
-  ComponentName,
-  SectionName,
-  Title,
-  Paragraph,
-} from '../src/documentation/Text';
-import {
-  IconDoc,
-  IconDocs,
-  IconDocWrapper,
-} from '../src/documentation/Icon/Icon';
-import { Typography } from '../src/documentation/Typography/Typography';
-import { RoundCorners } from '../src/documentation/RoundCorners/RoundCorners';
-import {
-  Code,
-  Grid,
-  Box,
-  Text,
-  HStack,
-  VStack,
-  StackDivider,
-  Heading,
-  Alert,
-  Flex,
-} from '@chakra-ui/react';
+import { Box } from '../src/components/atoms/Box';
+import { ColorDoc, ColorDocWrapper } from '../src/documentation/Color/Color';
+import { IconDoc, IconDocs, IconDocWrapper } from '../src/documentation/Icon/Icon';
+import { RadiusDoc, RadiusDocWrapper } from '../src/documentation/Radius/Radius';
+import { ShadowDoc, ShadowDocWrapper } from '../src/documentation/Shadow/Shadow';
+import { ComponentName, SectionName } from '../src/documentation/Text';
+import { Theme } from '../src/helpers/Theme';
 
 export const parameters = {
   controls: { expanded: true },
   options: {
+    panelPosition: 'bottom',
+    showSearchBox: true,
     storySort: {
       method: 'alphabetical',
-      order: [
-        'Overview',
-        ['Introduction', 'Get Started'],
-        'Foundations',
-        'Components',
-      ],
+      order: ['Foundations', 'Atoms', 'Molecules'],
     },
   },
-  actions: { argTypesRegex: '^on[A-Z].*' },
   docs: {
     components: {
       h1: ComponentName,
       h2: SectionName,
-      h3: Title,
-      p: Paragraph,
-      ColorPalette,
-      ColorPalettes,
-      ColorWrapper,
-      Code,
-      Grid,
       Box,
-      Text,
-      HStack,
-      VStack,
-      StackDivider,
-      Heading,
-      Alert,
-      Typography,
       IconDoc,
       IconDocs,
       IconDocWrapper,
-      Flex,
-      RoundCorners,
+      ColorDocWrapper,
+      ColorDoc,
+      ShadowDocWrapper,
+      ShadowDoc,
+      RadiusDocWrapper,
+      RadiusDoc,
     },
     container: ({ children, context }) => (
       <DocsContainer context={context}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <Theme>{children}</Theme>
       </DocsContainer>
     ),
   },
@@ -80,8 +42,8 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider>
+    <Theme>
       <Story />
-    </ThemeProvider>
+    </Theme>
   ),
 ];
