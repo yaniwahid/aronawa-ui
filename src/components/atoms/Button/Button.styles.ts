@@ -218,6 +218,20 @@ export const ButtonStyled = styled.button<IButton>(
         ...cssTmp,
         ...Ghost(color),
       };
+    } else if (variant === 'link') {
+      cssTmp = {
+        ...cssTmp,
+        ...Ghost(color),
+        padding: 0,
+        height: 'auto',
+        textTransform: 'uppercase',
+        fontWeight: 700,
+        fontSize: 12,
+        letterSpacing: '0.2px',
+        '&:hover': {
+          backgroundColor: Color.light,
+        },
+      };
     } else {
       cssTmp = {
         ...cssTmp,

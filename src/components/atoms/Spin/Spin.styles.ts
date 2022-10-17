@@ -26,8 +26,6 @@ export const SpinContent = styled.div<ISpin>(({ isLoading }) => ({
   }),
 }));
 
-
-
 const loader = keyframes({
   from: {
     transform: 'translateY(-50%) rotate(0deg)',

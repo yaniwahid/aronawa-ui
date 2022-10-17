@@ -19,16 +19,6 @@ export default {
         type: 'boolean',
       },
     },
-    iconUrl: {
-      name: 'iconUrl',
-      description: 'Use the iconUrl prop to change the iconUrl of the Preview',
-      table: {
-        type: { summary: 'string' },
-      },
-      control: {
-        type: 'text',
-      },
-    },
     imageUrl: {
       name: 'imageUrl',
       description: 'Use the imageUrl prop to change the imageUrl of the Preview',
@@ -63,13 +53,13 @@ export default {
         type: 'text',
       },
     },
-    iconSize: {
-      name: 'iconSize',
-      defaultValue: '64px',
-      description: 'Use the iconSize prop to change the iconSize of the Preview',
+    imageSize: {
+      name: 'imageSize',
+      defaultValue: '100%',
+      description: 'Use the imageSize prop to change the imageSize of the Preview',
       table: {
         type: { summary: 'string' },
-        defaultValue: { summary: '64px' },
+        defaultValue: { summary: '100%' },
       },
       control: {
         type: 'text',
@@ -84,9 +74,11 @@ export const WithImage = (args: IPreview) => <Preview {...args} />;
 WithImage.args = {
   imageUrl: 'https://static.bmdstatic.com/st/home/eaac05-BTS-Serba-10.-Full-Banner.jpg',
   boxWidth: '240px',
+  boxHeight: '240px',
 };
 
 export const WithIcon = (args: IPreview) => <Preview {...args} />;
 WithIcon.args = {
-  iconUrl: 'https://static.bmdstatic.com/st/home/9e15b3-DIGITAL-PRODUCT.png',
+  imageUrl: 'https://static.bmdstatic.com/st/home/9e15b3-DIGITAL-PRODUCT.png',
+  imageSize: '64px',
 };

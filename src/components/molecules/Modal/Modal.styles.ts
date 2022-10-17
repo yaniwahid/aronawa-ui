@@ -54,7 +54,7 @@ export const ModalStyled = css`
     padding: 16px;
     border-radius: 5px 5px 0 0;
     background: #fff;
-    padding-right:48px;
+    padding-right: 48px;
   }
   .aronawa-modal-default .aronawa-modal-header {
     border-bottom: 1px solid #e3e5e8;
@@ -70,15 +70,15 @@ export const ModalStyled = css`
     overflow: auto;
     max-height: calc(100vh - 56px - 64px - 32px);
   }
-  .aronawa-modal-no-title .aronawa-modal-body { 
+  .aronawa-modal-no-title .aronawa-modal-body {
     padding-top: 16px;
     max-height: calc(100vh - 64px - 32px);
   }
-  .aronawa-modal-no-footer .aronawa-modal-body { 
+  .aronawa-modal-no-footer .aronawa-modal-body {
     padding-bottom: 16px;
     max-height: calc(100vh - 56px - 32px);
   }
-  .aronawa-modal-no-title.aronawa-modal-no-footer .aronawa-modal-body { 
+  .aronawa-modal-no-title.aronawa-modal-no-footer .aronawa-modal-body {
     padding-bottom: 16px;
     padding-top: 16px;
     max-height: calc(100vh - 32px);
@@ -147,15 +147,15 @@ export const ModalStyled = css`
     .aronawa-modal-body {
       max-height: calc(100vh - 56px - 64px - 64px);
     }
-    .aronawa-modal-no-title .aronawa-modal-body { 
+    .aronawa-modal-no-title .aronawa-modal-body {
       padding-top: 16px;
       max-height: calc(100vh - 64px - 64px);
     }
-    .aronawa-modal-no-footer .aronawa-modal-body { 
+    .aronawa-modal-no-footer .aronawa-modal-body {
       padding-bottom: 16px;
       max-height: calc(100vh - 56px - 64px);
     }
-    .aronawa-modal-no-title.aronawa-modal-no-footer .aronawa-modal-body { 
+    .aronawa-modal-no-title.aronawa-modal-no-footer .aronawa-modal-body {
       padding-bottom: 16px;
       padding-top: 16px;
       max-height: calc(100vh - 64px);
@@ -214,4 +214,3 @@ export const ModalStyled = css`
     }
   }
 `;
-

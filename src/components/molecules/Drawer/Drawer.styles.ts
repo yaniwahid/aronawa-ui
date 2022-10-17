@@ -47,13 +47,17 @@ export const DrawerStyled = css`
     pointer-events: auto;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.06), 0px 8px 12px rgba(0, 0, 0, 0.16);
   }
-  .mask-motion-enter-active, .mask-motion-appear-active, .mask-motion-leave-active {
+  .mask-motion-enter-active,
+  .mask-motion-appear-active,
+  .mask-motion-leave-active {
     transition: all 0.3s;
   }
-  .mask-motion-enter, .mask-motion-appear {
+  .mask-motion-enter,
+  .mask-motion-appear {
     opacity: 0;
   }
-  .mask-motion-enter-active, .mask-motion-appear-active {
+  .mask-motion-enter-active,
+  .mask-motion-appear-active {
     opacity: 1;
   }
   .mask-motion-leave {
@@ -62,16 +66,22 @@ export const DrawerStyled = css`
   .mask-motion-leave-active {
     opacity: 0;
   }
-  .panel-motion-left-enter-start, .panel-motion-left-appear-start, .panel-motion-left-leave-start {
+  .panel-motion-left-enter-start,
+  .panel-motion-left-appear-start,
+  .panel-motion-left-leave-start {
     transition: none !important;
   }
-  .panel-motion-left-enter-active, .panel-motion-left-appear-active, .panel-motion-left-leave-active {
+  .panel-motion-left-enter-active,
+  .panel-motion-left-appear-active,
+  .panel-motion-left-leave-active {
     transition: all 0.3s;
   }
-  .panel-motion-left-enter, .panel-motion-left-appear {
+  .panel-motion-left-enter,
+  .panel-motion-left-appear {
     transform: translateX(-100%);
   }
-  .panel-motion-left-enter-active, .panel-motion-left-appear-active {
+  .panel-motion-left-enter-active,
+  .panel-motion-left-appear-active {
     transform: translateX(0);
   }
   .panel-motion-left-leave {
@@ -80,16 +90,22 @@ export const DrawerStyled = css`
   .panel-motion-left-leave-active {
     transform: translateX(-100%) !important;
   }
-  .panel-motion-right-enter-start, .panel-motion-right-appear-start, .panel-motion-right-leave-start {
+  .panel-motion-right-enter-start,
+  .panel-motion-right-appear-start,
+  .panel-motion-right-leave-start {
     transition: none !important;
   }
-  .panel-motion-right-enter-active, .panel-motion-right-appear-active, .panel-motion-right-leave-active {
+  .panel-motion-right-enter-active,
+  .panel-motion-right-appear-active,
+  .panel-motion-right-leave-active {
     transition: all 0.3s;
   }
-  .panel-motion-right-enter, .panel-motion-right-appear {
+  .panel-motion-right-enter,
+  .panel-motion-right-appear {
     transform: translateX(100%);
   }
-  .panel-motion-right-enter-active, .panel-motion-right-appear-active {
+  .panel-motion-right-enter-active,
+  .panel-motion-right-appear-active {
     transform: translateX(0);
   }
   .panel-motion-right-leave {
@@ -98,17 +114,17 @@ export const DrawerStyled = css`
   .panel-motion-right-leave-active {
     transform: translateX(100%) !important;
   }
-  .aronawa-drawer-no-title .aronawa-drawer-body { 
+  .aronawa-drawer-no-title .aronawa-drawer-body {
     padding-top: 16px;
     max-height: calc(100vh - 64px);
     height: calc(100vh - 64px);
   }
-  .aronawa-drawer-no-footer .aronawa-drawer-body { 
+  .aronawa-drawer-no-footer .aronawa-drawer-body {
     padding-bottom: 16px;
     max-height: calc(100vh - 56px);
     height: calc(100vh - 56px);
   }
-  .aronawa-drawer-no-title.aronawa-drawer-no-footer .aronawa-drawer-body { 
+  .aronawa-drawer-no-title.aronawa-drawer-no-footer .aronawa-drawer-body {
     padding-bottom: 16px;
     padding-top: 16px;
     max-height: 100vh;
@@ -127,10 +143,10 @@ export const DrawerHeaderStyled = styled.div<IDrawer>(({ isCloseLeft }) => ({
   padding: 16,
   paddingRight: 48,
   background: Color.light,
-  ...isCloseLeft && {
+  ...(isCloseLeft && {
     paddingRight: 16,
     paddingLeft: 48,
-  }
+  }),
 }));
 
 export const Title = styled.div({
@@ -141,9 +157,9 @@ export const Title = styled.div({
 
 export const DrawerFooterStyled = styled.div({
   padding: 16,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-end"
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'flex-end',
 });
 
 export const Close = styled.div<IDrawer>(({ isCloseLeft }) => ({
@@ -159,10 +175,8 @@ export const Close = styled.div<IDrawer>(({ isCloseLeft }) => ({
   justifyContent: 'center',
   width: 24,
   height: 24,
-  ...isCloseLeft && {
-    right: "auto",
-    left: 16
-  }
+  ...(isCloseLeft && {
+    right: 'auto',
+    left: 16,
+  }),
 }));
-
-

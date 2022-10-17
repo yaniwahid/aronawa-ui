@@ -7,5 +7,5 @@ export interface IBadge extends SpaceProps, React.HTMLAttributes<HTMLDivElement>
   color?: TColorBadge;
   variant?: TVariantBadge;
   isClosable?: boolean;
-  onClose?: () => void;
+  onClose?: (e: any) => void;
 }

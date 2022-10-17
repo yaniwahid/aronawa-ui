@@ -2,6 +2,9 @@ import { DocsContainer } from '@storybook/addon-docs';
 import { Box } from '../src/components/atoms/Box';
 import { ColorDoc, ColorDocWrapper } from '../src/documentation/Color/Color';
 import { IconDoc, IconDocs, IconDocWrapper } from '../src/documentation/Icon/Icon';
+import { RadiusDoc, RadiusDocWrapper } from '../src/documentation/Radius/Radius';
+import { ShadowDoc, ShadowDocWrapper } from '../src/documentation/Shadow/Shadow';
+import { ComponentName, SectionName } from '../src/documentation/Text';
 import { Theme } from '../src/helpers/Theme';
 
 export const parameters = {
@@ -16,12 +19,18 @@ export const parameters = {
   },
   docs: {
     components: {
+      h1: ComponentName,
+      h2: SectionName,
       Box,
       IconDoc,
       IconDocs,
       IconDocWrapper,
       ColorDocWrapper,
       ColorDoc,
+      ShadowDocWrapper,
+      ShadowDoc,
+      RadiusDocWrapper,
+      RadiusDoc,
     },
     container: ({ children, context }) => (
       <DocsContainer context={context}>

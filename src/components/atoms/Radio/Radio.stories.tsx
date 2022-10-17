@@ -1,7 +1,7 @@
 import { ComponentMeta } from '@storybook/react';
 import React from 'react';
 import Radio from './Radio';
-import { IRadio } from './Radio.types';
+import { IRadio, TVariantRadio } from './Radio.types';
 
 const options = [
   {
@@ -11,6 +11,10 @@ const options = [
   {
     label: 'Radio 2',
     value: 'Radio 2',
+  },
+  {
+    label: 'Radio 3',
+    value: 'Radio 3',
   },
 ];
 
@@ -50,18 +54,6 @@ export default {
         type: 'boolean',
       },
     },
-    isSolid: {
-      name: 'isSolid',
-      defaultValue: false,
-      description: 'Use the isSolid prop to change the isSolid of the Radio',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
-      control: {
-        type: 'boolean',
-      },
-    },
     isInvalid: {
       name: 'isInvalid',
       defaultValue: false,
@@ -93,16 +85,37 @@ export default {
         type: 'text',
       },
     },
+    variant: {
+      name: 'variant',
+      defaultValue: 'default',
+      description: 'Use the variant prop to change the variant of the Radio',
+      table: {
+        type: { summary: 'default | solid | button' },
+        defaultValue: { summary: 'default' },
+      },
+      control: {
+        type: 'radio',
+        options: ['default', 'solid', 'button'],
+      },
+    },
   },
 } as ComponentMeta<typeof Radio>;
+
+const VariantType = ['default', 'solid', 'button'] as any;
 
 export const Basic = (args: IRadio) => <Radio {...args} />;
 Basic.args = {
   data: options,
 };
 
-export const Solid = (args: IRadio) => <Radio {...args} />;
-Solid.args = {
-  isSolid: true,
+export const Variant = (args: IRadio) => (
+  <div className="vstack">
+    {VariantType.map((e: TVariantRadio, index: number) => (
+      <Radio {...args} variant={e} key={index} />
+    ))}
+  </div>
+);
+
+Variant.args = {
   data: options,
 };

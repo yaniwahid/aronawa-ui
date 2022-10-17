@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
+import Shadow from '../../../themes/Shadow';
 import { IStyle } from './Radio.types';
 
 const backroundProps = ({ isChecked, isDisabled, isInvalid }: IStyle) => ({
@@ -10,6 +11,12 @@ const backroundProps = ({ isChecked, isDisabled, isInvalid }: IStyle) => ({
   background: Color.light,
 });
 
+const backroundButtonProps = ({ isChecked, isDisabled, isInvalid }: IStyle) => ({
+  ...(isChecked && { background: Color.primary.default }),
+  ...(isDisabled && { background: Color.slate[200] }),
+  ...(isInvalid && { background: Color.danger.default }),
+});
+
 const borderColorProps = (isChecked: boolean, isInvalid: boolean) => {
   if (isChecked) {
     return `1px solid ${Color.primary.default}`;
@@ -17,26 +24,30 @@ const borderColorProps = (isChecked: boolean, isInvalid: boolean) => {
   return isInvalid ? `1px solid ${Color.danger.default}` : `1px solid ${Color.slate[500]}`;
 };
 
-const colorProps = (
-  isDisabled: boolean,
-  isChecked: boolean,
-  isInvalid: boolean,
-  isSolid: boolean,
-) => {
+const colorProps = (isDisabled: boolean, isChecked: boolean, isInvalid: boolean) => {
   if (isDisabled) {
     return Color.font.pencil;
-  } else if (isChecked && isSolid) {
+  } else if (isChecked) {
     return Color.primary.default;
-  } else if (isInvalid && isSolid) {
+  } else if (isInvalid) {
     return Color.danger.default;
+  } else {
+    return undefined;
+  }
+};
+const colorButtonProps = (isDisabled: boolean, isChecked: boolean, isInvalid: boolean) => {
+  if (isDisabled) {
+    return Color.font.pencil;
+  } else if (isChecked || isInvalid) {
+    return Color.light;
   } else {
     return undefined;
   }
 };
 
 export const OptionStyled = styled.label<IStyle>(
-  ({ isSolid }) => ({
-    display: isSolid ? 'inline-flex' : 'flex',
+  ({ variant }) => ({
+    display: variant !== 'default' ? 'inline-flex' : 'flex',
     alignItems: 'center',
     position: 'relative',
     fontSize: 14,
@@ -53,9 +64,9 @@ export const OptionStyled = styled.label<IStyle>(
       margin: 0,
     },
   }),
-  ({ isDisabled = false, isSolid = false, isChecked = false, isInvalid = false }) => {
+  ({ isDisabled = false, variant = 'default', isChecked = false, isInvalid = false }) => {
     let cssTmp: object = {};
-    if (isSolid) {
+    if (variant === 'solid') {
       cssTmp = {
         ...cssTmp,
         height: 32,
@@ -69,10 +80,27 @@ export const OptionStyled = styled.label<IStyle>(
           display: 'none',
         },
       };
+    } else if (variant === 'button') {
+      cssTmp = {
+        ...cssTmp,
+        height: 32,
+        paddingLeft: 8,
+        alignItems: 'center',
+        paddingRight: 8,
+        backgroundColor: Color.neutral.default,
+        ...backroundButtonProps({ isChecked, isDisabled, isInvalid }),
+        boxShadow: Shadow.platform,
+        '& > span:first-of-type': {
+          display: 'none',
+        },
+      };
     }
     cssTmp = {
       ...cssTmp,
-      color: colorProps(isDisabled, isChecked, isInvalid, isSolid),
+      color:
+        variant === 'button'
+          ? colorButtonProps(isDisabled, isChecked, isInvalid)
+          : colorProps(isDisabled, isChecked, isInvalid),
       cursor: 'pointer',
       input: {
         cursor: 'pointer',
@@ -98,9 +126,9 @@ export const WrapperCheck = styled.span({
   position: 'relative',
 });
 
-export const Label = styled.span<IStyle>(({ isSolid }) => ({
+export const Label = styled.span<IStyle>(({ variant }) => ({
   paddingLeft: 8,
-  ...(isSolid && {
+  ...(variant !== 'default' && {
     paddingRight: 8,
   }),
 }));
@@ -167,10 +195,23 @@ export const Check = styled.div<IStyle>(({ isChecked, isInvalid, isDisabled }) =
   return { ...cssTmp };
 });
 
-export const RadioStyled = styled.div<IStyle>(({ isSolid }) => ({
+export const RadioStyled = styled.div<IStyle>(({ variant }) => ({
   display: 'flex',
   alignItems: 'center',
   '& > * + *': {
-    marginLeft: isSolid ? 8 : 16,
+    marginLeft: variant === 'solid' ? 8 : 16,
   },
+  ...(variant === 'button' && {
+    '& > *:first-of-type': {
+      borderTopLeftRadius: Radius.blunt,
+      borderBottomLeftRadius: Radius.blunt,
+    },
+    '& > *:last-of-type': {
+      borderTopRightRadius: Radius.blunt,
+      borderBottomRightRadius: Radius.blunt,
+    },
+    '& > * + *': {
+      marginLeft: 0,
+    },
+  }),
 }));

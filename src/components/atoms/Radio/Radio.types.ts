@@ -1,5 +1,6 @@
 import { InputHTMLAttributes, ReactNode } from 'react';
 
+export type TVariantRadio = 'default' | 'solid' | 'button';
 export interface IRadioData {
   label?: ReactNode;
   value: string;
@@ -11,7 +12,7 @@ export interface IRadio extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onC
   value?: string;
   isInvalid?: boolean;
   isDisabled?: boolean;
-  isSolid?: boolean;
+  variant?: TVariantRadio;
   data: IRadioData[];
   onChange?: (data: string | null) => void;
   teid?: string;
@@ -21,5 +22,5 @@ export interface IStyle {
   isChecked?: boolean;
   isInvalid?: boolean;
   isDisabled?: boolean;
-  isSolid?: boolean;
+  variant?: TVariantRadio;
 }

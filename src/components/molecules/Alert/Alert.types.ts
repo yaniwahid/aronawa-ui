@@ -7,6 +7,6 @@ export interface IAlert extends SpaceProps, React.HTMLAttributes<HTMLDivElement>
   title?: string;
   isClosable?: boolean;
   icon?: string;
-  onClose?: () => void;
+  onClose?: (e: any) => void;
   teid?: string;
 }

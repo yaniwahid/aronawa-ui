@@ -9,7 +9,7 @@ const Radio: FC<IRadio> = ({
   onChange,
   isInvalid,
   isDisabled,
-  isSolid,
+  variant = 'default',
   teid = 'radio',
   ...props
 }) => {
@@ -34,7 +34,7 @@ const Radio: FC<IRadio> = ({
       key={index}
       data-testid={`${teid}-${index}`}
       isDisabled={isDisabled || item.isDisabled}
-      isSolid={isSolid}
+      variant={variant}
       isChecked={item.value === checked}
       isInvalid={isInvalid}
     >
@@ -50,12 +50,12 @@ const Radio: FC<IRadio> = ({
       <WrapperCheck>
         <Check isChecked={item.value === checked} isInvalid={isInvalid} isDisabled={isDisabled} />
       </WrapperCheck>
-      {Boolean(item.label) && <Label isSolid={isSolid}>{item.label}</Label>}
+      {Boolean(item.label) && <Label variant={variant}>{item.label}</Label>}
     </OptionStyled>
   ));
 
   return (
-    <RadioStyled isSolid={isSolid} {...props}>
+    <RadioStyled variant={variant} {...props}>
       {options}
     </RadioStyled>
   );

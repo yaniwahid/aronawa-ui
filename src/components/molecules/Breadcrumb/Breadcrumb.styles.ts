@@ -2,18 +2,21 @@ import styled from '@emotion/styled';
 import { space } from 'styled-system';
 import Color from '../../../themes/Color';
 
-export const BreadcrumbStyled = styled.div({
-  display: 'flex',
-  alignItems: "center",
-  fontSize: 14,
-  "& > * + *": {
-    marginLeft: 8
-  }
-}, space);
+export const BreadcrumbStyled = styled.div(
+  {
+    display: 'flex',
+    alignItems: 'center',
+    fontSize: 14,
+    '& > * + *': {
+      marginLeft: 8,
+    },
+  },
+  space,
+);
 
 export const BreadcrumbItemStyled = styled.div({
-  display: "flex",
-  alignItems: "center",
+  display: 'flex',
+  alignItems: 'center',
   '&:not(:first-of-type):before': {
     fontFamily: 'ikaicons',
     content: '"\\e919"',

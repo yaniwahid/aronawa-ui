@@ -1,25 +1,21 @@
 import { ComponentMeta } from '@storybook/react';
 import React from 'react';
+import Preview from '../Preview';
 import Upload from './Upload';
 import { IUpload } from './Upload.types';
 
 export default {
   title: 'Atoms/Upload',
   component: Upload,
-  argTypes: {
-    isButton: {
-      name: 'isButton',
-      defaultValue: false,
-      description: 'Use the isButton prop to change the isButton of the Upload',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
-      control: {
-        type: 'boolean',
-      },
-    },
-  },
 } as ComponentMeta<typeof Upload>;
 
-export const Basic = (args: IUpload) => <Upload {...args} />;
+export const Basic = (args: IUpload) => <Upload {...args} isButton />;
+
+export const WithPreview = (args: IUpload) => (
+  <Upload {...args} isButton>
+    <Preview
+      imageUrl="https://static.bmdstatic.com/st/home/eaac05-BTS-Serba-10.-Full-Banner.jpg"
+      isClearable
+    />
+  </Upload>
+);

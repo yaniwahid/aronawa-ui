@@ -216,12 +216,8 @@ export const DatepickerStyled = css`
     left: 50%;
     transform: translateX(-50%);
   }
-  .aronawa-picker-week-panel
-    .aronawa-picker-cell:hover
-    > .aronawa-picker-cell-inner,
-  .aronawa-picker-week-panel
-    .aronawa-picker-cell-selected
-    > .aronawa-picker-cell-inner {
+  .aronawa-picker-week-panel .aronawa-picker-cell:hover > .aronawa-picker-cell-inner,
+  .aronawa-picker-week-panel .aronawa-picker-cell-selected > .aronawa-picker-cell-inner {
     background: transparent;
   }
   .aronawa-picker-date-panel .aronawa-picker-cell-inner {
@@ -269,9 +265,7 @@ export const DatepickerStyled = css`
     font-size: 14px;
     border-radius: 25px;
   }
-  .aronawa-picker-time-panel-column
-    > li
-    .aronawa-picker-time-panel-cell-inner:hover {
+  .aronawa-picker-time-panel-column > li .aronawa-picker-time-panel-cell-inner:hover {
     background: #225db2;
     color: #fff;
   }
@@ -351,7 +345,7 @@ export const DatepickerStyled = css`
     left: 4px;
   }
   .aronawa-picker-clear-btn::after {
-    content: "×";
+    content: '×';
   }
   .aronawa-picker-dropdown {
     position: absolute;
@@ -361,7 +355,8 @@ export const DatepickerStyled = css`
   .aronawa-picker-dropdown-range {
     padding-top: 8px;
   }
-  .aronawa-picker-range-wrapper, .aronawa-picker-panel-container {
+  .aronawa-picker-range-wrapper,
+  .aronawa-picker-panel-container {
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.12);
     border-radius: 5px;
   }
@@ -387,8 +382,7 @@ export const DatepickerStyled = css`
     margin-left: 10px;
     transition: all 0.3s;
   }
-  .aronawa-picker-dropdown-rtl.aronawa-picker-dropdown
-    .aronawa-picker-range-arrow {
+  .aronawa-picker-dropdown-rtl.aronawa-picker-dropdown .aronawa-picker-range-arrow {
     right: 10px;
     left: auto;
     margin-left: 0;
@@ -396,17 +390,15 @@ export const DatepickerStyled = css`
   }
   .aronawa-picker-dropdown .aronawa-picker-range-arrow::before,
   .aronawa-picker-dropdown .aronawa-picker-range-arrow::after {
-    content: "";
+    content: '';
     position: absolute;
     box-sizing: border-box;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  .aronawa-picker-dropdown-rtl.aronawa-picker-dropdown
-    .aronawa-picker-range-arrow::before,
-  .aronawa-picker-dropdown-rtl.aronawa-picker-dropdown
-    .aronawa-picker-range-arrow::after {
+  .aronawa-picker-dropdown-rtl.aronawa-picker-dropdown .aronawa-picker-range-arrow::before,
+  .aronawa-picker-dropdown-rtl.aronawa-picker-dropdown .aronawa-picker-range-arrow::after {
     right: 50%;
     left: auto;
     transform: translate(50%, -50%);
@@ -433,10 +425,7 @@ export const DatepickerStyled = css`
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .aronawa-picker-range
-    .aronawa-picker-range-separator
-    + .aronawa-picker-input
-    input {
+  .aronawa-picker-range .aronawa-picker-range-separator + .aronawa-picker-input input {
     border-left: 0;
     padding-left: 16px !important;
     border-top-left-radius: 0;
@@ -479,16 +468,14 @@ export const DatepickerStyled = css`
     vertical-align: top;
     transition: margin 0.3s;
   }
-
 `;
 
 export const DatepickerWrapper = styled.div({
-  position: "relative",
+  position: 'relative',
 });
 
 export const DatepickerIcon = styled.div({
-  position: "absolute",
-  top: "50%",
-  transform: "translateY(-50%)",
-}
-);
+  position: 'absolute',
+  top: '50%',
+  transform: 'translateY(-50%)',
+});

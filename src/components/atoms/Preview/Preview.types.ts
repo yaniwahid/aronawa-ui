@@ -1,11 +1,10 @@
 import { SpaceProps } from 'styled-system';
 
 export interface IPreview extends SpaceProps {
-  iconUrl?: string;
   imageUrl?: string;
   isClearable?: boolean;
-  onClear?: () => void;
-  iconSize?: string;
+  onClear?: (e: any) => void;
+  imageSize?: string;
   boxWidth?: string;
   boxHeight?: string;
 }
