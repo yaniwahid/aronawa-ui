@@ -1,11 +1,11 @@
 import { ComponentMeta } from '@storybook/react';
 import React from 'react';
-import ColorPicker from './ColorPicker';
-import { IColorPicker } from './ColorPicker.types';
+import Colorpicker from './Colorpicker';
+import { IColorpicker } from './Colorpicker.types';
 
 export default {
   title: 'Atoms/Color Picker',
-  component: ColorPicker,
+  component: Colorpicker,
   argTypes: {
     color: {
       name: 'color',
@@ -17,6 +17,6 @@ export default {
       control: { type: 'color' },
     },
   },
-} as ComponentMeta<typeof ColorPicker>;
+} as ComponentMeta<typeof Colorpicker>;
 
-export const Basic = (args: IColorPicker) => <ColorPicker {...args} />;
+export const Basic = (args: IColorpicker) => <Colorpicker {...args} />;

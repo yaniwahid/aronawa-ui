@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
-import { IColorPicker } from './ColorPicker.types';
+import { IColorpicker } from './Colorpicker.types';
 
-export const ColorPickerStyled = styled.div({
+export const ColorpickerStyled = styled.div({
   '& .sketch-picker': {
     border: '0 !important',
     boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.12) !important',
@@ -12,7 +12,7 @@ export const ColorPickerStyled = styled.div({
   },
 });
 
-export const ColorPickerInput = styled.div({
+export const ColorpickerInput = styled.div({
   position: 'relative',
   width: '100%',
   backgroundColor: Color.light,
@@ -36,7 +36,7 @@ export const ColorPickerInput = styled.div({
   },
 });
 
-export const ColorPickerBackground = styled.div<IColorPicker>(({ color }) => ({
+export const ColorpickerBackground = styled.div<IColorpicker>(({ color }) => ({
   width: '100%',
   height: '100%',
   borderRadius: Radius.blunt,
@@ -44,12 +44,12 @@ export const ColorPickerBackground = styled.div<IColorPicker>(({ color }) => ({
   border: `2px solid ${Color.slate[200]}`,
 }));
 
-export const ColorPickerPopover = styled.div({
+export const ColorpickerPopover = styled.div({
   position: 'absolute',
   zIndex: '2',
 });
 
-export const ColorPickerCover = styled.div({
+export const ColorpickerCover = styled.div({
   position: 'fixed',
   top: '0px',
   right: '0px',
