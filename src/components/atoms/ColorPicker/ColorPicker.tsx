@@ -1,31 +1,31 @@
 import React, { FC, useState } from 'react';
 import { SketchPicker } from 'react-color';
 import {
-  ColorPickerBackground,
-  ColorPickerCover,
-  ColorPickerInput,
-  ColorPickerPopover,
-  ColorPickerStyled,
-} from './ColorPicker.styles';
-import { IColorPicker } from './ColorPicker.types';
+  ColorpickerBackground,
+  ColorpickerCover,
+  ColorpickerInput,
+  ColorpickerPopover,
+  ColorpickerStyled,
+} from './Colorpicker.styles';
+import { IColorpicker } from './Colorpicker.types';
 
-const ColorPicker: FC<IColorPicker> = ({ color, onChange }) => {
+const Colorpicker: FC<IColorpicker> = ({ color, onChange }) => {
   const [isOpen, setIsOpenn] = useState<boolean>(false);
   const onOpen = () => setIsOpenn(!isOpen);
   const onClose = () => setIsOpenn(false);
   return (
-    <ColorPickerStyled onClick={onOpen}>
-      <ColorPickerInput>
-        <ColorPickerBackground color={color} />
-      </ColorPickerInput>
+    <ColorpickerStyled onClick={onOpen}>
+      <ColorpickerInput>
+        <ColorpickerBackground color={color} />
+      </ColorpickerInput>
       {isOpen ? (
-        <ColorPickerPopover>
-          <ColorPickerCover onClick={onClose} />
+        <ColorpickerPopover>
+          <ColorpickerCover onClick={onClose} />
           <SketchPicker color={color} onChange={onChange} />
-        </ColorPickerPopover>
+        </ColorpickerPopover>
       ) : null}
-    </ColorPickerStyled>
+    </ColorpickerStyled>
   );
 };
 
-export default ColorPicker;
+export default Colorpicker;

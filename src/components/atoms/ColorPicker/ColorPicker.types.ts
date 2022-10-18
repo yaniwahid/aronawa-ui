@@ -1,6 +1,6 @@
 import { ColorChangeHandler } from 'react-color';
 
-export interface IColorPicker {
+export interface IColorpicker {
   color?: string;
   onChange?: ColorChangeHandler;
 }
