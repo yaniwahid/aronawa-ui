@@ -1,6 +1,6 @@
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
-import { color, space } from 'styled-system';
+import { space } from 'styled-system';
 import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
 import Shadow from '../../../themes/Shadow';
@@ -32,7 +32,6 @@ const Size = {
   },
   xl: {
     fontSize: 16,
-    fontWeight: 600,
     paddingLeft: 32,
     paddingRight: 32,
     height: 48,
@@ -200,6 +199,8 @@ export const ButtonStyled = styled.button<IButton>(
       verticalAlign: 'middle',
       textDecoration: 'none',
       boxSizing: 'border-box',
+      fontWeight: 500,
+      fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
       ...(isDisabled && {
         cursor: 'not-allowed',
       }),
@@ -242,7 +243,6 @@ export const ButtonStyled = styled.button<IButton>(
     return { ...cssTmp };
   },
   space,
-  color,
 );
 
 const loader = keyframes({

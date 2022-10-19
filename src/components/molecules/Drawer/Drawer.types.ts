@@ -20,4 +20,5 @@ export interface IDrawer extends DrawerProps {
   size?: TSizeDrawer;
   isCloseLeft?: boolean;
   isCloseable?: boolean;
+  isMaskBlack?: boolean;
 }

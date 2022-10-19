@@ -12,6 +12,7 @@ export const EmptyStyled = styled.div(
     textAlign: 'center',
     padding: '64px 16px',
     margin: '0 auto',
+    fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
     img: {
       width: 80,
       marginBottom: 16,
@@ -24,6 +25,7 @@ export const EmptyStyled = styled.div(
     },
     p: {
       fontSize: 14,
+      marginTop: 8,
     },
   },
   space,

@@ -7,6 +7,8 @@ export const CollapseStyled = styled.div<ICollapse>({
   backgroundColor: Color.light,
   border: `1px solid ${Color.slate[200]}`,
   borderRadius: Radius.curved,
+
+  fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
   borderBottom: 0,
   '& > div': {
     '& > div:first-of-type': {
@@ -48,6 +50,7 @@ export const Toggle = styled.div<IStyle>(({ isShow, isDisabled }) => ({
     display: 'flex',
     flexGrow: 1,
     alignItems: 'center',
+    fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
     '& > span': {
       marginRight: 4,
     },

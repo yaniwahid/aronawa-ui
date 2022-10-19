@@ -6,6 +6,7 @@ import { IForm, IFormItem } from './Form.types';
 export const FormStyled = styled.form<IForm>(({ layout, formWidth = '200px 386px' }) => {
   let cssTmp: object = {
     position: 'relative',
+    fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
     '& > * + *': {
       marginTop: 16,
     },
@@ -51,6 +52,7 @@ export const FormItemStyled = styled.div<IFormItem>(({ isInvalid, formWidth }) =
 export const Label = styled.div({
   fontWeight: 600,
   display: 'block',
+  fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
 });
 
 export const Extra = styled.span({

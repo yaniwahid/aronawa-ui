@@ -49,6 +49,7 @@ export const InputStyled = styled.div<IInput>(
           height: HEIGHT - 2,
           border: 0,
           width: '1% !important',
+          fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
           '&::placeholder': {
             color: Color.slate[500],
           },
@@ -66,6 +67,7 @@ export const InputStyled = styled.div<IInput>(
           height: HEIGHT,
           border: `1px solid ${isInvalid ? Color.danger.default : Color.slate[500]}`,
           width: '100%',
+          fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
           '&:focus': {
             borderColor: isInvalid ? Color.danger.default : Color.primary.default,
             boxShadow: `0 0 0 2px ${isInvalid ? Color.danger.default : Color.primary.default}33`,
@@ -125,9 +127,10 @@ export const InputAddon = styled.div<IInput>(({ size = 'md', rightAddon }) => ({
   position: 'relative',
   display: 'flex',
   alignItems: 'center',
-  color: Color.slate[800],
+  color: Color.font.ink,
   paddingLeft: paddingProps[size],
   paddingRight: paddingProps[size],
+  fontWeight: 500,
   backgroundColor: Color.slate[100],
   ...fontSizeProps[size],
   ...(rightAddon

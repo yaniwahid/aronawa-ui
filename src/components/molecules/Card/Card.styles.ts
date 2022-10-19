@@ -32,6 +32,7 @@ export const CardStyled = styled.div({
   borderRadius: Radius.dull,
   backgroundColor: Color.light,
   boxShadow: Shadow.hover,
+  fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
 });
 
 export const CardHeaderStyled = styled.div<ICard>(({ size = 'md' }) => ({

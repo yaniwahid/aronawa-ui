@@ -46,6 +46,7 @@ export const Label = styled.label<IStyle>(({ isDisabled }) => ({
   paddingLeft: 24,
   display: 'block',
   cursor: isDisabled ? 'not-allowed' : 'pointer',
+  fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
 }));
 
 export const Check = styled.div<IStyle>(({ isChecked, isInvalid, isDisabled }) => {

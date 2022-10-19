@@ -5,7 +5,7 @@ export { default as Checkbox } from './Checkbox';
 export { default as Colorpicker } from './Colorpicker';
 export { default as Datepicker } from './Datepicker';
 export { default as Daterange } from './Daterange';
-export { default as Dropdown, DropdownItem, DropdownMenu } from './Dropdown';
+export { default as Dropdown, DropdownDivider, DropdownItem, DropdownMenu } from './Dropdown';
 export { Col, Container, Row } from './Grid';
 export { default as Icon } from './Icon';
 export { default as Input } from './Input';
@@ -19,3 +19,4 @@ export { default as Textarea } from './Textarea';
 export { toast, toastBody } from './Toast';
 export { default as Tooltip } from './Tooltip';
 export { default as Upload } from './Upload';
+

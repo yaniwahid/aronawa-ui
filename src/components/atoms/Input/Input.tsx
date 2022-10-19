@@ -24,7 +24,7 @@ const Input: FC<IInput> = ({
   const inputNode = () => {
     if (leftAddon || rightAddon || leftElement || rightElement) {
       return (
-        <InputGroup isInvalid={isInvalid} isDisabled={isDisabled}>
+        <InputGroup isInvalid={isInvalid} isDisabled={isDisabled} className="input-group">
           {leftAddon && <InputAddon size={size}>{leftAddon}</InputAddon>}
           {leftElement && <InputElement size={size}>{leftElement}</InputElement>}
           <input
@@ -68,6 +68,7 @@ const Input: FC<IInput> = ({
       leftElement={leftElement}
       rightElement={rightElement}
       isDisabled={isDisabled}
+      className="input-wrapper"
       {...props}
     >
       {inputNode()}

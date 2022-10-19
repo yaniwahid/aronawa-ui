@@ -5,6 +5,7 @@ export const SelectStyled = css`
     width: 100%;
     position: relative;
     cursor: pointer;
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',
   }
   .aronawa-select-disabled,
   .aronawa-select-disabled input {

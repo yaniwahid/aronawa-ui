@@ -5,6 +5,8 @@ export const ModalStyled = css`
     position: relative;
     width: auto;
     margin: 16px;
+
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',
   }
   .aronawa-modal-wrap {
     position: fixed;
@@ -21,6 +23,7 @@ export const ModalStyled = css`
     margin: 0;
     font-size: 16px;
     font-weight: 700;
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',
   }
   .aronawa-modal-content {
     position: relative;

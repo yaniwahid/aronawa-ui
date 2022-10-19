@@ -14,6 +14,7 @@ export const TabsStyled = styled.div(
 export const TabsList = styled.div({
   display: 'flex',
   flexWrap: 'wrap',
+  fontFfamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
   '@media (max-width: 767.98px)': {
     maxWidth: '100%',
     overflow: 'auto hidden',
