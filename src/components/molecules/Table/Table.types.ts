@@ -57,4 +57,5 @@ export interface IStyle {
   layout?: 'top' | 'middle' | 'bottom';
   isPagination?: boolean;
   isStipred?: boolean;
+  isEmpty?: boolean;
 }

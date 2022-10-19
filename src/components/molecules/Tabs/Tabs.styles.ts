@@ -31,7 +31,7 @@ export const TitleWrapper = styled.div({
 });
 
 export const Title = styled.div<IStyle>(({ isSelected }) => ({
-  fontWeight: 600,
+  fontWeight: 700,
   textTransform: 'uppercase',
   fontSize: 12,
   padding: 16,
@@ -39,6 +39,7 @@ export const Title = styled.div<IStyle>(({ isSelected }) => ({
   cursor: 'pointer',
   transition: 'all 0.3s ease',
   position: 'relative',
+  letterSpacing: '0.2px',
   '& > span:first-of-type': {
     marginRight: 8,
     '& + span': {

@@ -4,6 +4,7 @@ import Radius from '../../../themes/Radius';
 import { IColorpicker } from './Colorpicker.types';
 
 export const ColorpickerStyled = styled.div({
+  width: "100%",
   '& .sketch-picker': {
     border: '0 !important',
     boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.12) !important',
@@ -41,7 +42,7 @@ export const ColorpickerBackground = styled.div<IColorpicker>(({ color }) => ({
   height: '100%',
   borderRadius: Radius.blunt,
   background: color,
-  border: `2px solid ${Color.slate[200]}`,
+  border: `1px solid ${Color.slate[500]}`,
 }));
 
 export const ColorpickerPopover = styled.div({

@@ -22,13 +22,13 @@ export const TitleWrapper = styled.div({
   marginRight: 'auto',
 });
 
-export const TitleStyled = styled.h3({
+export const TitleStyled = styled.h1({
   position: 'relative',
-  fontWeight: 600,
+  fontWeight: 700,
   display: 'flex',
   alignItems: 'center',
   fontFamily: 'geomanistbook,sans-serif',
-  fontSize: 24,
+  fontSize: 28,
   '& > *': {
     marginLeft: 8,
   },

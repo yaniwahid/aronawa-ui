@@ -46,7 +46,7 @@ const Button: FC<IButton> = ({
     }),
   };
   return (
-    <ButtonStyled as={asProp()} {...buttonProps} {...props}>
+    <ButtonStyled className="button" as={asProp()} {...buttonProps} {...props}>
       {isLoading && (
         <Loading hasChild={childCount === 1}>
           <span />

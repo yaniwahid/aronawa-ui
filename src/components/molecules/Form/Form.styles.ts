@@ -3,7 +3,7 @@ import { space } from 'styled-system';
 import Color from '../../../themes/Color';
 import { IForm, IFormItem } from './Form.types';
 
-export const FormStyled = styled.form<IForm>(({ layout, formWidth = '160px 1fr' }) => {
+export const FormStyled = styled.form<IForm>(({ layout, formWidth = '200px 386px' }) => {
   let cssTmp: object = {
     position: 'relative',
     '& > * + *': {
@@ -26,8 +26,8 @@ export const FormStyled = styled.form<IForm>(({ layout, formWidth = '160px 1fr' 
       },
       '& .label-item': {
         textAlign: 'right',
-        height: 32,
-        lineHeight: '32px',
+        minHeight: 32,
+        paddingTop: 6,
       },
     };
   }
@@ -90,9 +90,21 @@ export const Content = styled.div({
   display: 'flex',
   alignItems: 'center',
   flex: 1,
+  width: "100%"
 });
 
 export const Req = styled.span({
   color: Color.danger.default,
   fontSize: 12,
 });
+
+export const FormActionStyled = styled.div({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-end",
+  marginTop: 56,
+  "& > * + *": {
+    marginLeft: 8
+  }
+});
+

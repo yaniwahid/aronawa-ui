@@ -29,6 +29,7 @@ export const TableStyled = styled.table<IStyle>(
       textAlign: 'left',
       position: 'relative',
       wordBreak: 'break-word',
+      backgroundColor: Color.light,
     },
     '& .action-absolute': {
       display: 'none',
@@ -83,11 +84,12 @@ export const TableStyled = styled.table<IStyle>(
     },
     '& th': {
       fontWeight: 600,
-      padding: 16,
+      padding: '12px 16px',
       verticalAlign: 'middle',
       fontSize: 14,
       textAlign: 'left',
       wordBreak: 'break-word',
+      backgroundColor: Color.light,
       '& .req': {
         color: Color.lava[500],
       },
@@ -129,22 +131,32 @@ export const TableStyled = styled.table<IStyle>(
   }),
 );
 
-export const TableWrapper = styled.div({
+export const TableWrapper = styled.div<IStyle>(({ isEmpty }) => ({
   borderBottom: `1px solid ${Color.slate[200]}`,
   borderTop: `1px solid ${Color.slate[200]}`,
-});
+  borderBottomLeftRadius: Radius.dull,
+  borderBottomRightRadius: Radius.dull,
+  ...isEmpty && {
+    borderBottom: 0
+  }
+}));
 
 export const TableScroll = styled.div({
   overflow: 'auto',
+  borderBottomLeftRadius: Radius.dull,
+  borderBottomRightRadius: Radius.dull,
 });
 
 export const PaginationStyled = styled.div({
-  padding: 16,
+  padding: '12px 16px',
   width: '100%',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
   fontSize: 14,
+  backgroundColor: Color.light,
+  borderBottomLeftRadius: Radius.dull,
+  borderBottomRightRadius: Radius.dull,
   '@media(max-width: 767.98px)': {
     display: 'block',
     borderTop: `1px solid ${Color.slate[200]}`,

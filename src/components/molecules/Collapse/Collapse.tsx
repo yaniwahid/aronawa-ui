@@ -31,7 +31,7 @@ export const CollapseItem: FC<ICollapseItem> = ({
       >
         {title}
         <div className="arrow">
-          <Icon name="angle-down" />
+          <Icon name="angle-down" size={20} />
         </div>
       </Toggle>
       <Content isShow={showState}>
@@ -48,7 +48,5 @@ const Collapse: FC<ICollapse> = ({ children, teid = 'collapse', ...props }) => {
     </CollapseStyled>
   );
 };
-
-Collapse.displayName = 'Collapse';
 
 export default Collapse;

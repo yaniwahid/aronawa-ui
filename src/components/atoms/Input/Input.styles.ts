@@ -55,6 +55,7 @@ export const InputStyled = styled.div<IInput>(
         },
         button: {
           height: HEIGHT - 8,
+          minWidth: HEIGHT - 8,
           lineHeight: `${HEIGHT - 8}px`,
         },
       };
@@ -131,13 +132,13 @@ export const InputAddon = styled.div<IInput>(({ size = 'md', rightAddon }) => ({
   ...fontSizeProps[size],
   ...(rightAddon
     ? {
-        borderTopRightRadius: Radius.blunt,
-        borderBottomRightRadius: Radius.blunt,
-      }
+      borderTopRightRadius: Radius.blunt,
+      borderBottomRightRadius: Radius.blunt,
+    }
     : {
-        borderTopLeftRadius: Radius.blunt,
-        borderBottomLeftRadius: Radius.blunt,
-      }),
+      borderTopLeftRadius: Radius.blunt,
+      borderBottomLeftRadius: Radius.blunt,
+    }),
 }));
 
 export const InputElement = styled.div<IInput>(({ size = 'md', rightElement }) => ({
@@ -148,9 +149,9 @@ export const InputElement = styled.div<IInput>(({ size = 'md', rightElement }) =
   ...fontSizeProps[size],
   ...(rightElement
     ? {
-        paddingRight: paddingProps[size],
-      }
+      paddingRight: paddingProps[size],
+    }
     : {
-        paddingLeft: paddingProps[size],
-      }),
+      paddingLeft: paddingProps[size],
+    }),
 }));

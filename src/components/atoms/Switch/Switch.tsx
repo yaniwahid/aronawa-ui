@@ -45,6 +45,4 @@ const Switch: FC<ISwitch> = ({
   );
 };
 
-Switch.displayName = 'Switch';
-
 export default Switch;
