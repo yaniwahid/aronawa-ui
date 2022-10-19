@@ -1,1 +1,2 @@
-export { default, DropdownItem, DropdownMenu } from './Dropdown';
+export { default, DropdownDivider, DropdownItem, DropdownMenu } from './Dropdown';
+

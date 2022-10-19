@@ -21,3 +21,7 @@ export const useWindowSize = () => {
 
   return windowSize;
 };
+
+export const size = useWindowSize();
+
+export const isMobile = size.width < 767.98;

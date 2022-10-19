@@ -18,6 +18,7 @@ export const DropdownStyled = css`
     background: #fff;
     border-radius: 5px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.12);
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',
   }
   .aronawa-dropdown-hidden {
     display: none;
@@ -187,8 +188,20 @@ export const DropdownItemStyled = styled.div(
     borderRadius: Radius.blunt,
     '&:hover': {
       background: Color.slate[50],
+      color: Color.sky[500]
     },
   },
   space,
   color,
 );
+export const DividerStyled = styled.div(
+  {
+    height: 1,
+    marginTop: 8,
+    marginBottom: 8,
+    overflow: 'hidden',
+    lineHeight: 0,
+    backgroundColor: Color.slate[200],
+  }
+);
+

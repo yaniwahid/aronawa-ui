@@ -46,6 +46,7 @@ export const BadgeStyled = styled.span<IBadge>(({ variant, color }) => {
     alignItems: 'center',
     display: 'inline-flex',
     borderRadius: 25,
+    fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
   };
   if (variant === 'subtle') {
     cssTmp = {

@@ -33,6 +33,7 @@ export const SwitchStyled = styled.div<IStyle>(({ isDisabled }) => ({
 export const Label = styled.label<IStyle>(({ isDisabled }) => ({
   paddingLeft: 8,
   display: 'block',
+  fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
   cursor: isDisabled ? 'not-allowed' : 'pointer',
 }));
 

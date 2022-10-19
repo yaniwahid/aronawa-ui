@@ -128,6 +128,7 @@ export const WrapperCheck = styled.span({
 
 export const Label = styled.span<IStyle>(({ variant }) => ({
   paddingLeft: 8,
+  fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
   ...(variant !== 'default' && {
     paddingRight: 8,
   }),

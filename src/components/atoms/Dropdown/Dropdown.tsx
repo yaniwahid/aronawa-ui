@@ -2,8 +2,17 @@ import { Global } from '@emotion/react';
 import { default as DropdownComponent } from 'rc-dropdown';
 import React, { FC } from 'react';
 import Icon from '../Icon';
-import { DropdownItemStyled, DropdownMenuStyled, DropdownStyled } from './Dropdown.styles';
+import {
+  DividerStyled,
+  DropdownItemStyled,
+  DropdownMenuStyled,
+  DropdownStyled,
+} from './Dropdown.styles';
 import { IDropdown, IDropdownItem, IDropdownMenu } from './Dropdown.types';
+
+export const DropdownDivider: FC = () => {
+  return <DividerStyled />;
+};
 
 export const DropdownMenu: FC<IDropdownMenu> = ({ width, children }) => {
   return <DropdownMenuStyled width={width}>{children}</DropdownMenuStyled>;

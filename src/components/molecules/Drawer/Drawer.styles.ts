@@ -9,6 +9,7 @@ export const DrawerStyled = css`
     z-index: 1050;
     pointer-events: none;
     inset: 0;
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',
   }
   .aronawa-drawer-inline {
     position: absolute;
@@ -33,11 +34,13 @@ export const DrawerStyled = css`
     top: 0;
     bottom: 0;
     left: 0;
+    max-width: calc(100vw - 56px);
   }
   .aronawa-drawer-right .aronawa-drawer-content-wrapper {
     top: 0;
     right: 0;
     bottom: 0;
+    max-width: calc(100vw - 56px);
   }
   .aronawa-drawer-content {
     width: 100%;
@@ -143,6 +146,7 @@ export const DrawerHeaderStyled = styled.div<IDrawer>(({ isCloseLeft }) => ({
   padding: 16,
   paddingRight: 48,
   background: Color.light,
+  height: 56,
   ...(isCloseLeft && {
     paddingRight: 16,
     paddingLeft: 48,
@@ -153,6 +157,7 @@ export const Title = styled.div({
   margin: 0,
   fontSize: 16,
   fontWeight: 700,
+  fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
 });
 
 export const DrawerFooterStyled = styled.div({

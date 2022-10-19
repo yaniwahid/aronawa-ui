@@ -26,6 +26,7 @@ export const AlertStyled = styled.div<IAlert>(({ color }) => ({
   borderRadius: Radius.dull,
   display: 'flex',
   alignItems: 'flex-start',
+  fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
   ...Solid(color),
   p: {
     ' & + p': {

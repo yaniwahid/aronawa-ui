@@ -31,6 +31,7 @@ const Drawer: FC<IDrawer> = ({
   isCloseLeft,
   size = 'md',
   isCloseable = true,
+  isMaskBlack,
   ...props
 }) => {
   const Width = (size?: 'sm' | 'md' | 'lg') => {
@@ -60,8 +61,9 @@ const Drawer: FC<IDrawer> = ({
   };
 
   const classSize = `aronawa-drawer-${size}`;
-  const classTitle = !title ? `aronawa-drawer-no-title` : '';
+  const classTitle = !title && !isCloseable ? `aronawa-drawer-no-title` : '';
   const classFooter = isNoFooter ? `aronawa-drawer-no-footer` : '';
+
   return (
     <>
       <Global styles={DrawerStyled} />
@@ -71,19 +73,22 @@ const Drawer: FC<IDrawer> = ({
         prefixCls="aronawa-drawer"
         className={`${classSize} ${classTitle} ${classFooter}`}
         width={Width(size) ?? props.width}
+        {...(isMaskBlack && {
+          maskStyle: {
+            backgroundColor: 'rgba(18, 18, 18, 0.7)',
+          },
+        })}
         {...motionProps}
         {...props}
       >
-        {isCloseable && (
-          <Close isCloseLeft={isCloseLeft}>
-            <Icon name="cross" size={24} />
-          </Close>
-        )}
-        {title && (
-          <DrawerHeaderStyled isCloseLeft={isCloseLeft} className="aronawa-drawer-header">
-            <Title>{title}</Title>
-          </DrawerHeaderStyled>
-        )}
+        <DrawerHeaderStyled isCloseLeft={isCloseLeft} className="aronawa-drawer-header">
+          {title && <Title>{title}</Title>}
+          {isCloseable && (
+            <Close isCloseLeft={isCloseLeft} onClick={onClose}>
+              <Icon name="cross" size={24} />
+            </Close>
+          )}
+        </DrawerHeaderStyled>
         <DrawerBody className="aronawa-drawer-body">{children}</DrawerBody>
         {!isNoFooter && (
           <DrawerFooterStyled className="aronawa-drawer-footer">

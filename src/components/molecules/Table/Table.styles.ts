@@ -136,6 +136,7 @@ export const TableWrapper = styled.div<IStyle>(({ isEmpty }) => ({
   borderTop: `1px solid ${Color.slate[200]}`,
   borderBottomLeftRadius: Radius.dull,
   borderBottomRightRadius: Radius.dull,
+  fontFfamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
   ...isEmpty && {
     borderBottom: 0
   }
