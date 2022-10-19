@@ -11,7 +11,7 @@ const Modal: FC<IModal> = ({
   title,
   onOk,
   okText = 'Submit',
-  okColor = 'approval',
+  okColor = 'primary',
   okVariant = 'solid',
   onClose,
   cancelText = 'Cancel',
@@ -39,19 +39,14 @@ const Modal: FC<IModal> = ({
         maskAnimation="fade"
         onClose={onClose}
         title={title}
-        closeIcon={<Icon name="cross" size={24} color="#7c8187" />}
+        closeIcon={<Icon name="cross" size={24} />}
         closable={isCloseable}
         prefixCls="aronawa-modal"
         className={`${classSize} ${classVariant} ${classTitle} ${classFooter}`}
         footer={
           isNoFooter ? null : (
             <>
-              <Button
-                onClick={onClose}
-                color={cancelColor}
-                variant={cancelVariant}
-                isDisabled={isDisabled}
-              >
+              <Button onClick={onClose} color={cancelColor} variant={cancelVariant}>
                 {cancelText}
               </Button>
               <Button

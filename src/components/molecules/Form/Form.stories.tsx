@@ -32,11 +32,11 @@ export default {
     },
     formWidth: {
       name: 'formWidth',
-      defaultValue: '160px 1fr',
+      defaultValue: '200px 1fr',
       description: 'Use the formWidth prop to change the formWidth of the Form',
       table: {
         type: { summary: 'string' },
-        defaultValue: { summary: '160px 1fr' },
+        defaultValue: { summary: '200px 386px' },
       },
       control: {
         type: 'text',
@@ -78,7 +78,7 @@ export const Basic = (args: IForm) => (
       >
         <Input />
       </FormItem>
-      <FormItem label="Produk Buatan" formWidth="160px 240px">
+      <FormItem label="Produk Buatan" formWidth="200px 240px">
         <Select placeholder="Pilih Produk Buatan">
           <Option value="1">Dalam Negeri</Option>
           <Option value="2">Luar Negeri</Option>

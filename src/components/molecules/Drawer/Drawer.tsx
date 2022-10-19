@@ -76,7 +76,7 @@ const Drawer: FC<IDrawer> = ({
       >
         {isCloseable && (
           <Close isCloseLeft={isCloseLeft}>
-            <Icon name="cross" size={24} color="#7c8187" />
+            <Icon name="cross" size={24} />
           </Close>
         )}
         {title && (
@@ -87,12 +87,7 @@ const Drawer: FC<IDrawer> = ({
         <DrawerBody className="aronawa-drawer-body">{children}</DrawerBody>
         {!isNoFooter && (
           <DrawerFooterStyled className="aronawa-drawer-footer">
-            <Button
-              onClick={onClose}
-              color={cancelColor}
-              variant={cancelVariant}
-              isDisabled={isDisabled}
-            >
+            <Button onClick={onClose} color={cancelColor} variant={cancelVariant}>
               {cancelText}
             </Button>
             <Button

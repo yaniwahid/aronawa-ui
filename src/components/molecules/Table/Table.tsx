@@ -256,12 +256,12 @@ const Table: FC<ITable> = ({
 
   return (
     <Spin isLoading={isLoading}>
-      <TableWrapper>
+      <TableWrapper isEmpty={Boolean(emptyData)}>
         <TableScroll>
           <TableStyled
             layout={layout}
             isPagination={isPagination}
-            isStipred={isStipred}
+            isStipred={isStipred && !emptyData}
             data-tesid={teid}
             {...props}
           >
@@ -304,11 +304,17 @@ const Table: FC<ITable> = ({
               {emptyData ? (
                 <tr>
                   {rowSelection ? (
-                    <td colSpan={colSpanLength}>
+                    <td
+                      colSpan={colSpanLength}
+                      style={{ borderBottomLeftRadius: 5, borderBottomRightRadius: 5 }}
+                    >
                       <EmptyBlockStyled>{emptyData}</EmptyBlockStyled>
                     </td>
                   ) : (
-                    <td colSpan={columns.length}>
+                    <td
+                      colSpan={columns.length}
+                      style={{ borderBottomLeftRadius: 5, borderBottomRightRadius: 5 }}
+                    >
                       <EmptyBlockStyled>{emptyData}</EmptyBlockStyled>
                     </td>
                   )}
@@ -361,7 +367,7 @@ const Table: FC<ITable> = ({
             </tbody>
           </TableStyled>
         </TableScroll>
-        {isPagination && (
+        {isPagination && !emptyData && (
           <PaginationStyled>
             <ShowItem>
               <span>Show items per page</span>

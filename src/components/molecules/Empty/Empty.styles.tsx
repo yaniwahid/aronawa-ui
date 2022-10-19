@@ -13,17 +13,17 @@ export const EmptyStyled = styled.div(
     padding: '64px 16px',
     margin: '0 auto',
     img: {
-      width: 64,
+      width: 80,
       marginBottom: 16,
     },
     h4: {
       fontWeight: 600,
-      fontSize: 16,
+      fontSize: 24,
       marginBottom: 0,
+      fontFamily: 'geomanistbook,sans-serif',
     },
     p: {
-      fontSize: 12,
-      marginTop: 8,
+      fontSize: 14,
     },
   },
   space,

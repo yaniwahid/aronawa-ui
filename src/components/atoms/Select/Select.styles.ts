@@ -123,17 +123,18 @@ export const SelectStyled = css`
     box-sizing: border-box;
     max-width: 100%;
     height: 22px;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin: 2px;
     line-height: 20px;
-    background: #e7f0fd;
+    background: #D7DADE;
     border-radius: 3px;
     cursor: default;
     transition: font-size 0.3s, line-height 0.3s, height 0.3s;
     user-select: none;
     padding-left: 8px;
     padding-right: 8px;
-    margin-right: 4px;
+    font-size: 12px;
+    color:#7C8187;
+    font-weight: 600;
   }
   .aronawa-select-multiple .aronawa-select-selector .aronawa-select-selection-item-disabled {
     cursor: not-allowed;
@@ -143,10 +144,12 @@ export const SelectStyled = css`
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    align-items: center;
   }
   .aronawa-select-multiple .aronawa-select-selector .aronawa-select-selection-overflow-item {
     flex: none;
     max-width: 100%;
+    height: fit-content;
   }
   .aronawa-select-multiple .aronawa-select-selector .aronawa-select-selection-search {
     position: relative;
@@ -162,7 +165,7 @@ export const SelectStyled = css`
   }
   .aronawa-select-multiple .aronawa-select-selector .aronawa-select-selection-search-input {
     width: 100%;
-    height: 30px;
+    height: 26px;
     border: 0;
     padding: 0;
     margin: 0;

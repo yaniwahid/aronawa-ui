@@ -9,7 +9,7 @@ export const Upload: FC<IUpload> = ({ isButton, buttonLabel = 'Upload', children
     <UploadStyled>
       <UploadComponent prefixCls="aronawa-upload" {...props}>
         {children}
-        {isButton && <Button>{buttonLabel}</Button>}
+        {isButton && <Button size="sm">{buttonLabel}</Button>}
       </UploadComponent>
     </UploadStyled>
   );

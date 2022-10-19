@@ -4,6 +4,7 @@ import {
   Content,
   ContentWrapper,
   Extra,
+  FormActionStyled,
   FormItemStyled,
   FormStyled,
   Help,
@@ -53,10 +54,14 @@ export const FormItem: FC<IFormItem> = ({
   );
 };
 
+export const FormAction: FC = ({ children }) => {
+  return <FormActionStyled className="form-action">{children}</FormActionStyled>;
+};
+
 const Form: FC<IForm> = ({
   layout = 'horizontal',
   children,
-  formWidth = '160px 1fr',
+  formWidth = '200px 386px',
   teid = 'from',
   ...props
 }) => {

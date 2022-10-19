@@ -9,15 +9,15 @@ export const Preview: FC<IPreview> = ({
   isClearable,
   children,
   imageSize = '100%',
-  boxHeight = '128px',
-  boxWidth = '128px',
+  boxHeight = '104px',
+  boxWidth = '104px',
   ...props
 }) => {
   return (
     <PreviewStyled boxHeight={boxHeight} boxWidth={boxWidth} imageUrl={imageUrl} {...props}>
       {isClearable && (
         <Clear onClick={onClear}>
-          <Button size="sm" icon="undo" />
+          <Button size="sm" icon="history" />
         </Clear>
       )}
       {imageUrl ? (

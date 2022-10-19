@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { color, space } from 'styled-system';
 import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
+import { IDropdownMenu } from './Dropdown.types';
 
 export const DropdownStyled = css`
   .aronawa-dropdown {
@@ -168,9 +169,12 @@ export const DropdownStyled = css`
   }
 `;
 
-export const DropdownMenuStyled = styled.div({
+export const DropdownMenuStyled = styled.div<IDropdownMenu>(({ width }) => ({
   position: 'relative',
-});
+  ...width && {
+    minWidth: width
+  }
+}));
 
 export const DropdownItemStyled = styled.div(
   {

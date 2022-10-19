@@ -47,8 +47,14 @@ export const ModalStyled = css`
     height: 24px;
     margin: 0;
   }
+  .aronawa-modal-close i {
+    color: #7c8187;
+  }
   .aronawa-modal-close:hover {
     text-decoration: none;
+  }
+  .aronawa-modal-close:hover i {
+    color: #121212;
   }
   .aronawa-modal-header {
     padding: 16px;
@@ -132,7 +138,7 @@ export const ModalStyled = css`
   }
   @media (min-width: 768px) {
     .aronawa-modal {
-      margin: 32px auto;
+      margin: 64px auto;
     }
     .aronawa-modal-sm {
       width: 360px;
@@ -145,20 +151,20 @@ export const ModalStyled = css`
     }
 
     .aronawa-modal-body {
-      max-height: calc(100vh - 56px - 64px - 64px);
+      max-height: calc(100vh - 56px - 64px - 128px);
     }
     .aronawa-modal-no-title .aronawa-modal-body {
       padding-top: 16px;
-      max-height: calc(100vh - 64px - 64px);
+      max-height: calc(100vh - 128px - 128px);
     }
     .aronawa-modal-no-footer .aronawa-modal-body {
       padding-bottom: 16px;
-      max-height: calc(100vh - 56px - 64px);
+      max-height: calc(100vh - 56px - 128px);
     }
     .aronawa-modal-no-title.aronawa-modal-no-footer .aronawa-modal-body {
       padding-bottom: 16px;
       padding-top: 16px;
-      max-height: calc(100vh - 64px);
+      max-height: calc(100vh - 128px);
     }
   }
   .aronawa-modal-mask {

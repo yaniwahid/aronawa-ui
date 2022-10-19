@@ -175,6 +175,12 @@ export const Close = styled.div<IDrawer>(({ isCloseLeft }) => ({
   justifyContent: 'center',
   width: 24,
   height: 24,
+  i: {
+    color: "#7c8187"
+  },
+  "&:hover i": {
+    color: "#121212"
+  },
   ...(isCloseLeft && {
     right: 'auto',
     left: 16,
