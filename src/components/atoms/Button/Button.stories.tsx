@@ -25,12 +25,12 @@ export default {
       defaultValue: 'solid',
       description: 'Use the variant prop to change the variant of the Button',
       table: {
-        type: { summary: 'solid | outline | ghost | link' },
+        type: { summary: 'solid | outline | ghost | link | text' },
         defaultValue: { summary: 'solid' },
       },
       control: {
         type: 'radio',
-        options: ['solid', 'outline', 'ghost', 'link'],
+        options: ['solid', 'outline', 'ghost', 'link', 'text'],
       },
     },
     size: {
@@ -128,7 +128,7 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 const ColorType = ['neutral', 'primary', 'secondary', 'approval', 'danger', 'light'] as any;
-const VariantType = ['solid', 'outline', 'ghost', 'link'] as any;
+const VariantType = ['solid', 'outline', 'ghost', 'link', 'text'] as any;
 
 const capFirstLetterInSentence = (sentence: string) => {
   let words = sentence.split(' ').map((word: string) => {

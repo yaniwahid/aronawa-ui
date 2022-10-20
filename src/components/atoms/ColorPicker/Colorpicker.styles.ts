@@ -4,7 +4,7 @@ import Radius from '../../../themes/Radius';
 import { IColorpicker } from './Colorpicker.types';
 
 export const ColorpickerStyled = styled.div({
-  width: "100%",
+  width: '100%',
   '& .sketch-picker': {
     border: '0 !important',
     boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.12) !important',

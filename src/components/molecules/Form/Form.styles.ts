@@ -88,12 +88,16 @@ export const ContentWrapper = styled.div({
   flexDirection: 'column',
 });
 
-export const Content = styled.div({
+export const Content = styled.div<IFormItem>(({ isColumn }) => ({
   display: 'flex',
   alignItems: 'center',
   flex: 1,
-  width: "100%"
-});
+  width: '100%',
+  ...(isColumn && {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+  }),
+}));
 
 export const Req = styled.span({
   color: Color.danger.default,
@@ -101,12 +105,11 @@ export const Req = styled.span({
 });
 
 export const FormActionStyled = styled.div({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-end",
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'flex-end',
   marginTop: 56,
-  "& > * + *": {
-    marginLeft: 8
-  }
+  '& > * + *': {
+    marginLeft: 8,
+  },
 });
-

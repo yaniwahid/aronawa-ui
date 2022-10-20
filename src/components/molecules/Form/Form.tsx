@@ -23,6 +23,7 @@ export const FormItem: FC<IFormItem> = ({
   isInvalid,
   invalidText,
   formWidth,
+  isColumn,
 }) => {
   const additionalNode = () => {
     if (extra || help || invalidText) {
@@ -47,7 +48,7 @@ export const FormItem: FC<IFormItem> = ({
         </Label>
       )}
       <ContentWrapper className="children-item">
-        <Content>{children}</Content>
+        <Content isColumn={isColumn}>{children}</Content>
         {additionalNode()}
       </ContentWrapper>
     </FormItemStyled>

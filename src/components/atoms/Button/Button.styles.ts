@@ -233,6 +233,17 @@ export const ButtonStyled = styled.button<IButton>(
           backgroundColor: Color.light,
         },
       };
+    } else if (variant === 'text') {
+      cssTmp = {
+        ...cssTmp,
+        ...Ghost(color),
+        padding: 0,
+        height: 'auto',
+        fontWeight: 400,
+        '&:hover': {
+          backgroundColor: Color.light,
+        },
+      };
     } else {
       cssTmp = {
         ...cssTmp,

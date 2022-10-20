@@ -8,7 +8,9 @@ export const DrawerStyled = css`
     z-index: 1050;
     pointer-events: none;
     inset: 0;
-    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+      'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+      'Segoe UI Emoji', 'Segoe UI Symbol';
   }
   .aronawa-drawer-inline {
     position: absolute;
@@ -146,7 +148,7 @@ export const DrawerHeaderStyled = styled.div<IDrawer>(({ isCloseLeft }) => ({
   paddingRight: 48,
   height: 56,
   img: {
-    width: 24
+    width: 24,
   },
   ...(isCloseLeft && {
     paddingRight: 16,
@@ -182,10 +184,10 @@ export const Close = styled.div<IDrawer>(({ isCloseLeft }) => ({
   width: 24,
   height: 24,
   i: {
-    color: "#7c8187"
+    color: '#7c8187',
   },
-  "&:hover i": {
-    color: "#121212"
+  '&:hover i': {
+    color: '#121212',
   },
   ...(isCloseLeft && {
     right: 'auto',

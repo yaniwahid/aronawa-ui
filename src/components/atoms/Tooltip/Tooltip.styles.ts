@@ -89,14 +89,16 @@ export const TooltipStyled = css`
     padding: 0 9px 0 5px;
   }
   .aronawa-tooltip-inner {
-    padding: 8px;
+    padding: 8px 16px;
     color: #fff;
     text-align: left;
     text-decoration: none;
     background-color: #121212;
     border-radius: 5px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.12);
-    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+      'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+      'Segoe UI Emoji', 'Segoe UI Symbol';
   }
   .aronawa-tooltip-light .aronawa-tooltip-inner {
     background-color: #fff;

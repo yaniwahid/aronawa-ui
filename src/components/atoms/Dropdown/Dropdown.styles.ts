@@ -18,7 +18,9 @@ export const DropdownStyled = css`
     background: #fff;
     border-radius: 5px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.12);
-    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+      'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+      'Segoe UI Emoji', 'Segoe UI Symbol';
   }
   .aronawa-dropdown-hidden {
     display: none;
@@ -172,50 +174,49 @@ export const DropdownStyled = css`
 
 export const DropdownMenuStyled = styled.div<IDropdownMenu>(({ width }) => ({
   position: 'relative',
-  ...width && {
-    minWidth: width
-  }
+  ...(width && {
+    minWidth: width,
+  }),
 }));
 
-export const DropdownItemStyled = styled.div<IDropdownItem>(({ hoverColor = Color.sky[500], hoverBackground = Color.slate[50] }) => ({
-  position: 'relative',
-  cursor: 'pointer',
-  fontSize: 14,
-  lineHeight: '26px',
-  padding: '4px 8px',
-  display: 'flex',
-  alignItems: "center",
-  borderRadius: Radius.blunt,
-  '&:hover': {
-    background: hoverBackground,
-    color: hoverColor,
-    "& .dropdown-image": {
-      display: "none"
+export const DropdownItemStyled = styled.div<IDropdownItem>(
+  ({ hoverColor = Color.sky[500], hoverBackground = Color.slate[50] }) => ({
+    position: 'relative',
+    cursor: 'pointer',
+    fontSize: 14,
+    lineHeight: '26px',
+    padding: '4px 8px',
+    display: 'flex',
+    alignItems: 'center',
+    borderRadius: Radius.blunt,
+    '&:hover': {
+      background: hoverBackground,
+      color: hoverColor,
+      '& .dropdown-image': {
+        display: 'none',
+      },
+      '& .dropdown-image-hover': {
+        display: 'block',
+      },
     },
-    "& .dropdown-image-hover": {
-      display: "block"
-    }
-  },
-  img: {
-    width: 18,
-    height: 18,
-    marginRight: 8,
-  },
-  "& .dropdown-image-hover": {
-    display: "none"
-  }
-}),
+    img: {
+      width: 18,
+      height: 18,
+      marginRight: 8,
+    },
+    '& .dropdown-image-hover': {
+      display: 'none',
+    },
+  }),
   space,
   color,
-)
+);
 
-export const DividerStyled = styled.div<IDropdownDivider>(({ color = Color.slate[300] }) => (
-  {
-    height: 1,
-    marginTop: 8,
-    marginBottom: 8,
-    overflow: 'hidden',
-    lineHeight: 0,
-    backgroundColor: color,
-  }
-));
+export const DividerStyled = styled.div<IDropdownDivider>(({ color = Color.slate[300] }) => ({
+  height: 1,
+  marginTop: 8,
+  marginBottom: 8,
+  overflow: 'hidden',
+  lineHeight: 0,
+  backgroundColor: color,
+}));
