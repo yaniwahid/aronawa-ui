@@ -89,7 +89,7 @@ export const TooltipStyled = css`
     padding: 0 9px 0 5px;
   }
   .aronawa-tooltip-inner {
-    padding: 8px;
+    padding: 8px 16px;
     color: #fff;
     text-align: left;
     text-decoration: none;

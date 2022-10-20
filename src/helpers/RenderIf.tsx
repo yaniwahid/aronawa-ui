@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC, ReactElement } from 'react';
 
 interface IRenderIf {
-  children: JSX.Element;
+  children: ReactElement;
   isTrue: boolean;
 }
 

@@ -1,7 +1,7 @@
 import { SpaceProps } from 'styled-system';
 
 export type TColorButton = 'neutral' | 'primary' | 'secondary' | 'approval' | 'danger' | 'light';
-export type TVariantButton = 'solid' | 'outline' | 'ghost' | 'link';
+export type TVariantButton = 'solid' | 'outline' | 'ghost' | 'link' | "text";
 export type TSizeButton = 'sm' | 'md' | 'lg' | 'xl';
 
 export interface IButton

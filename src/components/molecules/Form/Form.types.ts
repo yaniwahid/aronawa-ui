@@ -15,6 +15,7 @@ export interface IFormItem {
   isInvalid?: boolean;
   invalidText?: ReactNode;
   formWidth?: string;
+  isColumn?: boolean;
 }
 
 
