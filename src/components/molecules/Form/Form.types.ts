@@ -17,5 +17,3 @@ export interface IFormItem {
   formWidth?: string;
   isColumn?: boolean;
 }
-
-

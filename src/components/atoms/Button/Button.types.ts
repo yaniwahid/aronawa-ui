@@ -1,12 +1,10 @@
 import { SpaceProps } from 'styled-system';
 
 export type TColorButton = 'neutral' | 'primary' | 'secondary' | 'approval' | 'danger' | 'light';
-export type TVariantButton = 'solid' | 'outline' | 'ghost' | 'link' | "text";
+export type TVariantButton = 'solid' | 'outline' | 'ghost' | 'link' | 'text';
 export type TSizeButton = 'sm' | 'md' | 'lg' | 'xl';
 
-export interface IButton
-  extends SpaceProps,
-  React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IButton extends SpaceProps, React.ButtonHTMLAttributes<HTMLButtonElement> {
   color?: TColorButton;
   variant?: TVariantButton;
   size?: TSizeButton;

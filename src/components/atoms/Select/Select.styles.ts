@@ -5,7 +5,9 @@ export const SelectStyled = css`
     width: 100%;
     position: relative;
     cursor: pointer;
-    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+      'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+      'Segoe UI Emoji', 'Segoe UI Symbol';
   }
   .aronawa-select-disabled,
   .aronawa-select-disabled input {
@@ -126,7 +128,7 @@ export const SelectStyled = css`
     height: 22px;
     margin: 2px;
     line-height: 20px;
-    background: #D7DADE;
+    background: #d7dade;
     border-radius: 3px;
     cursor: default;
     transition: font-size 0.3s, line-height 0.3s, height 0.3s;
@@ -134,7 +136,7 @@ export const SelectStyled = css`
     padding-left: 8px;
     padding-right: 8px;
     font-size: 12px;
-    color:#7C8187;
+    color: #7c8187;
     font-weight: 600;
   }
   .aronawa-select-multiple .aronawa-select-selector .aronawa-select-selection-item-disabled {

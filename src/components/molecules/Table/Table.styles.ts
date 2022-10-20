@@ -137,9 +137,9 @@ export const TableWrapper = styled.div<IStyle>(({ isEmpty }) => ({
   borderBottomLeftRadius: Radius.dull,
   borderBottomRightRadius: Radius.dull,
   fontFfamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
-  ...isEmpty && {
-    borderBottom: 0
-  }
+  ...(isEmpty && {
+    borderBottom: 0,
+  }),
 }));
 
 export const TableScroll = styled.div({

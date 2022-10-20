@@ -58,6 +58,6 @@ export const Toggle = styled.div<IStyle>(({ isShow, isDisabled }) => ({
   '& .arrow': {
     transition: 'transform 0.3s, -webkit-transform 0.3s',
     transform: isShow ? 'rotate(180deg)' : undefined,
-    display: "flex"
+    display: 'flex',
   },
 }));
