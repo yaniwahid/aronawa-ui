@@ -32,6 +32,8 @@ const Drawer: FC<IDrawer> = ({
   size = 'md',
   isCloseable = true,
   isMaskBlack,
+  closeIcon,
+  background,
   ...props
 }) => {
   const Width = (size?: 'sm' | 'md' | 'lg') => {
@@ -78,6 +80,7 @@ const Drawer: FC<IDrawer> = ({
             backgroundColor: 'rgba(18, 18, 18, 0.7)',
           },
         })}
+        contentWrapperStyle={{ background: background }}
         {...motionProps}
         {...props}
       >
@@ -85,7 +88,7 @@ const Drawer: FC<IDrawer> = ({
           {title && <Title>{title}</Title>}
           {isCloseable && (
             <Close isCloseLeft={isCloseLeft} onClick={onClose}>
-              <Icon name="cross" size={24} />
+              {closeIcon ? <img src={closeIcon} alt="Close" /> : <Icon name="cross" size={24} />}
             </Close>
           )}
         </DrawerHeaderStyled>

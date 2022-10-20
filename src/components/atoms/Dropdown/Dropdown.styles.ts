@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { color, space } from 'styled-system';
 import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
-import { IDropdownMenu } from './Dropdown.types';
+import { IDropdownDivider, IDropdownItem, IDropdownMenu } from './Dropdown.types';
 
 export const DropdownStyled = css`
   .aronawa-dropdown {
@@ -177,31 +177,45 @@ export const DropdownMenuStyled = styled.div<IDropdownMenu>(({ width }) => ({
   }
 }));
 
-export const DropdownItemStyled = styled.div(
-  {
-    position: 'relative',
-    cursor: 'pointer',
-    fontSize: 14,
-    lineHeight: '26px',
-    padding: '4px 8px',
-    display: 'flex',
-    borderRadius: Radius.blunt,
-    '&:hover': {
-      background: Color.slate[50],
-      color: Color.sky[500]
+export const DropdownItemStyled = styled.div<IDropdownItem>(({ hoverColor = Color.sky[500], hoverBackground = Color.slate[50] }) => ({
+  position: 'relative',
+  cursor: 'pointer',
+  fontSize: 14,
+  lineHeight: '26px',
+  padding: '4px 8px',
+  display: 'flex',
+  alignItems: "center",
+  borderRadius: Radius.blunt,
+  '&:hover': {
+    background: hoverBackground,
+    color: hoverColor,
+    "& .dropdown-image": {
+      display: "none"
     },
+    "& .dropdown-image-hover": {
+      display: "block"
+    }
   },
+  img: {
+    width: 18,
+    height: 18,
+    marginRight: 8,
+  },
+  "& .dropdown-image-hover": {
+    display: "none"
+  }
+}),
   space,
   color,
-);
-export const DividerStyled = styled.div(
+)
+
+export const DividerStyled = styled.div<IDropdownDivider>(({ color = Color.slate[300] }) => (
   {
     height: 1,
     marginTop: 8,
     marginBottom: 8,
     overflow: 'hidden',
     lineHeight: 0,
-    backgroundColor: Color.slate[200],
+    backgroundColor: color,
   }
-);
-
+));

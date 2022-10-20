@@ -1,6 +1,5 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import Color from '../../../themes/Color';
 import { IDrawer } from './Drawer.types';
 
 export const DrawerStyled = css`
@@ -26,6 +25,7 @@ export const DrawerStyled = css`
     z-index: 1050;
     overflow: hidden;
     transition: transform 0.3s;
+    background-color: #fff;
   }
   .aronawa-drawer-content-wrapper-hidden {
     display: none;
@@ -46,7 +46,6 @@ export const DrawerStyled = css`
     width: 100%;
     height: 100%;
     overflow: auto;
-    background: #fff;
     pointer-events: auto;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.06), 0px 8px 12px rgba(0, 0, 0, 0.16);
   }
@@ -145,8 +144,10 @@ export const DrawerBody = styled.div({
 export const DrawerHeaderStyled = styled.div<IDrawer>(({ isCloseLeft }) => ({
   padding: 16,
   paddingRight: 48,
-  background: Color.light,
   height: 56,
+  img: {
+    width: 24
+  },
   ...(isCloseLeft && {
     paddingRight: 16,
     paddingLeft: 48,
