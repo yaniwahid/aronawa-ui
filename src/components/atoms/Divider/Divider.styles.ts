@@ -5,7 +5,7 @@ import { IDivider } from './Divider.types';
 
 export const DividerStyled = styled.div<IDivider>(
   ({ color }) => ({
-    backgroundColor: color ? color : Color.slate[200],
+    backgroundColor: color ? color : Color.slate[300],
     height: 1,
     display: 'flex',
     clear: 'both',

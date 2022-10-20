@@ -21,4 +21,6 @@ export interface IDrawer extends DrawerProps {
   isCloseLeft?: boolean;
   isCloseable?: boolean;
   isMaskBlack?: boolean;
+  closeIcon?: string;
+  background?: string;
 }

@@ -8,20 +8,30 @@ import {
   DropdownMenuStyled,
   DropdownStyled,
 } from './Dropdown.styles';
-import { IDropdown, IDropdownItem, IDropdownMenu } from './Dropdown.types';
+import { IDropdown, IDropdownDivider, IDropdownItem, IDropdownMenu } from './Dropdown.types';
 
-export const DropdownDivider: FC = () => {
-  return <DividerStyled />;
+export const DropdownDivider: FC<IDropdownDivider> = ({ color }) => {
+  return <DividerStyled color={color} />;
 };
 
 export const DropdownMenu: FC<IDropdownMenu> = ({ width, children }) => {
   return <DropdownMenuStyled width={width}>{children}</DropdownMenuStyled>;
 };
 
-export const DropdownItem: FC<IDropdownItem> = ({ icon, children, ...props }) => {
+export const DropdownItem: FC<IDropdownItem> = ({
+  icon,
+  hoverColor,
+  hoverBackground,
+  image,
+  imageHover,
+  children,
+  ...props
+}) => {
   return (
-    <DropdownItemStyled {...props}>
+    <DropdownItemStyled hoverColor={hoverColor} hoverBackground={hoverBackground} {...props}>
       {icon && <Icon name={icon} mr="2" size={14} />}
+      <img src={image} alt="Image" className="dropdown-image" />
+      <img src={imageHover} alt="Image Hover" className="dropdown-image-hover" />
       {children}
     </DropdownItemStyled>
   );
