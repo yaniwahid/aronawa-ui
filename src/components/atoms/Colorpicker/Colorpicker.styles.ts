@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
-import { IColorpicker } from './Color-picker.types';
+import { IColorpicker } from './Colorpicker.types';
 
 export const ColorpickerStyled = styled.div({
   width: '100%',

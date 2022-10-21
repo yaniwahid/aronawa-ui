@@ -1,7 +1,7 @@
 import { ComponentMeta } from '@storybook/react';
 import React from 'react';
-import Colorpicker from './Color-picker';
-import { IColorpicker } from './Color-picker.types';
+import Colorpicker from './Colorpicker';
+import { IColorpicker } from './Colorpicker.types';
 
 export default {
   title: 'Atoms/Color Picker',

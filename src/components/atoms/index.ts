@@ -2,7 +2,7 @@ export { default as Badge } from './Badge';
 export { default as Box } from './Box';
 export { default as Button } from './Button';
 export { default as Checkbox } from './Checkbox';
-export { default as Colorpicker } from './Color-picker';
+export { default as Colorpicker } from './Colorpicker';
 export { default as Datepicker } from './Datepicker';
 export { default as Daterange } from './Daterange';
 export { default as Dropdown, DropdownDivider, DropdownItem, DropdownMenu } from './Dropdown';
