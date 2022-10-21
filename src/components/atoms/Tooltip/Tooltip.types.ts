@@ -18,4 +18,5 @@ export interface ITooltip extends TooltipProps {
   teid?: string;
   placement?: TPlacement;
   color?: 'dark' | 'light';
+  size?: number;
 }

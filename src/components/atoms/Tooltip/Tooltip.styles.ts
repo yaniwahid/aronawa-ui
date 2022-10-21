@@ -61,7 +61,7 @@ export const TooltipStyled = css`
     z-index: 1070;
     display: block;
     visibility: visible;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.5;
     opacity: 0.9;
   }

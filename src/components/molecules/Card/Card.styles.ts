@@ -37,7 +37,7 @@ export const CardStyled = styled.div({
 
 export const CardHeaderStyled = styled.div<ICard>(({ size = 'md' }) => ({
   ...sizeProps[size],
-  borderBottom: `1px solid ${Color.slate[200]}`,
+  borderBottom: `1px solid ${Color.slate[300]}`,
   display: 'flex',
   alignItems: 'center',
 }));
@@ -51,7 +51,7 @@ export const CardBody = styled.div<ICard>(({ size = 'md' }) => ({
 
 export const CardFooterStyled = styled.div<ICard>(({ size = 'md' }) => ({
   ...sizeProps[size],
-  borderTop: `1px solid ${Color.slate[200]}`,
+  borderTop: `1px solid ${Color.slate[300]}`,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'flex-end',

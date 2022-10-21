@@ -78,7 +78,7 @@ export const Bar = styled.div<IStyle>(({ isSelected }) => ({
 
 export const Content = styled.div({
   padding: 16,
-  borderTop: `1px solid ${Color.slate[200]}`,
+  borderTop: `1px solid ${Color.slate[300]}`,
 });
 
 export const TabsItemStyled = styled.div({

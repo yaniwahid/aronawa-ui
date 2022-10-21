@@ -6,7 +6,7 @@ import { IPreview } from './Preview.types';
 export const PreviewStyled = styled.div<IPreview>(
   ({ boxHeight, boxWidth }) => ({
     backgroundColor: Color.slate[100],
-    border: `1px solid ${Color.slate[200]}`,
+    border: `1px solid ${Color.slate[300]}`,
     width: boxWidth,
     height: boxHeight,
     position: 'relative',

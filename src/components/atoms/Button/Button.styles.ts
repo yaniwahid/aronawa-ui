@@ -92,7 +92,7 @@ const Solid = (color: any) => {
     '&:disabled': {
       color: `${Color.light}CC`,
       backgroundColor: Colors[color]['disabled'],
-      boxShadow: Shadow.platform,
+      boxShadow: "none",
     },
     ...styleProps[color],
   };
@@ -145,6 +145,7 @@ const Outline = (color: any) => {
     '&:disabled': {
       backgroundColor: Color.light,
       color: `${Colors[color]['default']}CC`,
+      boxShadow: "none",
     },
     ...styleProps[color],
   };
@@ -175,6 +176,7 @@ const Ghost = (color: any) => {
     '&:disabled': {
       backgroundColor: Color.light,
       color: `${Colors[color]['default']}CC`,
+      boxShadow: "none",
     },
     ...styleProps[color],
   };
