@@ -229,9 +229,9 @@ export const ButtonStyled = styled.button<IButton>(
         fontWeight: 700,
         fontSize: 12,
         letterSpacing: '0.2px',
-        backgroundColor: "transparent",
+        backgroundColor: 'transparent',
         '&:hover': {
-          backgroundColor: "transparent",
+          backgroundColor: 'transparent',
         },
       };
     } else if (variant === 'text') {
@@ -241,9 +241,9 @@ export const ButtonStyled = styled.button<IButton>(
         padding: 0,
         height: 'auto',
         fontWeight: 400,
-        backgroundColor: "transparent",
+        backgroundColor: 'transparent',
         '&:hover': {
-          backgroundColor: "transparent",
+          backgroundColor: 'transparent',
         },
       };
     } else {
