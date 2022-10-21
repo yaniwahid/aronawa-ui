@@ -6,8 +6,8 @@ import {
   ColorpickerInput,
   ColorpickerPopover,
   ColorpickerStyled,
-} from './Colorpicker.styles';
-import { IColorpicker } from './Colorpicker.types';
+} from './Color-picker.styles';
+import { IColorpicker } from './Color-picker.types';
 
 const Colorpicker: FC<IColorpicker> = ({ color, onChange }) => {
   const [isOpen, setIsOpenn] = useState<boolean>(false);

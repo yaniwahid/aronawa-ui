@@ -2,7 +2,7 @@ export { default as Badge } from './Badge';
 export { default as Box } from './Box';
 export { default as Button } from './Button';
 export { default as Checkbox } from './Checkbox';
-export { default as Colorpicker } from './Colorpicker';
+export { default as Colorpicker } from './Color-picker';
 export { default as Datepicker } from './Datepicker';
 export { default as Daterange } from './Daterange';
 export { default as Dropdown, DropdownDivider, DropdownItem, DropdownMenu } from './Dropdown';
@@ -19,3 +19,4 @@ export { default as Textarea } from './Textarea';
 export { toast, toastBody } from './Toast';
 export { default as Tooltip } from './Tooltip';
 export { default as Upload } from './Upload';
+
