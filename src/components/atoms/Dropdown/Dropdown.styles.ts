@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { color, space } from 'styled-system';
 import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
+import Shadow from '../../../themes/Shadow';
 import { IDropdownDivider, IDropdownItem, IDropdownMenu } from './Dropdown.types';
 
 export const DropdownStyled = css`
@@ -14,13 +15,6 @@ export const DropdownStyled = css`
     display: block;
     font-size: 14px;
     line-height: 1.5;
-    padding: 8px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.12);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
-      'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-      'Segoe UI Emoji', 'Segoe UI Symbol';
   }
   .aronawa-dropdown-hidden {
     display: none;
@@ -174,6 +168,14 @@ export const DropdownStyled = css`
 
 export const DropdownMenuStyled = styled.div<IDropdownMenu>(({ width }) => ({
   position: 'relative',
+  padding: 8,
+  background: Color.light,
+  borderRadius: Radius.dull,
+  boxShadow: Shadow.hover,
+  marginTop: 4,
+  fontFfamily: `-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol'`,
   ...(width && {
     minWidth: width,
   }),

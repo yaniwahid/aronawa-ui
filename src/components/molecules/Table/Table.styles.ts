@@ -24,7 +24,7 @@ export const TableStyled = styled.table<IStyle>(
     '& td': {
       padding: '12px 16px',
       ...tdAlignProps[layout],
-      borderTop: `1px solid ${Color.slate[200]}`,
+      borderTop: `1px solid ${Color.slate[300]}`,
       fontSize: 14,
       textAlign: 'left',
       position: 'relative',
@@ -108,7 +108,7 @@ export const TableStyled = styled.table<IStyle>(
     },
     '& tbody tr': {
       '&:last-of-type td': {
-        borderBottom: isPagination ? `1px solid ${Color.slate[200]}` : undefined,
+        borderBottom: isPagination ? `1px solid ${Color.slate[300]}` : undefined,
       },
       '&:hover': {
         '& td': {
@@ -132,8 +132,8 @@ export const TableStyled = styled.table<IStyle>(
 );
 
 export const TableWrapper = styled.div<IStyle>(({ isEmpty }) => ({
-  borderBottom: `1px solid ${Color.slate[200]}`,
-  borderTop: `1px solid ${Color.slate[200]}`,
+  borderBottom: `1px solid ${Color.slate[300]}`,
+  borderTop: `1px solid ${Color.slate[300]}`,
   borderBottomLeftRadius: Radius.dull,
   borderBottomRightRadius: Radius.dull,
   fontFfamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
@@ -160,7 +160,7 @@ export const PaginationStyled = styled.div({
   borderBottomRightRadius: Radius.dull,
   '@media(max-width: 767.98px)': {
     display: 'block',
-    borderTop: `1px solid ${Color.slate[200]}`,
+    borderTop: `1px solid ${Color.slate[300]}`,
     '& > * + *': {
       marginTop: 8,
       paddingLeft: '0 !important',

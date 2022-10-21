@@ -24,10 +24,9 @@ export const TitleWrapper = styled.div({
 
 export const TitleStyled = styled.h1({
   position: 'relative',
-  fontWeight: 700,
   display: 'flex',
   alignItems: 'center',
-  fontFamily: 'geomanistbook,sans-serif',
+  fontFamily: 'geomanistmedium,sans-serif',
   fontSize: 28,
   '& > *': {
     marginLeft: 8,

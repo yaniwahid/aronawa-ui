@@ -26,7 +26,7 @@ export const mappingBorderStatus = (isSelected: any, isDone: any, isFailed: any)
   if (isDone) {
     return Color.primary.default;
   }
-  return Color.slate[200];
+  return Color.slate[300];
 };
 
 export const mappingIconStatus = (isSelected: any, isFailed: any) => {
@@ -40,20 +40,17 @@ export const mappingIconStatus = (isSelected: any, isFailed: any) => {
 };
 
 export const mappingCircleStatus = (isSelected: any, isDone: any, isFailed: any) => {
-  if (isFailed) {
+  if (isFailed || isSelected) {
     return 'transparent';
-  }
-  if (isSelected) {
-    return Color.primary.default;
   }
   if (isDone) {
     return Color.primary.default;
   }
-  return Color.slate[200];
+  return Color.slate[300];
 };
 
-export const mappingBackgroundStatus = (isDone: any, isFailed: any) => {
-  if (isFailed) {
+export const mappingBackgroundStatus = (isDone: any, isFailed: any, isSelected: any) => {
+  if (isFailed || isSelected) {
     return 'transparent';
   }
   if (isDone) {
@@ -99,7 +96,9 @@ export const Title = styled.div<IStyle>(({ isSelected, isDone, isFailed }) => ({
   display: 'flex',
 }));
 
-export const Content = styled.div({});
+export const Content = styled.div({
+  marginTop: 16,
+});
 
 export const StepsItemStyled = styled.div({
   position: 'relative',
@@ -109,7 +108,7 @@ export const Circle = styled.div<IStyle>(({ isSelected, isDone, isFailed }) => (
   position: 'relative',
   border: `2px solid ${mappingCircleStatus(isSelected, isDone, isFailed)}`,
   borderRadius: Radius.circle,
-  backgroundColor: mappingBackgroundStatus(isDone, isFailed),
+  backgroundColor: mappingBackgroundStatus(isDone, isFailed, isSelected),
   width: 16,
   height: 16,
   display: 'flex',

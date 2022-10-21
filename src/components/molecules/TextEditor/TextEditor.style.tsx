@@ -7,7 +7,8 @@ export const EditorStyled = styled.div({
   boxShadow: Shadow.platform,
   borderRadius: Radius.dull,
   paddingBottom: 1,
-  borderTop: `1px solid ${Color.slate[200]}`,
+  borderTop: `1px solid ${Color.slate[300]}`,
+  width: '100%',
   '.cke_reset_all, .cke_reset_all *, .cke_reset_all a, .cke_reset_all textarea': {
     fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
     color: Color.font.ink,
@@ -21,7 +22,7 @@ export const EditorStyled = styled.div({
   },
   '.cke_top': {
     background: '#fff',
-    borderBottomColor: Color.slate[200],
+    borderBottomColor: Color.slate[300],
     borderTopLeftRadius: Radius.dull,
     borderTopRightRadius: Radius.dull,
   },

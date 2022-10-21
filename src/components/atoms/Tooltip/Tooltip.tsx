@@ -8,6 +8,7 @@ const Tooltip: FC<ITooltip> = ({
   placement = 'top',
   color = 'dark',
   teid = 'tooltip',
+  size,
   children,
   ...props
 }) => {
@@ -19,6 +20,7 @@ const Tooltip: FC<ITooltip> = ({
         data-testid={teid}
         prefixCls="aronawa-tooltip"
         overlayClassName={`aronawa-tooltip-${color}`}
+        overlayStyle={{ fontSize: size }}
         {...props}
       >
         {children}

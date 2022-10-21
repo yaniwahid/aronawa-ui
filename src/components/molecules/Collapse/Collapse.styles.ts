@@ -5,7 +5,7 @@ import { ICollapse, IStyle } from './Collapse.types';
 
 export const CollapseStyled = styled.div<ICollapse>({
   backgroundColor: Color.light,
-  border: `1px solid ${Color.slate[200]}`,
+  border: `1px solid ${Color.slate[300]}`,
   borderRadius: Radius.curved,
 
   fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
@@ -22,7 +22,7 @@ export const CollapseStyled = styled.div<ICollapse>({
 });
 
 export const Wrapper = styled.div({
-  borderBottom: `1px solid ${Color.slate[200]}`,
+  borderBottom: `1px solid ${Color.slate[300]}`,
 });
 
 export const Content = styled.div<IStyle>(({ isShow }) => ({

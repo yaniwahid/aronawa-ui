@@ -54,7 +54,7 @@ const Steps: FC<ISteps> = ({ defaultActive = 0, children, ...props }) => {
                   {isFailed ? (
                     <Icon name="exclamation-circle" size={20} />
                   ) : (
-                    <Icon name={iconName} />
+                    <Icon name={iconName} {...(index === defaultActive && { size: 20 })} />
                   )}
                 </Circle>
                 <TitleContent>
