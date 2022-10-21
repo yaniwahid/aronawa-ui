@@ -1,7 +1,8 @@
 import { Global } from '@emotion/react';
+import { Dayjs } from 'dayjs';
 import { RangePicker } from 'rc-picker';
 import generateConfig from 'rc-picker/lib/generate/dayjs';
-import id_ID from 'rc-picker/lib/locale/id_ID';
+import en_US from 'rc-picker/lib/locale/en_US';
 import React, { useRef } from 'react';
 import {
   DatepickerIcon,
@@ -18,16 +19,16 @@ const Daterange: React.FC<IDaterange> = ({
   isDisabled,
   ...props
 }) => {
-  const rangePickerRef = useRef<RangePicker<any>>(null);
+  const rangePickerRef = useRef<RangePicker<Dayjs>>(null);
   return (
     <>
       <Global styles={DatepickerStyled} />
       <DatepickerWrapper>
-        <RangePicker<any>
+        <RangePicker<Dayjs>
           picker={picker}
           prefixCls="aronawa-picker"
           generateConfig={generateConfig}
-          locale={id_ID}
+          locale={en_US}
           value={value}
           defaultValue={defaultValue}
           ref={rangePickerRef}

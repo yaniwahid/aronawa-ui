@@ -1,6 +1,6 @@
 import { DialogProps } from 'rc-dialog/lib';
 import { ReactNode } from 'react';
-import { TColorButton, TVariantButton } from '../../atoms/Button/button.types';
+import { TColorButton, TVariantButton } from '../../atoms/Button/Button.types';
 type TSizeModal = 'sm' | 'md' | 'lg';
 type TVariantModal = 'default' | 'filled' | 'clean';
 

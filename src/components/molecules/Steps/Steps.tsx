@@ -10,7 +10,7 @@ import {
   TitleContent,
   TitleWrapper,
 } from './Steps.styles';
-import { IStepItem, ISteps } from './steps.types';
+import { IStepItem, ISteps } from './Steps.types';
 
 export const StepItem: FC<IStepItem> = ({ children }) => {
   return <StepsItemStyled>{children}</StepsItemStyled>;
@@ -30,7 +30,7 @@ const Steps: FC<ISteps> = ({ defaultActive = 0, children, ...props }) => {
     <StepsStyled {...props}>
       <StepsList>
         {React.Children.map(children, (item: any, index) => {
-          let iconName: string = index < defaultActive ? 'check' : 'stop-circle';
+          let iconName: string = index < defaultActive ? 'check' : 'record-audio';
 
           const isFailed = item.props?.isFailed || false;
 

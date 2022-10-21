@@ -1,6 +1,6 @@
 import { DrawerProps } from 'rc-drawer/lib/Drawer';
 import { ReactNode } from 'react';
-import { TColorButton, TVariantButton } from '../../atoms/Button/button.types';
+import { TColorButton, TVariantButton } from '../../atoms/Button/Button.types';
 type TSizeDrawer = 'sm' | 'md' | 'lg';
 
 export interface IDrawer extends DrawerProps {

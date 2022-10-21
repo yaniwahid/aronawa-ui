@@ -4,11 +4,11 @@ import { space } from 'styled-system';
 import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
 import Shadow from '../../../themes/Shadow';
-import { IButton } from './button.types';
+import { IButton } from './Button.types';
 
 const Colors = Color as any;
 
-const Size = {
+const Size: any = {
   sm: {
     fontSize: 12,
     paddingLeft: 8,
@@ -201,13 +201,13 @@ export const ButtonStyled = styled.button<IButton>(
       boxSizing: 'border-box',
       fontWeight: 500,
       fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
+      ...Size[size],
       ...(isDisabled && {
         cursor: 'not-allowed',
       }),
       ...(isFullWidth && {
         width: '100%',
       }),
-      ...Size[size],
     };
     if (variant === 'outline') {
       cssTmp = {
@@ -229,8 +229,9 @@ export const ButtonStyled = styled.button<IButton>(
         fontWeight: 700,
         fontSize: 12,
         letterSpacing: '0.2px',
+        backgroundColor: "transparent",
         '&:hover': {
-          backgroundColor: Color.light,
+          backgroundColor: "transparent",
         },
       };
     } else if (variant === 'text') {
@@ -240,8 +241,9 @@ export const ButtonStyled = styled.button<IButton>(
         padding: 0,
         height: 'auto',
         fontWeight: 400,
+        backgroundColor: "transparent",
         '&:hover': {
-          backgroundColor: Color.light,
+          backgroundColor: "transparent",
         },
       };
     } else {
