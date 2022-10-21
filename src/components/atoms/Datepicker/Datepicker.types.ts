@@ -1,8 +1,8 @@
-import { Moment } from 'moment';
+import { Dayjs } from 'dayjs';
 import { PickerProps } from 'rc-picker/lib/Picker';
 
 export interface IDatepicker
-  extends Omit<PickerProps<Moment>, 'picker' | 'locale' | 'generateConfig'> {
+  extends Omit<PickerProps<Dayjs>, 'picker' | 'locale' | 'generateConfig'> {
   picker?: 'time' | 'date' | 'week' | 'month' | 'quarter' | 'year' | undefined;
   value?: any;
   defaultValue?: any;

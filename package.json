@@ -73,6 +73,9 @@
     "format": "prettier --write src"
   },
   "dependencies": {
+    "ckeditor4-react": "^4.1.0",
+    "dayjs": "^1.11.6",
+    "lodash": "^4.17.21",
     "rc-dialog": "^9.0.0",
     "rc-drawer": "^6.0.0",
     "rc-dropdown": "^4.0.1",
@@ -81,6 +84,7 @@
     "rc-tooltip": "^5.2.2",
     "rc-upload": "^4.3.4",
     "react-color": "^2.19.3",
+    "react-markdown": "^8.0.3",
     "react-slick": "^0.29.0",
     "react-toastify": "^9.0.8",
     "styled-system": "^5.1.5"

@@ -1,17 +1,12 @@
 import { Global } from '@emotion/react';
+import { Dayjs } from 'dayjs';
 import Picker from 'rc-picker';
 import generateConfig from 'rc-picker/lib/generate/dayjs';
-import id_ID from 'rc-picker/lib/locale/id_ID';
+import en_US from 'rc-picker/lib/locale/en_US';
 import React, { FC } from 'react';
 import Icon from '../Icon';
 import { DatepickerIcon, DatepickerStyled, DatepickerWrapper } from './Datepicker.styles';
 import { IDatepicker } from './Datepicker.types';
-
-export const localeCustom = {
-  ...id_ID,
-  now: 'Hari Ini',
-  ok: 'Simpan',
-};
 
 const Datepicker: FC<IDatepicker> = ({
   picker = 'date',
@@ -24,11 +19,11 @@ const Datepicker: FC<IDatepicker> = ({
     <>
       <Global styles={DatepickerStyled} />
       <DatepickerWrapper>
-        <Picker<any>
+        <Picker<Dayjs>
           prefixCls="aronawa-picker"
           picker={picker}
           generateConfig={generateConfig}
-          locale={localeCustom}
+          locale={en_US}
           value={value}
           defaultValue={defaultValue}
           inputReadOnly
