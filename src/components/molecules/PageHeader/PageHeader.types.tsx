@@ -5,4 +5,5 @@ export interface IPageHeader {
   subtitle?: ReactNode;
   breadcrumb?: ReactNode;
   back?: string;
+  children?: ReactNode;
 }

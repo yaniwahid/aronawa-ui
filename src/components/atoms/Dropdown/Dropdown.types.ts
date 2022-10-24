@@ -1,10 +1,12 @@
 import { DropdownProps } from 'rc-dropdown/lib/Dropdown';
+import { ReactNode } from 'react';
 import { ColorProps, SpaceProps } from 'styled-system';
 
 export interface IDropdown extends DropdownProps {}
 
 export interface IDropdownMenu {
   width?: number;
+  children?: ReactNode;
 }
 
 export interface IDropdownItem
@@ -17,6 +19,7 @@ export interface IDropdownItem
   color?: string;
   image?: string;
   imageHover?: string;
+  children?: ReactNode;
 }
 
 export interface IDropdownDivider {

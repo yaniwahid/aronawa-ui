@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { SpaceProps } from 'styled-system';
 
 export type TColorButton = 'neutral' | 'primary' | 'secondary' | 'approval' | 'danger' | 'light';
@@ -18,4 +19,5 @@ export interface IButton extends SpaceProps, React.ButtonHTMLAttributes<HTMLButt
   href?: string;
   as?: React.ElementType<any>;
   teid?: string;
+  children?: ReactNode;
 }

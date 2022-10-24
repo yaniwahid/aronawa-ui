@@ -9,4 +9,5 @@ export interface IEmpty
   title: ReactNode;
   description?: ReactNode;
   imageWidth?: string | number;
+  children?: ReactNode;
 }

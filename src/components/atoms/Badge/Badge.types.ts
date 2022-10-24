@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { SpaceProps } from 'styled-system';
 
 export type TColorBadge = 'neutral' | 'primary' | 'secondary' | 'approval' | 'danger';
@@ -8,4 +9,5 @@ export interface IBadge extends SpaceProps, React.HTMLAttributes<HTMLDivElement>
   variant?: TVariantBadge;
   isClosable?: boolean;
   onClose?: (e: any) => void;
+  children?: ReactNode;
 }

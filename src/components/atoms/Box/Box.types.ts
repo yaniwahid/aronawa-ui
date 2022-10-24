@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import {
   BorderProps,
   ColorProps,
@@ -17,4 +18,6 @@ export interface IBox
     TypographyProps,
     BorderProps,
     GridProps,
-    ShadowProps {}
+    ShadowProps {
+  children?: ReactNode;
+}

@@ -5,10 +5,12 @@ export interface ICollapseItem {
   defaultShow?: boolean;
   isDisabled?: boolean;
   isShow?: boolean;
+  children?: ReactNode;
 }
 
 export interface ICollapse extends React.HTMLAttributes<HTMLDivElement> {
   teid?: string;
+  children?: ReactNode;
 }
 
 export interface IStyle {
