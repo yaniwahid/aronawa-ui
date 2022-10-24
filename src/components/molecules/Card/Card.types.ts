@@ -8,4 +8,5 @@ export interface ICard extends SpaceProps {
   footer?: ReactNode;
   title?: ReactNode;
   extra?: ReactNode;
+  children?: ReactNode;
 }

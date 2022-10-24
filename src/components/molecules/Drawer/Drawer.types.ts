@@ -23,4 +23,5 @@ export interface IDrawer extends DrawerProps {
   isMaskBlack?: boolean;
   closeIcon?: string;
   background?: string;
+  children?: ReactNode;
 }

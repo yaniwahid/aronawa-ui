@@ -21,4 +21,5 @@ export interface IModal extends DialogProps {
   size?: TSizeModal;
   variant?: TVariantModal;
   isCloseable?: boolean;
+  children?: ReactNode;
 }

@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { Settings } from 'react-slick';
 
 export interface ICarousel extends Settings {
@@ -16,4 +17,5 @@ export interface ICarousel extends Settings {
   teid?: string;
   width?: number;
   height?: number;
+  children?: ReactNode;
 }

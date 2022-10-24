@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { SpaceProps } from 'styled-system';
 
 export interface IPreview extends SpaceProps {
@@ -7,4 +8,5 @@ export interface IPreview extends SpaceProps {
   imageSize?: string;
   boxWidth?: string;
   boxHeight?: string;
+  children?: ReactNode;
 }
