@@ -1,5 +1,5 @@
 import { Global, ThemeProvider } from '@emotion/react';
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { Slide, ToastContainer } from 'react-toastify';
 
 const GlobalStyle = () => (
@@ -120,7 +120,11 @@ const theme = {
   space: [0, 4, 8, 12, 16, 24, 32, 40, 48, 56, 66, 72],
 };
 
-export const Theme: FC = ({ children }) => {
+interface ITheme {
+  children?: ReactNode
+}
+
+export const Theme: FC<ITheme> = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
