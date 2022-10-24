@@ -1,15 +1,11 @@
 import styled from '@emotion/styled';
-import { space } from 'styled-system';
 import Color from '../../../themes/Color';
 import { IStyle } from './Tabs.types';
 
-export const TabsStyled = styled.div(
-  {
-    position: 'relative',
-    background: Color.light,
-  },
-  space,
-);
+export const TabsStyled = styled.div({
+  position: 'relative',
+  background: Color.light,
+});
 
 export const TabsList = styled.div({
   display: 'flex',

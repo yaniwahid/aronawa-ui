@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { space } from 'styled-system';
 import Color from '../../../themes/Color';
 import { IForm, IFormItem } from './Form.types';
 
@@ -33,7 +32,7 @@ export const FormStyled = styled.form<IForm>(({ layout, formWidth = '200px 386px
     };
   }
   return { ...cssTmp };
-}, space);
+});
 
 export const FormItemStyled = styled.div<IFormItem>(({ isInvalid, formWidth }) => ({
   position: 'relative',

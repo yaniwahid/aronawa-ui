@@ -168,6 +168,9 @@ export const DrawerFooterStyled = styled.div({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'flex-end',
+  '& > * + *': {
+    marginLeft: 8,
+  },
 });
 
 export const Close = styled.div<IDrawer>(({ isCloseLeft }) => ({

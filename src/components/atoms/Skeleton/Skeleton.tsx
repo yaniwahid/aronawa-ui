@@ -1,6 +1,6 @@
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
-import { border, space } from 'styled-system';
+
 import Color from '../../../themes/Color';
 import { ISkeleton } from './Skeleton.types';
 
@@ -13,16 +13,12 @@ const loader = keyframes`
   }
 `;
 
-const Skeleton = styled.div<ISkeleton>(
-  ({ width, height, color = Color.slate[100] }) => ({
-    width,
-    height,
-    background: `linear-gradient(90deg, ${color} 25%, ${Color.slate[50]} 37%, ${color} 63%)`,
-    animation: `${loader} 1.4s ease infinite`,
-    backgroundSize: '400% 100%',
-  }),
-  space,
-  border,
-);
+const Skeleton = styled.div<ISkeleton>(({ width, height, color = Color.slate[100] }) => ({
+  width,
+  height,
+  background: `linear-gradient(90deg, ${color} 25%, ${Color.slate[50]} 37%, ${color} 63%)`,
+  animation: `${loader} 1.4s ease infinite`,
+  backgroundSize: '400% 100%',
+}));
 
 export default Skeleton;

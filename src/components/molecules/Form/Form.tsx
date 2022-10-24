@@ -12,7 +12,7 @@ import {
   Label,
   Req,
 } from './Form.styles';
-import { IForm, IFormItem } from './Form.types';
+import { IForm, IFormAction, IFormItem } from './Form.types';
 
 export const FormItem: FC<IFormItem> = ({
   label,
@@ -55,7 +55,7 @@ export const FormItem: FC<IFormItem> = ({
   );
 };
 
-export const FormAction: FC = ({ children }) => {
+export const FormAction: FC<IFormAction> = ({ children }) => {
   return <FormActionStyled className="form-action">{children}</FormActionStyled>;
 };
 

@@ -1,9 +1,6 @@
-import { SpaceProps } from 'styled-system';
 type TVariantPagination = 'default' | 'withoutNumber' | 'withSelect';
 
-export interface IPagination
-  extends SpaceProps,
-    Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'> {
+export interface IPagination extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'> {
   defaultCurrent: number;
   pageSize: number;
   total: number;

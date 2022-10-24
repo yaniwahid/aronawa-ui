@@ -1,6 +1,5 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { color, space } from 'styled-system';
 import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
 import Shadow from '../../../themes/Shadow';
@@ -210,8 +209,6 @@ export const DropdownItemStyled = styled.div<IDropdownItem>(
       display: 'none',
     },
   }),
-  space,
-  color,
 );
 
 export const DividerStyled = styled.div<IDropdownDivider>(({ color = Color.slate[300] }) => ({

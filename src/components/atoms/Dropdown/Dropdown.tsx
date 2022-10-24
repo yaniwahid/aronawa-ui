@@ -29,7 +29,7 @@ export const DropdownItem: FC<IDropdownItem> = ({
 }) => {
   return (
     <DropdownItemStyled hoverColor={hoverColor} hoverBackground={hoverBackground} {...props}>
-      {icon && <Icon name={icon} mr="2" size={14} />}
+      {icon && <Icon name={icon} style={{ marginRight: 8 }} size={14} />}
       {image && <img src={image} alt="Image" className="dropdown-image" />}
       {imageHover && <img src={imageHover} alt="Image Hover" className="dropdown-image-hover" />}
       {children}

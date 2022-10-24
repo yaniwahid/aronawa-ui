@@ -51,7 +51,6 @@ const Modal: FC<IModal> = ({
               </Button>
               <Button
                 color={okColor}
-                ml="2"
                 onClick={onOk}
                 isDisabled={isDisabled}
                 isLoading={isLoading}

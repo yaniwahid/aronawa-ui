@@ -1,5 +1,5 @@
-import { SpaceProps } from 'styled-system';
-
-export interface IDivider extends SpaceProps, React.HTMLAttributes<HTMLDivElement> {
+export interface IDivider extends React.HTMLAttributes<HTMLDivElement> {
   color?: string;
+  my?: number;
+  mx?: number;
 }

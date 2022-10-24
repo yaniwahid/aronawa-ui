@@ -52,9 +52,11 @@ const Button: FC<IButton> = ({
           <span />
         </Loading>
       )}
-      {icon && !isLoading && <Icon name={icon} {...(childCount === 1 && { mr: '2' })} />}
+      {icon && !isLoading && (
+        <Icon name={icon} {...(childCount === 1 && { style: { marginRight: 8 } })} />
+      )}
       {children}
-      {rightIcon && !isLoading && <Icon name={rightIcon} ml="2" />}
+      {rightIcon && !isLoading && <Icon name={rightIcon} style={{ marginLeft: 8 }} />}
     </ButtonStyled>
   );
 };

@@ -85,8 +85,7 @@
     "rc-upload": "^4.3.4",
     "react-color": "^2.19.3",
     "react-slick": "^0.29.0",
-    "react-toastify": "^9.0.8",
-    "styled-system": "^5.1.5"
+    "react-toastify": "^9.0.8"
   },
   "resolutions": {
     "@types/react": "^16.9.17",
