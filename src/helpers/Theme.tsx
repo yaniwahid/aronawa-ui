@@ -121,7 +121,7 @@ const theme = {
 };
 
 interface ITheme {
-  children?: ReactNode
+  children?: ReactNode;
 }
 
 export const Theme: FC<ITheme> = ({ children }) => {
