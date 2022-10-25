@@ -5,7 +5,7 @@ import Icon from '../Icon';
 import { SelectStyled } from './Select.styles';
 import { ISelect } from './Select.types';
 
-const Select: FC<ISelect> = ({ isDisabled, children, width, isSearchable, ...props }) => {
+const Select: FC<ISelect> = ({ isDisabled, width, isSearchable, ...props }) => {
   return (
     <>
       <Global styles={SelectStyled} />
@@ -19,7 +19,7 @@ const Select: FC<ISelect> = ({ isDisabled, children, width, isSearchable, ...pro
         })}
         {...props}
       >
-        {children}
+        {props.children}
       </SelectComponent>
     </>
   );
