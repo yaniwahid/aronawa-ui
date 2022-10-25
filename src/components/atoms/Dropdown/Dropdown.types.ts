@@ -1,7 +1,7 @@
 import { DropdownProps } from 'rc-dropdown/lib/Dropdown';
 import { ReactNode } from 'react';
 
-export interface IDropdown extends DropdownProps { }
+export interface IDropdown extends DropdownProps {}
 
 export interface IDropdownMenu {
   width?: number;

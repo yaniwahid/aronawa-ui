@@ -11,7 +11,7 @@ export { default as Icon } from './Icon';
 export { default as Input } from './Input';
 export { default as Preview } from './Preview';
 export { default as Radio } from './Radio';
-export { default as Select, Option } from './Select';
+export { default as Option, default as Select } from './Select';
 export { default as Skeleton } from './Skeleton';
 export { default as Spin } from './Spin';
 export { default as Switch } from './Switch';

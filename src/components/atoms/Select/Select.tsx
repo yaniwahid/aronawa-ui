@@ -26,4 +26,5 @@ const Select: FC<ISelect> = ({ isDisabled, children, width, isSearchable, ...pro
 };
 
 export default Select;
+
 export { Option };

@@ -39,7 +39,7 @@ export const Item = styled.div<ISideMenuItem>(({ isActive }) => ({
     alignItems: 'center',
     borderRadius: Radius.blunt,
     textDecoration: 'none',
-    cursor: "pointer",
+    cursor: 'pointer',
     '&:hover': {
       color: isActive ? Color.light : Color.sky[500],
     },
