@@ -16,6 +16,6 @@ export { default as Skeleton } from './Skeleton';
 export { default as Spin } from './Spin';
 export { default as Switch } from './Switch';
 export { default as Textarea } from './Textarea';
-export { toast, toastBody } from './Toast';
+export { default as toast, toastBody } from './Toast';
 export { default as Tooltip } from './Tooltip';
 export { default as Upload } from './Upload';

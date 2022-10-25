@@ -1,16 +1,18 @@
 import { Global } from '@emotion/react';
-import { default as OptionComponent, OptionProps } from 'rc-select/lib/Option';
-import { default as SelectComponent } from 'rc-select/lib/Select';
+import { default as SelectComponent } from 'rc-select';
+import { OptionProps } from 'rc-select/lib/Option';
 import React, { FC } from 'react';
 import Icon from '../Icon';
 import { SelectStyled } from './Select.styles';
 import { ISelect } from './Select.types';
 
-export const Option: FC<OptionProps> = ({ ...props }) => {
-  return <OptionComponent {...props} />;
-};
-
-const Select: FC<ISelect> = ({ isDisabled, children, width, isSearchable, ...props }) => {
+const Select: FC<ISelect & OptionProps> = ({
+  isDisabled,
+  children,
+  width,
+  isSearchable,
+  ...props
+}) => {
   return (
     <>
       <Global styles={SelectStyled} />
@@ -23,11 +25,10 @@ const Select: FC<ISelect> = ({ isDisabled, children, width, isSearchable, ...pro
           style: { minWidth: width, maxWidth: width },
         })}
         {...props}
-      >
-        {children}
-      </SelectComponent>
+      />
     </>
   );
 };
 
 export default Select;
+export const Option = SelectComponent.Option;
