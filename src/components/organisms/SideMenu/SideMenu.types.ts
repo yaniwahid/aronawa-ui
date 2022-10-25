@@ -7,7 +7,7 @@ export interface ISideMenu extends React.HTMLAttributes<HTMLDivElement> {
 export interface ISideMenuItem {
   isActive?: boolean;
   icon?: string;
-  link?: string;
+  link?: any;
   label?: string;
   defaultSelected?: number | string;
   content?: ReactNode;
