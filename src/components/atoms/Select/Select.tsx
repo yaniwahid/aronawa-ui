@@ -18,9 +18,7 @@ const Select: FC<ISelect> = ({ isDisabled, width, isSearchable, ...props }) => {
           style: { minWidth: width, maxWidth: width },
         })}
         {...props}
-      >
-        {props.children}
-      </SelectComponent>
+      />
     </>
   );
 };
