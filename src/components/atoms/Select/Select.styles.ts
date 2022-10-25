@@ -175,6 +175,7 @@ export const SelectStyled = css`
     margin: 0;
     outline: 0;
     background: transparent;
+    color: #121212;
   }
   .aronawa-select-multiple .aronawa-select-selection-item-remove {
     margin-left: 4px;

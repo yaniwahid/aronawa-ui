@@ -181,7 +181,7 @@ export const DropdownMenuStyled = styled.div<IDropdownMenu>(({ width }) => ({
 }));
 
 export const DropdownItemStyled = styled.div<IDropdownItem>(
-  ({ hoverColor = Color.sky[500], hoverBackground = Color.slate[50] }) => ({
+  ({ hoverColor = Color.sky[500], hoverBackground = Color.slate[50], color = Color.font.ink }) => ({
     position: 'relative',
     cursor: 'pointer',
     fontSize: 14,
@@ -190,6 +190,7 @@ export const DropdownItemStyled = styled.div<IDropdownItem>(
     display: 'flex',
     alignItems: 'center',
     borderRadius: Radius.blunt,
+    color: color,
     '&:hover': {
       background: hoverBackground,
       color: hoverColor,

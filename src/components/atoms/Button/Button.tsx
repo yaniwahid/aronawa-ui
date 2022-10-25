@@ -42,7 +42,7 @@ const Button: FC<IButton> = ({
     target: target,
     'data-testid': teid,
     ...(childCount != 1 && {
-      p: '0',
+      style:{padding:0}
     }),
   };
   return (
