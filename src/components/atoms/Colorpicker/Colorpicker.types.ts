@@ -1,6 +1,14 @@
-import { ColorChangeHandler } from 'react-color';
+import { ReactNode } from 'react';
 
 export interface IColorpicker {
+  defaultColor?: string;
+  defaultAlpha?: number;
+  alpha?: number;
+  children?: ReactNode;
+  className?: string;
   color?: string;
-  onChange?: ColorChangeHandler;
+  enableAlpha?: boolean;
+  onChange?: () => void;
+  onClose?: () => void;
+  onOpen?: () => void;
 }

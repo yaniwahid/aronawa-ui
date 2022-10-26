@@ -4,7 +4,7 @@ import Colorpicker from './Colorpicker';
 import { IColorpicker } from './Colorpicker.types';
 
 export default {
-  title: 'Atoms/Color Picker',
+  title: 'Atoms/Colorpicker',
   component: Colorpicker,
   argTypes: {
     color: {
