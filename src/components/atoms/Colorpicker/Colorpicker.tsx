@@ -14,8 +14,8 @@ const Colorpicker: FC<IColorpicker> = ({ color, onChange }) => {
   const onOpen = () => setIsOpenn(!isOpen);
   const onClose = () => setIsOpenn(false);
   return (
-    <ColorpickerStyled onClick={onOpen}>
-      <ColorpickerInput>
+    <ColorpickerStyled>
+      <ColorpickerInput onClick={onOpen}>
         <ColorpickerBackground color={color} />
       </ColorpickerInput>
       {isOpen ? (

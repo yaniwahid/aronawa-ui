@@ -114,6 +114,7 @@ export const SelectStyled = css`
     margin: 0;
     outline: 0;
     background: transparent;
+    color: #121212;
   }
   .aronawa-select-single.aronawa-select-show-search:not(.aronawa-select-customize-input)
     .aronawa-select-selector
