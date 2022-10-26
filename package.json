@@ -76,7 +76,6 @@
     "ckeditor4-react": "^4.1.0",
     "dayjs": "^1.11.6",
     "lodash": "^4.17.21",
-    "rc-color-picker": "^1.2.6",
     "rc-dialog": "^9.0.0",
     "rc-drawer": "^6.0.0",
     "rc-dropdown": "^4.0.1",
@@ -84,6 +83,7 @@
     "rc-select": "^14.1.13",
     "rc-tooltip": "^5.2.2",
     "rc-upload": "^4.3.4",
+    "react-input-color": "^4.0.1",
     "react-slick": "^0.29.0",
     "react-toastify": "^9.0.8"
   },
