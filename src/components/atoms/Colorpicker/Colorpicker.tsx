@@ -12,7 +12,6 @@ const Colorpicker: FC<IColorpicker> = ({ color, alpha = 100, onChange }) => {
   return (
     <ColorpickerStyled>
       <InputColor
-        placement="top"
         initialValue={`${color}${decimalToHex(alpha / 100)}`}
         onChange={onChange}
       />

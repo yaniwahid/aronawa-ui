@@ -4,6 +4,7 @@ import Radius from '../../../themes/Radius';
 import Shadow from '../../../themes/Shadow';
 
 export const ColorpickerStyled = styled.div({
+  width:"100%",
   "[x-placement^='bottom'] [data-arrow]:before": {
     borderBottomColor: Color.slate[100]
   },

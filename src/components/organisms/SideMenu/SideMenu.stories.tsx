@@ -10,11 +10,11 @@ export default {
 
 export const Basic = () => (
   <SideMenu>
-    <SideMenuItem isActive icon="dashboard" link="/dashboard" label="Dashboard" />
-    <SideMenuItem icon="grid" link="/produk" label="Page Builder" />
+    <SideMenuItem isActive icon="dashboard" label="Dashboard" />
+    <SideMenuItem icon="grid" label="Page Builder" />
     <SideMenuSub label="Setting" icon="cog">
-      <SideMenuItem link="/pengaturan" label="Header" />
-      <SideMenuItem link="/pengaturan" label="Footer" />
+      <SideMenuItem label="Header" />
+      <SideMenuItem label="Footer" />
     </SideMenuSub>
   </SideMenu>
 );
