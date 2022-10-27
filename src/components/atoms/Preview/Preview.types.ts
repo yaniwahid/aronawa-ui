@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
-import { SpaceProps } from 'styled-system';
 
-export interface IPreview extends SpaceProps {
+export interface IPreview {
   imageUrl?: string;
   isClearable?: boolean;
   onClear?: (e: any) => void;

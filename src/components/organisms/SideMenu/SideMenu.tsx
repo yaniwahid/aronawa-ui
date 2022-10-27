@@ -7,12 +7,12 @@ import { ISideMenu, ISideMenuItem, ISideMenuParent, ISideMenuSub } from './SideM
 export const SideMenuItem: FC<ISideMenuItem> = ({ isActive, icon, link, label, content }) => {
   return (
     <Item isActive={isActive}>
-      <a href={link}>
+      <div onClick={link}>
         {icon && <Icon size={20} name={icon} />}
         <TextItem>
           {label} {content}
         </TextItem>
-      </a>
+      </div>
     </Item>
   );
 };

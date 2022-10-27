@@ -101,6 +101,9 @@ export const ModalStyled = css`
     text-align: right;
     border-radius: 0 0 5px 5px;
   }
+  .aronawa-modal-footer > * + * {
+    margin-left: 8px;
+  }
   .aronawa-modal-zoom-enter,
   .aronawa-modal-zoom-appear {
     opacity: 0;

@@ -1,6 +1,6 @@
 {
   "name": "aronawa-ui",
-  "version": "1.0.5",
+  "version": "1.0.20",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "publishConfig": {
@@ -83,10 +83,9 @@
     "rc-select": "^14.1.13",
     "rc-tooltip": "^5.2.2",
     "rc-upload": "^4.3.4",
-    "react-color": "^2.19.3",
+    "react-input-color": "^4.0.1",
     "react-slick": "^0.29.0",
-    "react-toastify": "^9.0.8",
-    "styled-system": "^5.1.5"
+    "react-toastify": "^9.0.8"
   },
   "resolutions": {
     "@types/react": "^16.9.17",

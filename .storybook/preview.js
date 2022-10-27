@@ -1,5 +1,4 @@
 import { DocsContainer } from '@storybook/addon-docs';
-import { Box } from '../src/components/atoms/Box';
 import { ColorDoc, ColorDocWrapper } from '../src/documentation/Color/Color';
 import { IconDoc, IconDocs, IconDocWrapper } from '../src/documentation/Icon/Icon';
 import { RadiusDoc, RadiusDocWrapper } from '../src/documentation/Radius/Radius';
@@ -21,7 +20,6 @@ export const parameters = {
     components: {
       h1: ComponentName,
       h2: SectionName,
-      Box,
       IconDoc,
       IconDocs,
       IconDocWrapper,

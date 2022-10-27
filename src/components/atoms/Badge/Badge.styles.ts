@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { space } from 'styled-system';
 import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
 import { IBadge } from './Badge.types';
@@ -73,7 +72,7 @@ export const BadgeStyled = styled.span<IBadge>(({ variant, color }) => {
     };
   }
   return { ...cssTmp };
-}, space);
+});
 
 export const IndicatorStyled = styled.span<IBadge>(({ color }) => ({
   position: 'relative',

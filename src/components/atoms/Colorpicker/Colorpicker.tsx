@@ -1,29 +1,20 @@
-import React, { FC, useState } from 'react';
-import { SketchPicker } from 'react-color';
-import {
-  ColorpickerBackground,
-  ColorpickerCover,
-  ColorpickerInput,
-  ColorpickerPopover,
-  ColorpickerStyled,
-} from './Colorpicker.styles';
+import React, { FC } from 'react';
+import InputColor from 'react-input-color';
+import { ColorpickerStyled } from './Colorpicker.styles';
 import { IColorpicker } from './Colorpicker.types';
 
-const Colorpicker: FC<IColorpicker> = ({ color, onChange }) => {
-  const [isOpen, setIsOpenn] = useState<boolean>(false);
-  const onOpen = () => setIsOpenn(!isOpen);
-  const onClose = () => setIsOpenn(false);
+const decimalToHex = (alpha: number) => {
+  let aHex = Math.round(255 * alpha).toString(16);
+  return alpha === 0 ? '00' : aHex.length < 2 ? `0${aHex}` : aHex;
+};
+
+const Colorpicker: FC<IColorpicker> = ({ color, alpha = 100, onChange }) => {
   return (
-    <ColorpickerStyled onClick={onOpen}>
-      <ColorpickerInput>
-        <ColorpickerBackground color={color} />
-      </ColorpickerInput>
-      {isOpen ? (
-        <ColorpickerPopover>
-          <ColorpickerCover onClick={onClose} />
-          <SketchPicker color={color} onChange={onChange} />
-        </ColorpickerPopover>
-      ) : null}
+    <ColorpickerStyled>
+      <InputColor
+        initialValue={`${color}${decimalToHex(alpha / 100)}`}
+        onChange={onChange}
+      />
     </ColorpickerStyled>
   );
 };

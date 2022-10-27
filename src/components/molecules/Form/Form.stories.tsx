@@ -67,7 +67,7 @@ export const Basic = (args: IForm) => (
           ]}
         />
         <Tooltip placement="top" overlay="Pelatihan/Training">
-          <Icon name="question-circle" ml="2" />
+          <Icon name="question-circle" style={{ marginRight: 8 }} />
         </Tooltip>
       </FormItem>
       <FormItem

@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { SpaceProps } from 'styled-system';
 
 export interface IRow extends React.HTMLAttributes<HTMLDivElement> {
   noGutter?: boolean;
@@ -7,7 +6,7 @@ export interface IRow extends React.HTMLAttributes<HTMLDivElement> {
   children?: ReactNode;
 }
 
-export interface IContainer extends SpaceProps, React.HTMLAttributes<HTMLDivElement> {
+export interface IContainer extends React.HTMLAttributes<HTMLDivElement> {
   gutter?: number;
   noPadding?: boolean;
   isFullWidth?: boolean;

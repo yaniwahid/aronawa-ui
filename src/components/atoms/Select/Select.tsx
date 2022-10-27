@@ -1,5 +1,5 @@
 import { Global } from '@emotion/react';
-import { default as SelectComponent, Option } from 'rc-select';
+import { default as SelectComponent } from 'rc-select';
 import React, { FC } from 'react';
 import Icon from '../Icon';
 import { SelectStyled } from './Select.styles';
@@ -26,4 +26,5 @@ const Select: FC<ISelect> = ({ isDisabled, children, width, isSearchable, ...pro
 };
 
 export default Select;
-export { Option };
+
+export const Option = SelectComponent.Option;

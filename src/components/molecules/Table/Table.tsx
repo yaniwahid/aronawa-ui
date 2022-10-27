@@ -372,8 +372,12 @@ const Table: FC<ITable> = ({
             <ShowItem>
               <span>Show items per page</span>
               <Select defaultValue={meta.pageSize} onChange={handlePageSizeChange}>
-                {options?.map((item: any) => {
-                  return <Option value={item.value}>{item.value}</Option>;
+                {options?.map((item: any, index: number) => {
+                  return (
+                    <Option value={item.value} key={index}>
+                      {item.value}
+                    </Option>
+                  );
                 })}
               </Select>
             </ShowItem>

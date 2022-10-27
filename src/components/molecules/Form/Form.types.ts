@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
-import { SpaceProps } from 'styled-system';
 
-export interface IForm extends SpaceProps, React.HTMLAttributes<HTMLFormElement> {
+export interface IForm extends React.HTMLAttributes<HTMLFormElement> {
   layout?: 'inline' | 'horizontal' | 'vertical';
   formWidth?: string;
   teid?: string;
@@ -17,5 +16,9 @@ export interface IFormItem {
   invalidText?: ReactNode;
   formWidth?: string;
   isColumn?: boolean;
+  children?: ReactNode;
+}
+
+export interface IFormAction {
   children?: ReactNode;
 }

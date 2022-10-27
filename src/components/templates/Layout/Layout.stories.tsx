@@ -1,3 +1,4 @@
+import { useArgs } from '@storybook/addons';
 import { ComponentMeta } from '@storybook/react';
 import React from 'react';
 import Color from '../../../themes/Color';
@@ -19,6 +20,8 @@ export default {
 } as ComponentMeta<typeof Layout>;
 
 export const Basic = () => {
+  const [{ color }, updateArgs] = useArgs();
+  const onChange = () => updateArgs({ color: color });
   return (
     <Layout
       avatarUrl="https://bit.ly/dan-abramov"
@@ -43,11 +46,11 @@ export const Basic = () => {
       }
       sideMenu={
         <>
-          <SideMenuItem icon="dashboard" link="/dashboard" label="Dashboard" />
-          <SideMenuItem icon="grid" link="/produk" label="Page Builder" />
-          <SideMenuSub label="Setting" icon="cog" isActive>
-            <SideMenuItem link="/pengaturan" label="Header" />
-            <SideMenuItem link="/pengaturan" label="Footer" isActive />
+          <SideMenuItem isActive icon="dashboard" label="Dashboard" />
+          <SideMenuItem icon="grid" label="Page Builder" />
+          <SideMenuSub label="Setting" icon="cog">
+            <SideMenuItem label="Header" />
+            <SideMenuItem label="Footer" />
           </SideMenuSub>
         </>
       }
@@ -60,7 +63,7 @@ export const Basic = () => {
               <Switch unCheckedLabel="Unpublish" checkedLabel="Publish" />
             </FormItem>
             <FormItem label="Information & Contact Us Text Color" isRequired>
-              <Colorpicker color="#fff" />
+              <Colorpicker color="#fff" onChange={onChange} />
             </FormItem>
             <FormItem label="Information & Contact Us Background" isRequired>
               <Colorpicker color="#104D97" />

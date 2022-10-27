@@ -30,7 +30,7 @@ export const SideMenuStyled = styled.aside({
 
 export const Item = styled.div<ISideMenuItem>(({ isActive }) => ({
   position: 'relative',
-  '& > a': {
+  '& > div': {
     padding: '0 8px',
     height: 40,
     backgroundColor: isActive ? '#1984FB' : undefined,
@@ -39,6 +39,7 @@ export const Item = styled.div<ISideMenuItem>(({ isActive }) => ({
     alignItems: 'center',
     borderRadius: Radius.blunt,
     textDecoration: 'none',
+    cursor: 'pointer',
     '&:hover': {
       color: isActive ? Color.light : Color.sky[500],
     },

@@ -19,4 +19,4 @@ export default {
   },
 } as ComponentMeta<typeof Divider>;
 
-export const Basic = (args: IDivider) => <Divider {...args} />;
+export const Basic = (args: IDivider) => <Divider {...args} my={32} />;

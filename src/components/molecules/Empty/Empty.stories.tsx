@@ -56,5 +56,5 @@ export default {
 } as ComponentMeta<typeof Empty>;
 
 export const Basic = (args: IEmpty) => {
-  return <Empty maxWidth={600} {...args} />;
+  return <Empty {...args} />;
 };

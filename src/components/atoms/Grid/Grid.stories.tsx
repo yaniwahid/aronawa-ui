@@ -2,7 +2,6 @@ import { ComponentMeta } from '@storybook/react';
 import React from 'react';
 import Color from '../../../themes/Color';
 import Radius from '../../../themes/Radius';
-import Box from '../Box';
 import Col from './Col';
 import Container from './Container';
 import { ICol, IContainer, IRow } from './Grid.types';
@@ -22,18 +21,20 @@ const colOptions = {
 
 const Sample = ({ children }: any) => {
   return (
-    <Box
-      width="100%"
-      height="80px"
-      border={`1px solid ${Color.slate[200]}`}
-      backgroundColor={Color.slate[50]}
-      borderRadius={Radius.dull}
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
+    <div
+      style={{
+        width: '100%',
+        height: '80px',
+        border: `1px solid ${Color.slate[200]}`,
+        backgroundColor: Color.slate[50],
+        borderRadius: Radius.dull,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
     >
       {children}
-    </Box>
+    </div>
   );
 };
 

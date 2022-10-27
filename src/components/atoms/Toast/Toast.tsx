@@ -36,4 +36,4 @@ export const toastBody = (
   </>
 );
 
-export { toast };
+export default toast;

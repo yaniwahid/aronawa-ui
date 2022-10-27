@@ -100,7 +100,6 @@ const Drawer: FC<IDrawer> = ({
             </Button>
             <Button
               color={okColor}
-              ml="2"
               onClick={onOk}
               isDisabled={isDisabled}
               isLoading={isLoading}

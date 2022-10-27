@@ -5,7 +5,7 @@ export { default as Carousel } from './Carousel';
 export { CollapseItem, default as Collapse } from './Collapse';
 export { default as Drawer } from './Drawer';
 export { default as Empty } from './Empty';
-export { default as Form, FormItem } from './Form';
+export { default as Form, FormAction, FormItem } from './Form';
 export { default as Modal } from './Modal';
 export { default as PageHeader } from './PageHeader';
 export { default as Pagination } from './Pagination';

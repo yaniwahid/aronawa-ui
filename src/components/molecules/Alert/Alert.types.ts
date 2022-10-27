@@ -1,9 +1,8 @@
 import { ReactNode } from 'react';
-import { SpaceProps } from 'styled-system';
 
 export type TColorAlert = 'primary' | 'secondary' | 'approval' | 'danger';
 
-export interface IAlert extends SpaceProps, React.HTMLAttributes<HTMLDivElement> {
+export interface IAlert extends React.HTMLAttributes<HTMLDivElement> {
   color?: TColorAlert;
   title?: string;
   isClosable?: boolean;

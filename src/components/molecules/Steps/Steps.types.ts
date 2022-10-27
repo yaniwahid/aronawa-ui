@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
-import { SpaceProps } from 'styled-system';
 
-export interface ISteps extends SpaceProps, React.HTMLAttributes<HTMLDivElement> {
+export interface ISteps extends React.HTMLAttributes<HTMLDivElement> {
   defaultActive?: number;
   children?: ReactNode;
 }
