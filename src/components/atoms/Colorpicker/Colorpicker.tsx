@@ -11,10 +11,7 @@ const decimalToHex = (alpha: number) => {
 const Colorpicker: FC<IColorpicker> = ({ color, alpha = 100, onChange }) => {
   return (
     <ColorpickerStyled>
-      <InputColor
-        initialValue={`${color}${decimalToHex(alpha / 100)}`}
-        onChange={onChange}
-      />
+      <InputColor initialValue={`${color}${decimalToHex(alpha / 100)}`} onChange={onChange} />
     </ColorpickerStyled>
   );
 };

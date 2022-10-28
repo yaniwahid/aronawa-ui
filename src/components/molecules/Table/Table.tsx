@@ -1,4 +1,4 @@
-import { isEmpty } from 'lodash';
+import isEmpty from 'lodash/isEmpty';
 import React, { FC, useEffect, useState } from 'react';
 import Button from '../../atoms/Button';
 import Checkbox from '../../atoms/Checkbox';
