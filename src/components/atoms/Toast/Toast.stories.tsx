@@ -1,6 +1,6 @@
 import React from 'react';
+import { toast, toastBody } from '.';
 import Button from '../Button';
-import { toast, toastBody } from './Toast';
 
 export default {
   title: 'Atoms/Toast',
