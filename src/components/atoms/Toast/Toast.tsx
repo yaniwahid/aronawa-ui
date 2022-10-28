@@ -1,6 +1,6 @@
 import { Global } from '@emotion/react';
 import React from 'react';
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
 import { ToastStyled } from './Toast.styles';
 
 interface IDetailedMessage {
@@ -36,4 +36,4 @@ export const toastBody = (
   </>
 );
 
-export default toast;
+export { toast };
