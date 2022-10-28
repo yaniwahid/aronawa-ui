@@ -3,11 +3,11 @@ import Radius from '../../../themes/Radius';
 
 export const NavbarStyled = styled.div({
   backgroundColor: '#104D97',
-  top: '0',
-  left: '0',
-  right: '0',
-  zIndex: '99',
-  height: '56px',
+  top: 0,
+  left: 0,
+  right: 0,
+  zIndex: 1041,
+  height: 56,
   position: 'fixed',
 });
 

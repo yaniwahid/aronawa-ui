@@ -58,12 +58,12 @@ export const TooltipStyled = css`
   }
   .aronawa-tooltip {
     position: absolute;
-    z-index: 1070;
+    z-index: 1040;
     display: block;
     visibility: visible;
     font-size: 14px;
     line-height: 1.5;
-    opacity: 0.9;
+    opacity: 1;
   }
   .aronawa-tooltip-hidden {
     display: none;
