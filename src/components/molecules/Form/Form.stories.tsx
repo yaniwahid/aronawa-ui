@@ -93,6 +93,9 @@ export const Basic = (args: IForm) => (
       <FormItem label="SKU Produk" isRequired isInvalid invalidText="SKU Produk Harus Diisi">
         <Input isInvalid />
       </FormItem>
+      <FormItem label={<></>}>
+        <Button color="primary">Add Item</Button>
+      </FormItem>
     </Form>
   </Card>
 );
