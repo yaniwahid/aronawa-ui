@@ -8,7 +8,7 @@ const Button: FC<IButton> = ({
   variant = 'solid',
   size,
   target,
-  type,
+  type = 'button',
   isDisabled,
   isFullWidth,
   isLoading,
@@ -40,6 +40,7 @@ const Button: FC<IButton> = ({
     isFullWidth: isFullWidth,
     href: href,
     target: target,
+    type: type,
     'data-testid': teid,
     ...(childCount != 1 && {
       style: { padding: 0 },
