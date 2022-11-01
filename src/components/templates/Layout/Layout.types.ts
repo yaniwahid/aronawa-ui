@@ -4,7 +4,7 @@ export interface ILayout {
   title?: ReactNode;
   subtitle?: ReactNode;
   action?: ReactNode;
-  back?: string;
+  back?: any;
   logoUrl?: string;
   navbarMenu?: ReactNode;
   avatarUrl?: string;
