@@ -24,7 +24,7 @@ const PageHeader: React.FC<IPageHeader> = ({ title, subtitle, breadcrumb, back, 
       {breadcrumbRender()}
       {back && (
         <Back>
-          <Button href={back} variant="link" color="primary" icon="angle-left">
+          <Button onClick={back} variant="link" color="primary" icon="angle-left">
             Back
           </Button>
         </Back>

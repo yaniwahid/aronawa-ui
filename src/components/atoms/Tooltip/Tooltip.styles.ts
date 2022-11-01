@@ -58,7 +58,7 @@ export const TooltipStyled = css`
   }
   .aronawa-tooltip {
     position: absolute;
-    z-index: 1040;
+    z-index: 1051;
     display: block;
     visibility: visible;
     font-size: 14px;
