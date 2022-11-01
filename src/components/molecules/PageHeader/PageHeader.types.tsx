@@ -4,6 +4,6 @@ export interface IPageHeader {
   title?: ReactNode;
   subtitle?: ReactNode;
   breadcrumb?: ReactNode;
-  back?: string;
+  back?: any;
   children?: ReactNode;
 }
