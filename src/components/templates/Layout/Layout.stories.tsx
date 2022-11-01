@@ -7,6 +7,7 @@ import Colorpicker from '../../atoms/Colorpicker';
 import { DropdownItem } from '../../atoms/Dropdown';
 import Icon from '../../atoms/Icon';
 import Switch from '../../atoms/Switch';
+import { toast, toastBody } from '../../atoms/Toast';
 import Drawer from '../../molecules/Drawer';
 import Form, { FormItem } from '../../molecules/Form';
 import { FormAction } from '../../molecules/Form/Form';
@@ -22,7 +23,10 @@ export default {
 
 export const Basic = () => {
   const [{ color, isOpen }, updateArgs] = useArgs();
-  const onClose = () => updateArgs({ isOpen: !isOpen });
+  const onClose = () => {
+    updateArgs({ isOpen: !isOpen });
+    toast(toastBody(true, 'Page has been unpublished successfully', [], 'Unpublished'));
+  };
   const onChange = () => updateArgs({ color: color });
   return (
     <Layout
