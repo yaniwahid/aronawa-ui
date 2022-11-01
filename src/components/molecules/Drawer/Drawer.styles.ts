@@ -120,27 +120,27 @@ export const DrawerStyled = css`
   }
   .aronawa-drawer-no-title .aronawa-drawer-body {
     padding-top: 16px;
-    max-height: calc(100vh - 64px);
-    height: calc(100vh - 64px);
+    max-height: calc(100% - 64px);
+    height: calc(100% - 64px);
   }
   .aronawa-drawer-no-footer .aronawa-drawer-body {
     padding-bottom: 16px;
-    max-height: calc(100vh - 56px);
-    height: calc(100vh - 56px);
+    max-height: calc(100% - 56px);
+    height: calc(100% - 56px);
   }
   .aronawa-drawer-no-title.aronawa-drawer-no-footer .aronawa-drawer-body {
     padding-bottom: 16px;
     padding-top: 16px;
-    max-height: 100vh;
-    height: 100vh;
+    max-height: 100%;
+    height: 100%;
   }
 `;
 
 export const DrawerBody = styled.div({
   padding: '0 16px',
   overflow: 'auto',
-  maxHeight: 'calc(100vh - 56px - 64px)',
-  height: 'calc(100vh - 56px - 64px)',
+  maxHeight: 'calc(100% - 56px - 64px)',
+  height: 'calc(100% - 56px - 64px)',
 });
 
 export const DrawerHeaderStyled = styled.div<IDrawer>(({ isCloseLeft }) => ({
