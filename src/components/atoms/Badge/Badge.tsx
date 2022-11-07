@@ -9,9 +9,10 @@ const Badge: FC<IBadge> = ({
   children,
   onClose,
   isClosable,
+  teid = 'badge',
   ...props
 }) => (
-  <BadgeStyled color={color} variant={variant} {...props}>
+  <BadgeStyled color={color} variant={variant} data-testid={teid} {...props}>
     {variant === 'indicator' && <IndicatorStyled color={color} />}
     {children}
     {isClosable && (

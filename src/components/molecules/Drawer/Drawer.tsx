@@ -34,6 +34,7 @@ const Drawer: FC<IDrawer> = ({
   isMaskBlack,
   closeIcon,
   background,
+  top,
   ...props
 }) => {
   const Width = (size?: 'sm' | 'md' | 'lg') => {
@@ -78,6 +79,13 @@ const Drawer: FC<IDrawer> = ({
         {...(isMaskBlack && {
           maskStyle: {
             backgroundColor: 'rgba(18, 18, 18, 0.7)',
+          },
+        })}
+        rootStyle={{ height: '100vh' }}
+        {...(top && {
+          rootStyle: {
+            top: top,
+            height: `calc(100vh - ${top}px)`,
           },
         })}
         contentWrapperStyle={{ background: background }}

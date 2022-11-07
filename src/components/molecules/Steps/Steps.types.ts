@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 export interface ISteps extends React.HTMLAttributes<HTMLDivElement> {
   defaultActive?: number;
   children?: ReactNode;
+  teid?: string;
 }
 
 export interface IStepItem {
@@ -10,6 +11,7 @@ export interface IStepItem {
   description?: ReactNode;
   isFailed?: boolean;
   children?: ReactNode;
+  teid?: string;
 }
 
 export interface IStyle {

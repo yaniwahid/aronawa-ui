@@ -6,4 +6,5 @@ export interface ISelect extends SelectProps {
   width?: number;
   isSearchable?: boolean;
   children?: ReactNode;
+  teid?: string;
 }

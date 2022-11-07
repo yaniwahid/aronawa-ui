@@ -238,7 +238,7 @@ export const SelectStyled = css`
     background: #fff;
     border-radius: 5px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.12);
-    z-index: 9999;
+    z-index: 9998;
     width: auto !important;
   }
   .aronawa-select-dropdown-hidden {

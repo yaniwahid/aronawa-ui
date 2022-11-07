@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import { Loading, SpinContent, SpinStyled, SpinWrapper } from './Spin.styles';
 import { ISpin } from './Spin.types';
 
-const Spin: FC<ISpin> = ({ isLoading, children }) => {
+const Spin: FC<ISpin> = ({ isLoading, teid = 'spin', children }) => {
   return (
-    <SpinStyled>
+    <SpinStyled data-testid={teid}>
       {isLoading && (
         <SpinWrapper>
           <Loading>

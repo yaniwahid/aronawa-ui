@@ -24,6 +24,7 @@ export const FormItem: FC<IFormItem> = ({
   invalidText,
   formWidth,
   isColumn,
+  teid = 'form-item',
 }) => {
   const additionalNode = () => {
     if (extra || help || invalidText) {
@@ -41,7 +42,12 @@ export const FormItem: FC<IFormItem> = ({
   };
 
   return (
-    <FormItemStyled isInvalid={isInvalid} formWidth={formWidth} className="form-item">
+    <FormItemStyled
+      isInvalid={isInvalid}
+      formWidth={formWidth}
+      className="form-item"
+      data-testid={teid}
+    >
       {label && (
         <Label className="label-item">
           {label} {isRequired && <Req>*</Req>}
@@ -55,8 +61,12 @@ export const FormItem: FC<IFormItem> = ({
   );
 };
 
-export const FormAction: FC<IFormAction> = ({ children }) => {
-  return <FormActionStyled className="form-action">{children}</FormActionStyled>;
+export const FormAction: FC<IFormAction> = ({ teid = 'form-action', children }) => {
+  return (
+    <FormActionStyled className="form-action" data-testid={teid}>
+      {children}
+    </FormActionStyled>
+  );
 };
 
 const Form: FC<IForm> = ({

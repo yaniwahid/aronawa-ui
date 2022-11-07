@@ -4,11 +4,13 @@ export interface ITabs extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onCha
   defaultActive?: number;
   onChange?: (index: number) => void;
   children?: ReactNode;
+  teid?: string;
 }
 
 export interface ITabItem {
   title: ReactNode;
   children?: ReactNode;
+  teid?: string;
 }
 
 export interface IStyle {

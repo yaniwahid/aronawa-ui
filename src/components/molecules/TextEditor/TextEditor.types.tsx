@@ -9,4 +9,5 @@ export interface ITextEditor extends CKEditorProps<any> {
   onChangeSource?: (source: string) => void;
   additionalConfig?: object;
   id?: string;
+  teid?: string;
 }

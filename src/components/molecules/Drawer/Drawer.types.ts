@@ -24,4 +24,5 @@ export interface IDrawer extends DrawerProps {
   closeIcon?: string;
   background?: string;
   children?: ReactNode;
+  top?: number;
 }

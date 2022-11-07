@@ -9,4 +9,5 @@ export interface IBadge extends React.HTMLAttributes<HTMLDivElement> {
   isClosable?: boolean;
   onClose?: (e: any) => void;
   children?: ReactNode;
+  teid?: string;
 }

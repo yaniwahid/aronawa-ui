@@ -11,6 +11,7 @@ const TextEditor: FC<ITextEditor> = ({
   onChangeSource,
   additionalConfig,
   id,
+  teid = 'texteditor',
   ...props
 }) => {
   const defaultConfig = {
@@ -58,7 +59,7 @@ const TextEditor: FC<ITextEditor> = ({
   };
 
   return (
-    <EditorStyled>
+    <EditorStyled data-testid={teid}>
       <CKEditor
         data={data}
         onChange={onChange}

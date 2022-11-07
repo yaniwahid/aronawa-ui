@@ -39,8 +39,7 @@ const Checkbox: FC<ICheckbox> = ({
           onChange={(e) => onChange?.(e.target.checked)}
           disabled={isDisabled}
           value={value}
-          data-testid="checkbox"
-          data-te-id={teid}
+          data-testid={teid}
           id={id}
           {...props}
         />

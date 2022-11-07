@@ -17,8 +17,10 @@ export interface IFormItem {
   formWidth?: string;
   isColumn?: boolean;
   children?: ReactNode;
+  teid?: string;
 }
 
 export interface IFormAction {
   children?: ReactNode;
+  teid?: string;
 }

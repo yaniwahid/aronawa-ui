@@ -4,4 +4,5 @@ export interface IColorpicker {
   alpha?: number;
   color: string;
   onChange?(color: Color): void;
+  teid?: string;
 }

@@ -7,6 +7,8 @@ import Colorpicker from '../../atoms/Colorpicker';
 import { DropdownItem } from '../../atoms/Dropdown';
 import Icon from '../../atoms/Icon';
 import Switch from '../../atoms/Switch';
+import { toast, toastBody } from '../../atoms/Toast';
+import Drawer from '../../molecules/Drawer';
 import Form, { FormItem } from '../../molecules/Form';
 import { FormAction } from '../../molecules/Form/Form';
 import Tabs, { TabItem } from '../../molecules/Tabs';
@@ -20,7 +22,11 @@ export default {
 } as ComponentMeta<typeof Layout>;
 
 export const Basic = () => {
-  const [{ color }, updateArgs] = useArgs();
+  const [{ color, isOpen }, updateArgs] = useArgs();
+  const onClose = () => {
+    updateArgs({ isOpen: !isOpen });
+    toast(toastBody(true, 'Page has been unpublished successfully', [], 'Unpublished'));
+  };
   const onChange = () => updateArgs({ color: color });
   return (
     <Layout
@@ -55,7 +61,20 @@ export const Basic = () => {
         </>
       }
       title="Footer"
+      action={
+        <Button icon="plus" color="primary" onClick={() => updateArgs({ isOpen: !isOpen })}>
+          Add Menu
+        </Button>
+      }
     >
+      <Drawer isOpen={isOpen} onClose={onClose} title="Drawer" top={56}>
+        In the morning I walked down the Boulevard to the rue Soufflot for coffee and brioche. It
+        was a fine morning. The horse-chestnut trees in the Luxembourg gardens were in bloom. There
+        was the pleasant early-morning feeling of a hot day. I read the papers with the coffee and
+        then smoked a cigarette. The flower-women were coming up from the market and arranging their
+        daily stock. Students went by going up to the law school, or down to the Sorbonne. The
+        Boulevard was busy with trams and people going to work.
+      </Drawer>
       <Tabs>
         <TabItem title="Information & Contact Us">
           <Form>

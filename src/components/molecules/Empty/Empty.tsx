@@ -8,10 +8,11 @@ const Empty: React.FC<IEmpty> = ({
   description,
   children,
   imageWidth,
+  teid = 'empty',
   ...props
 }) => {
   return (
-    <EmptyStyled {...props}>
+    <EmptyStyled data-testid={teid} {...props}>
       <img src={imageUrl} style={{ width: imageWidth }} />
       <h4>{title}</h4>
       {description && <p>{description}</p>}
