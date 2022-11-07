@@ -7,4 +7,5 @@ export interface INavbar {
   username?: string;
   userMenu?: ReactNode;
   children?: ReactNode;
+  teid?: string;
 }

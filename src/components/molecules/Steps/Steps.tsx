@@ -12,11 +12,11 @@ import {
 } from './Steps.styles';
 import { IStepItem, ISteps } from './Steps.types';
 
-export const StepItem: FC<IStepItem> = ({ children }) => {
-  return <StepsItemStyled>{children}</StepsItemStyled>;
+export const StepItem: FC<IStepItem> = ({ teid = 'step-item', children }) => {
+  return <StepsItemStyled data-testid={teid}>{children}</StepsItemStyled>;
 };
 
-const Steps: FC<ISteps> = ({ defaultActive = 0, children, ...props }) => {
+const Steps: FC<ISteps> = ({ defaultActive = 0, teid = 'steps', children, ...props }) => {
   const contentTab: any = children;
 
   const contentRender = () => {
@@ -27,7 +27,7 @@ const Steps: FC<ISteps> = ({ defaultActive = 0, children, ...props }) => {
   };
 
   return (
-    <StepsStyled {...props}>
+    <StepsStyled data-testid={teid} {...props}>
       <StepsList>
         {React.Children.map(children, (item: any, index) => {
           let iconName: string = index < defaultActive ? 'check' : 'record-audio';

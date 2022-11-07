@@ -9,6 +9,7 @@ export const CollapseItem: FC<ICollapseItem> = ({
   isDisabled,
   children,
   isShow,
+  teid = 'collapse-item',
 }) => {
   const [showState, setShowState] = useState(isShow);
 
@@ -21,10 +22,9 @@ export const CollapseItem: FC<ICollapseItem> = ({
   };
 
   return (
-    <Wrapper className="collapse-wrapper">
+    <Wrapper className="collapse-wrapper" data-testid={teid}>
       <Toggle
         onClick={!isDisabled ? handleToggle : undefined}
-        data-testid="collapse-title"
         className="collapse-title"
         isShow={showState}
         isDisabled={isDisabled}

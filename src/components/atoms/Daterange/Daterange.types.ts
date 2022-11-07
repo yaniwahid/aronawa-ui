@@ -6,4 +6,5 @@ export interface IDaterange
   value?: any;
   defaultValue?: any;
   isDisabled?: boolean;
+  teid?: string;
 }

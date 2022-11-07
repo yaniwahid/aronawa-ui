@@ -7,4 +7,5 @@ export interface IDatepicker
   value?: any;
   defaultValue?: any;
   isDisabled?: boolean;
+  teid?: string;
 }

@@ -6,4 +6,5 @@ export interface IEmpty extends Omit<React.HTMLAttributes<HTMLInputElement>, 'ti
   description?: ReactNode;
   imageWidth?: string | number;
   children?: ReactNode;
+  teid?: string;
 }

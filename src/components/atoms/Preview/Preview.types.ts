@@ -8,4 +8,6 @@ export interface IPreview {
   boxWidth?: string;
   boxHeight?: string;
   children?: ReactNode;
+  teid?: string;
+  buttonTeid?: string;
 }

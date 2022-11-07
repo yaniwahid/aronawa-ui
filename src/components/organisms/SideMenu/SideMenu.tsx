@@ -4,9 +4,16 @@ import Collapse, { CollapseItem } from '../../molecules/Collapse';
 import { Item, ItemSub, ItemSubWrapper, Parent, SideMenuStyled, TextItem } from './SideMenu.styles';
 import { ISideMenu, ISideMenuItem, ISideMenuParent, ISideMenuSub } from './SideMenu.types';
 
-export const SideMenuItem: FC<ISideMenuItem> = ({ isActive, icon, link, label, content }) => {
+export const SideMenuItem: FC<ISideMenuItem> = ({
+  isActive,
+  icon,
+  link,
+  label,
+  content,
+  teid = 'sidemenu-item',
+}) => {
   return (
-    <Item isActive={isActive}>
+    <Item isActive={isActive} data-testid={teid}>
       <div onClick={link}>
         {icon && <Icon size={20} name={icon} />}
         <TextItem>
@@ -17,18 +24,28 @@ export const SideMenuItem: FC<ISideMenuItem> = ({ isActive, icon, link, label, c
   );
 };
 
-export const SideMenuParent: FC<ISideMenuParent> = ({ title, children }) => {
+export const SideMenuParent: FC<ISideMenuParent> = ({
+  title,
+  teid = 'sidemenu-parent',
+  children,
+}) => {
   return (
-    <Parent>
+    <Parent data-testid={teid}>
       <h4>{title}</h4>
       {children}
     </Parent>
   );
 };
 
-export const SideMenuSub: FC<ISideMenuSub> = ({ isActive, icon, label, children }) => {
+export const SideMenuSub: FC<ISideMenuSub> = ({
+  isActive,
+  icon,
+  label,
+  children,
+  teid = 'sidemenu-sub',
+}) => {
   return (
-    <ItemSubWrapper>
+    <ItemSubWrapper data-testid={teid}>
       <Collapse>
         <CollapseItem
           isShow={isActive}
@@ -45,8 +62,12 @@ export const SideMenuSub: FC<ISideMenuSub> = ({ isActive, icon, label, children 
   );
 };
 
-const SideMenu: FC<ISideMenu> = ({ children, ...props }) => {
-  return <SideMenuStyled {...props}>{children}</SideMenuStyled>;
+const SideMenu: FC<ISideMenu> = ({ children, teid = 'sidemenu', ...props }) => {
+  return (
+    <SideMenuStyled data-testid={teid} {...props}>
+      {children}
+    </SideMenuStyled>
+  );
 };
 
 export default SideMenu;

@@ -13,12 +13,13 @@ const Datepicker: FC<IDatepicker> = ({
   value = null,
   defaultValue,
   isDisabled,
+  teid = 'datepiceker',
   ...props
 }) => {
   return (
     <>
       <Global styles={DatepickerStyled} />
-      <DatepickerWrapper>
+      <DatepickerWrapper date-testid={teid}>
         <Picker<Dayjs>
           prefixCls="aronawa-picker"
           picker={picker}

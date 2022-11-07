@@ -10,11 +10,11 @@ import {
 } from './Tabs.styles';
 import { ITabItem, ITabs } from './Tabs.types';
 
-export const TabItem: FC<ITabItem> = ({ children }) => {
-  return <TabsItemStyled>{children}</TabsItemStyled>;
+export const TabItem: FC<ITabItem> = ({ teid = 'tab-item', children }) => {
+  return <TabsItemStyled data-testid={teid}>{children}</TabsItemStyled>;
 };
 
-const Tabs: FC<ITabs> = ({ defaultActive = 0, children, onChange, ...props }) => {
+const Tabs: FC<ITabs> = ({ defaultActive = 0, children, teid = 'tabs', onChange, ...props }) => {
   const [selectedStatus, setSelectedStatus] = useState<number>(defaultActive || 0);
 
   const handleChange = (newValue: number) => {
@@ -32,7 +32,7 @@ const Tabs: FC<ITabs> = ({ defaultActive = 0, children, onChange, ...props }) =>
   };
 
   return (
-    <TabsStyled {...props}>
+    <TabsStyled data-testid={teid} {...props}>
       <TabsList>
         {React.Children.map(children, (item: any, index) => {
           return (

@@ -17,13 +17,14 @@ const Daterange: React.FC<IDaterange> = ({
   defaultValue = null,
   picker = 'date',
   isDisabled,
+  teid = 'daterange',
   ...props
 }) => {
   const rangePickerRef = useRef<RangePicker<Dayjs>>(null);
   return (
     <>
       <Global styles={DatepickerStyled} />
-      <DatepickerWrapper>
+      <DatepickerWrapper data-testid={teid}>
         <RangePicker<Dayjs>
           picker={picker}
           prefixCls="aronawa-picker"

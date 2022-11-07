@@ -9,9 +9,10 @@ const Navbar: React.FC<INavbar> = ({
   username,
   avatarUrl,
   userMenu,
+  teid = 'navbar',
 }) => {
   return (
-    <NavbarStyled>
+    <NavbarStyled data-testid={teid}>
       <NavbarContainer>
         <NavbarLogo>
           <img src={logoUrl} alt="Logo" />

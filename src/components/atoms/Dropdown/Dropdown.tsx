@@ -14,8 +14,12 @@ export const DropdownDivider: FC<IDropdownDivider> = ({ color }) => {
   return <DividerStyled color={color} />;
 };
 
-export const DropdownMenu: FC<IDropdownMenu> = ({ width, children }) => {
-  return <DropdownMenuStyled width={width}>{children}</DropdownMenuStyled>;
+export const DropdownMenu: FC<IDropdownMenu> = ({ width, teid = 'dropdown-menu', children }) => {
+  return (
+    <DropdownMenuStyled width={width} data-testid={teid}>
+      {children}
+    </DropdownMenuStyled>
+  );
 };
 
 export const DropdownItem: FC<IDropdownItem> = ({
@@ -25,6 +29,7 @@ export const DropdownItem: FC<IDropdownItem> = ({
   hoverBackground,
   image,
   imageHover,
+  teid = 'dropdown-item',
   children,
   ...props
 }) => {
@@ -33,6 +38,7 @@ export const DropdownItem: FC<IDropdownItem> = ({
       color={color}
       hoverColor={hoverColor}
       hoverBackground={hoverBackground}
+      data-testid={teid}
       {...props}
     >
       {icon && <Icon name={icon} style={{ marginRight: 8 }} size={14} />}
@@ -43,13 +49,15 @@ export const DropdownItem: FC<IDropdownItem> = ({
   );
 };
 
-const Dropdown: FC<IDropdown> = ({ children, ...props }) => {
+const Dropdown: FC<IDropdown> = ({ children, teid = 'dropdown', ...props }) => {
   return (
     <>
       <Global styles={DropdownStyled} />
-      <DropdownComponent prefixCls="aronawa-dropdown" trigger={['click']} {...props}>
-        {children}
-      </DropdownComponent>
+      <div data-testid={teid}>
+        <DropdownComponent prefixCls="aronawa-dropdown" trigger={['click']} {...props}>
+          {children}
+        </DropdownComponent>
+      </div>
     </>
   );
 };
