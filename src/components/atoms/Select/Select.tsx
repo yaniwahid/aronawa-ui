@@ -2,7 +2,7 @@ import { Global } from '@emotion/react';
 import { default as SelectComponent } from 'rc-select';
 import React, { FC } from 'react';
 import Icon from '../Icon';
-import { SelectStyled } from './Select.styles';
+import { SelectStyled, SelectWrapper } from './Select.styles';
 import { ISelect } from './Select.types';
 
 const Select: FC<ISelect> = ({
@@ -16,7 +16,7 @@ const Select: FC<ISelect> = ({
   return (
     <>
       <Global styles={SelectStyled} />
-      <div data-testid={teid}>
+      <SelectWrapper data-testid={teid}>
         <SelectComponent
           prefixCls="aronawa-select"
           inputIcon={<Icon name={isSearchable ? 'search' : 'angle-down'} size={18} />}
@@ -29,7 +29,7 @@ const Select: FC<ISelect> = ({
         >
           {children}
         </SelectComponent>
-      </div>
+      </SelectWrapper>
     </>
   );
 };

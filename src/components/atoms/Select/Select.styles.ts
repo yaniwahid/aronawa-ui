@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 
 export const SelectStyled = css`
   .aronawa-select {
@@ -367,3 +368,8 @@ export const SelectStyled = css`
     }
   }
 `;
+
+
+export const SelectWrapper = styled.div({
+  width: "100%"
+});
