@@ -369,7 +369,6 @@ export const SelectStyled = css`
   }
 `;
 
-
 export const SelectWrapper = styled.div({
-  width: "100%"
+  width: '100%',
 });

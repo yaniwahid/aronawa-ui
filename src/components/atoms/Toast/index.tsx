@@ -1,6 +1,6 @@
 import { Global } from '@emotion/react';
 import React from 'react';
-import toast from 'react-hot-toast';
+import { toast } from 'react-toastify';
 import { ToastStyled } from './Toast.styles';
 
 interface IDetailedMessage {

@@ -16,7 +16,12 @@ const Select: FC<ISelect> = ({
   return (
     <>
       <Global styles={SelectStyled} />
-      <SelectWrapper data-testid={teid}>
+      <SelectWrapper
+        data-testid={teid}
+        {...(width && {
+          style: { minWidth: width, maxWidth: width },
+        })}
+      >
         <SelectComponent
           prefixCls="aronawa-select"
           inputIcon={<Icon name={isSearchable ? 'search' : 'angle-down'} size={18} />}

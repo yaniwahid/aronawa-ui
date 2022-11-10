@@ -7,8 +7,7 @@ export default {
 };
 
 export const Basic = () => {
-  const notify = () =>
-    toast(toastBody(true, 'Page has been unpublished successfully', [], 'Unpublished'));
+  const notify = () => toast.error(toastBody(true, 'Berhasil mereject merchant order'));
   return (
     <Button color="primary" onClick={notify}>
       Show Toast
