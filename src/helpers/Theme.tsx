@@ -1,6 +1,6 @@
 import { Global, ThemeProvider } from '@emotion/react';
 import React, { FC, ReactNode } from 'react';
-import { Toaster } from 'react-hot-toast';
+import { Slide, ToastContainer } from 'react-toastify';
 
 const GlobalStyle = () => (
   <Global
@@ -128,22 +128,14 @@ export const Theme: FC<ITheme> = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Toaster
-        position="top-right"
-        reverseOrder={false}
-        containerClassName="aronawa-toast"
-        toastOptions={{
-          duration: 3000,
-          style: {
-            background: '#484C52',
-            color: '#FFFFFF',
-            boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.06), 0px 8px 12px rgba(0, 0, 0, 0.16)',
-            borderRadius: '5px',
-            padding: '16px',
-            maxWidth: '360px',
-            width: '360px',
-          },
-        }}
+      <ToastContainer
+        transition={Slide}
+        autoClose={3000}
+        pauseOnFocusLoss={false}
+        hideProgressBar
+        newestOnTop
+        icon={false}
+        closeButton={false}
       />
       {children}
     </ThemeProvider>
