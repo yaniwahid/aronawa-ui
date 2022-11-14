@@ -22,4 +22,5 @@ export interface IModal extends DialogProps {
   variant?: TVariantModal;
   isCloseable?: boolean;
   children?: ReactNode;
+  footer?: ReactNode;
 }

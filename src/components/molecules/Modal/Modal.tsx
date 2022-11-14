@@ -24,6 +24,7 @@ const Modal: FC<IModal> = ({
   size = 'md',
   variant = 'clean',
   isCloseable = true,
+  footer,
   ...props
 }) => {
   const classSize = `aronawa-modal-${size}`;
@@ -44,7 +45,9 @@ const Modal: FC<IModal> = ({
         prefixCls="aronawa-modal"
         className={`${classSize} ${classVariant} ${classTitle} ${classFooter}`}
         footer={
-          isNoFooter ? null : (
+          isNoFooter ? null : footer ? (
+            footer
+          ) : (
             <>
               <Button onClick={onClose} color={cancelColor} variant={cancelVariant}>
                 {cancelText}
