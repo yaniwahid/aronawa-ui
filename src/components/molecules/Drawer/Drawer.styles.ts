@@ -17,7 +17,7 @@ export const DrawerStyled = css`
   }
   .aronawa-drawer-mask {
     position: absolute;
-    z-index: 1050;
+    z-index: 9997;
     background-color: rgba(165, 170, 176, 0.48);
     pointer-events: auto;
     inset: 0;

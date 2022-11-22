@@ -353,7 +353,7 @@ export const DatepickerStyled = css`
   .aronawa-picker-dropdown {
     position: absolute;
     border-radius: 5px;
-    z-index: 9999;
+    z-index: 9994;
   }
   .aronawa-picker-dropdown-range {
     padding-top: 8px;

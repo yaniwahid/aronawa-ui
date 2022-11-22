@@ -17,7 +17,7 @@ export const ModalStyled = css`
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1050;
+    z-index: 9998;
     -webkit-overflow-scrolling: touch;
     outline: 0;
   }

@@ -6,7 +6,7 @@ export const NavbarStyled = styled.div({
   top: 0,
   left: 0,
   right: 0,
-  zIndex: 9998,
+  zIndex: 9995,
   height: 56,
   position: 'fixed',
 });
