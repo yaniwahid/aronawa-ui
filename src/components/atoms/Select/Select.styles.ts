@@ -162,7 +162,7 @@ export const SelectStyled = css`
     max-width: 100%;
   }
   .aronawa-select-multiple .aronawa-select-selector .aronawa-select-selection-search-mirror {
-    z-index: 999;
+    z-index: 9994;
     white-space: nowrap;
     position: absolute;
     left: 0;

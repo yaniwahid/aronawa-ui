@@ -17,7 +17,7 @@ export const ModalStyled = css`
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1050;
+    z-index: 9998;
     -webkit-overflow-scrolling: touch;
     outline: 0;
   }
@@ -185,7 +185,7 @@ export const ModalStyled = css`
     bottom: 0;
     background-color: rgba(165, 170, 176, 0.48);
     height: 100%;
-    z-index: 1050;
+    z-index: 9998;
   }
   .aronawa-modal-mask-hidden {
     display: none;

@@ -5,7 +5,7 @@ import { IDrawer } from './Drawer.types';
 export const DrawerStyled = css`
   .aronawa-drawer {
     position: fixed;
-    z-index: 1050;
+    z-index: 9997;
     pointer-events: none;
     inset: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
@@ -17,14 +17,14 @@ export const DrawerStyled = css`
   }
   .aronawa-drawer-mask {
     position: absolute;
-    z-index: 1050;
+    z-index: 9997;
     background-color: rgba(165, 170, 176, 0.48);
     pointer-events: auto;
     inset: 0;
   }
   .aronawa-drawer-content-wrapper {
     position: absolute;
-    z-index: 1050;
+    z-index: 9997;
     overflow: hidden;
     transition: transform 0.3s;
     background-color: #fff;
