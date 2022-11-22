@@ -24,7 +24,7 @@ export const DrawerStyled = css`
   }
   .aronawa-drawer-content-wrapper {
     position: absolute;
-    z-index: 1050;
+    z-index: 9997;
     overflow: hidden;
     transition: transform 0.3s;
     background-color: #fff;

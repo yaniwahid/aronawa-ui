@@ -185,7 +185,7 @@ export const ModalStyled = css`
     bottom: 0;
     background-color: rgba(165, 170, 176, 0.48);
     height: 100%;
-    z-index: 1050;
+    z-index: 9998;
   }
   .aronawa-modal-mask-hidden {
     display: none;
