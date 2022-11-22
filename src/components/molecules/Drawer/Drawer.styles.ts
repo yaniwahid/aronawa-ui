@@ -5,7 +5,7 @@ import { IDrawer } from './Drawer.types';
 export const DrawerStyled = css`
   .aronawa-drawer {
     position: fixed;
-    z-index: 1050;
+    z-index: 9997;
     pointer-events: none;
     inset: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
