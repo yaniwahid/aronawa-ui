@@ -5,4 +5,5 @@ export interface IColorpicker {
   color: string;
   onChange?(color: Color): void;
   teid?: string;
+  placement?: string;
 }
