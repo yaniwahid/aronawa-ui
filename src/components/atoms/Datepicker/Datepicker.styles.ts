@@ -324,6 +324,7 @@ export const DatepickerStyled = css`
     background: inherit;
     border-radius: 3px;
     padding-right: 40px;
+    background-color: #ffffff;
   }
   .aronawa-picker-input > input::-moz-placeholder {
     opacity: 1;
@@ -353,7 +354,7 @@ export const DatepickerStyled = css`
   .aronawa-picker-dropdown {
     position: absolute;
     border-radius: 5px;
-    z-index: 9994;
+    z-index: 9998;
   }
   .aronawa-picker-dropdown-range {
     padding-top: 8px;
@@ -475,6 +476,7 @@ export const DatepickerStyled = css`
 
 export const DatepickerWrapper = styled.div({
   position: 'relative',
+  width: "100%"
 });
 
 export const DatepickerIcon = styled.div({
