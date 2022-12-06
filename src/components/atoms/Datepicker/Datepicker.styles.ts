@@ -476,7 +476,7 @@ export const DatepickerStyled = css`
 
 export const DatepickerWrapper = styled.div({
   position: 'relative',
-  width: "100%"
+  width: '100%',
 });
 
 export const DatepickerIcon = styled.div({
