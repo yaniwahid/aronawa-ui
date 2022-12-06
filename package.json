@@ -1,6 +1,6 @@
 {
   "name": "aronawa-ui",
-  "version": "1.0.36",
+  "version": "1.0.39",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "publishConfig": {
@@ -82,6 +82,7 @@
     "rc-picker": "^2.6.10",
     "rc-select": "^14.1.13",
     "rc-tooltip": "^5.2.2",
+    "rc-tree-select": "^5.5.5",
     "rc-upload": "^4.3.4",
     "react-input-color": "^4.0.1",
     "react-slick": "^0.29.0",

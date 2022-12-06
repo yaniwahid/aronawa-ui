@@ -8,10 +8,20 @@ const decimalToHex = (alpha: number) => {
   return alpha === 0 ? '00' : aHex.length < 2 ? `0${aHex}` : aHex;
 };
 
-const Colorpicker: FC<IColorpicker> = ({ color, alpha = 100, onChange, teid = 'colorpicker' }) => {
+const Colorpicker: FC<IColorpicker> = ({
+  color,
+  alpha = 100,
+  onChange,
+  teid = 'colorpicker',
+  placement = 'bottom',
+}) => {
   return (
     <ColorpickerStyled data-testid={teid}>
-      <InputColor initialValue={`${color}${decimalToHex(alpha / 100)}`} onChange={onChange} />
+      <InputColor
+        initialValue={`${color}${decimalToHex(alpha / 100)}`}
+        onChange={onChange}
+        placement={placement}
+      />
     </ColorpickerStyled>
   );
 };
