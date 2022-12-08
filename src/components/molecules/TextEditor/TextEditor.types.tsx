@@ -1,8 +1,6 @@
-import { CKEditorProps } from 'ckeditor4-react';
-
-export interface ITextEditor extends CKEditorProps<any> {
+export interface ITextEditor {
   name?: string;
-  data?: string;
+  initData?: string;
   onChange?: (event: any) => void;
   onBlur?: (event: any) => void;
   isReadOnly?: boolean;

@@ -7,7 +7,7 @@ const TextEditor: FC<ITextEditor> = ({
   isReadOnly,
   onChange,
   onBlur,
-  data,
+  initData,
   onChangeSource,
   additionalConfig,
   id,
@@ -61,7 +61,7 @@ const TextEditor: FC<ITextEditor> = ({
   return (
     <EditorStyled data-testid={teid}>
       <CKEditor
-        initData={data}
+        initData={initData}
         onChange={onChange}
         onBlur={onBlur}
         readOnly={isReadOnly}
