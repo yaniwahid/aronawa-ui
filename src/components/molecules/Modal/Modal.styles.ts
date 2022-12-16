@@ -254,6 +254,8 @@ export const ModalStyled = css`
       margin: 0;
       position: fixed;
       bottom: 0;
+      left: 0;
+      right: 0;
     }
     .aronawa-modal-drawer .aronawa-modal-content {
       border-radius: 0;

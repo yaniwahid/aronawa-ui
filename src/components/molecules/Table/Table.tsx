@@ -1,11 +1,11 @@
 import isEmpty from 'lodash/isEmpty';
 import React, { FC, useEffect, useState } from 'react';
+import { Skeleton } from '../../atoms';
 import Button from '../../atoms/Button';
 import Checkbox from '../../atoms/Checkbox';
 import Icon from '../../atoms/Icon';
 import Input from '../../atoms/Input';
 import Select, { Option } from '../../atoms/Select';
-import Spin from '../../atoms/Spin';
 import {
   EmptyBlockStyled,
   Pagination,
@@ -35,6 +35,7 @@ const Table: FC<ITable> = ({
   emptyData,
   isStipred = true,
   isLoading,
+  skeletonData = 10,
   ...props
 }) => {
   const [sortConfig, setSortConfig] = useState<ISortConfig>({
@@ -255,156 +256,176 @@ const Table: FC<ITable> = ({
   const colSpanLength = columns.length + 1;
 
   return (
-    <Spin isLoading={isLoading}>
-      <TableWrapper isEmpty={Boolean(emptyData)}>
-        <TableScroll>
-          <TableStyled
-            layout={layout}
-            isPagination={isPagination}
-            isStipred={isStipred && !emptyData}
-            data-tesid={teid}
-            {...props}
-          >
-            {!isHideTitleRow && (
-              <thead>
-                <tr>
+    <TableWrapper isEmpty={Boolean(emptyData)}>
+      <TableScroll>
+        <TableStyled
+          layout={layout}
+          isPagination={isPagination}
+          isStipred={isStipred && !emptyData}
+          data-tesid={teid}
+          {...props}
+        >
+          {!isHideTitleRow && (
+            <thead>
+              <tr>
+                {rowSelection && (
+                  <th style={{ width: 48 }} className="row-selection">
+                    <Checkbox
+                      name="select-all"
+                      value="select-all"
+                      onClick={handleSelectAll}
+                      isDisabled={data.length === 0}
+                      isChecked={selectAll.checked}
+                      isIndeterminate={selectAll.indeterminate}
+                    />
+                  </th>
+                )}
+                {columns.map((column: IColumn) => (
+                  <th
+                    key={column.key}
+                    onClick={column.sort ? requestSort(column) : () => {}}
+                    style={{
+                      width: column.width,
+                      backgroundColor: column.bg,
+                      textAlign: column.align,
+                      padding: column.padding,
+                    }}
+                  >
+                    {column.title}
+                    {column.sort && (
+                      <span className="sort">{generateSortIcon(column, sortConfig)}</span>
+                    )}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+          )}
+          <tbody>
+            {emptyData ? (
+              <tr>
+                {rowSelection ? (
+                  <td
+                    colSpan={colSpanLength}
+                    style={{ borderBottomLeftRadius: 5, borderBottomRightRadius: 5 }}
+                  >
+                    <EmptyBlockStyled>{emptyData}</EmptyBlockStyled>
+                  </td>
+                ) : (
+                  <td
+                    colSpan={columns.length}
+                    style={{ borderBottomLeftRadius: 5, borderBottomRightRadius: 5 }}
+                  >
+                    <EmptyBlockStyled>{emptyData}</EmptyBlockStyled>
+                  </td>
+                )}
+              </tr>
+            ) : isLoading ? (
+              Array.from(new Array(skeletonData), (i) => (
+                <tr key={i}>
                   {rowSelection && (
-                    <th style={{ width: 48 }} className="row-selection">
-                      <Checkbox
-                        name="select-all"
-                        value="select-all"
-                        onClick={handleSelectAll}
-                        isDisabled={data.length === 0}
-                        isChecked={selectAll.checked}
-                        isIndeterminate={selectAll.indeterminate}
-                      />
-                    </th>
-                  )}
-                  {columns.map((column: IColumn) => (
-                    <th
-                      key={column.key}
-                      onClick={column.sort ? requestSort(column) : () => {}}
-                      style={{
-                        width: column.width,
-                        backgroundColor: column.bg,
-                        textAlign: column.align,
-                        padding: column.padding,
-                      }}
-                    >
-                      {column.title}
-                      {column.sort && (
-                        <span className="sort">{generateSortIcon(column, sortConfig)}</span>
-                      )}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-            )}
-            <tbody>
-              {emptyData ? (
-                <tr>
-                  {rowSelection ? (
-                    <td
-                      colSpan={colSpanLength}
-                      style={{ borderBottomLeftRadius: 5, borderBottomRightRadius: 5 }}
-                    >
-                      <EmptyBlockStyled>{emptyData}</EmptyBlockStyled>
-                    </td>
-                  ) : (
-                    <td
-                      colSpan={columns.length}
-                      style={{ borderBottomLeftRadius: 5, borderBottomRightRadius: 5 }}
-                    >
-                      <EmptyBlockStyled>{emptyData}</EmptyBlockStyled>
+                    <td className="row-selection">
+                      <Skeleton width="100%" height="24px" />
                     </td>
                   )}
+                  {columns.map((col: IColumn, colIndex: number) => {
+                    return (
+                      <td
+                        key={colIndex}
+                        rowSpan={col.rowSpan}
+                        colSpan={col.rowSpan}
+                        style={{ padding: col.padding }}
+                      >
+                        <Skeleton width="100%" height="24px" />
+                      </td>
+                    );
+                  })}
                 </tr>
-              ) : (
-                <>
-                  {selectedRow.map((row: any, index: number) => (
-                    <tr key={index}>
-                      {rowSelection && (
-                        <td className="row-selection">
-                          <Checkbox
-                            name="select-row"
-                            value="select-row"
-                            onClick={handleCheckBox(index)}
-                            isChecked={selectedRow[index].checked}
-                            isIndeterminate={selectedRow[index].indeterminate}
-                            isDisabled={selectedRow[index].disabled}
-                          />
-                        </td>
-                      )}
-                      {columns.map((col: IColumn, colIndex: number) => {
-                        let renderData: ColumnRender;
-                        switch (typeof col.render) {
-                          case 'undefined':
-                            renderData = row[col.dataIndex];
-                            break;
-                          case 'function':
-                            renderData = col.render(row[col.dataIndex], row, index);
-                            break;
-                          default:
-                            renderData = col.render;
-                            break;
-                        }
+              ))
+            ) : (
+              <>
+                {selectedRow.map((row: any, index: number) => (
+                  <tr key={index}>
+                    {rowSelection && (
+                      <td className="row-selection">
+                        <Checkbox
+                          name="select-row"
+                          value="select-row"
+                          onClick={handleCheckBox(index)}
+                          isChecked={selectedRow[index].checked}
+                          isIndeterminate={selectedRow[index].indeterminate}
+                          isDisabled={selectedRow[index].disabled}
+                        />
+                      </td>
+                    )}
+                    {columns.map((col: IColumn, colIndex: number) => {
+                      let renderData: ColumnRender;
+                      switch (typeof col.render) {
+                        case 'undefined':
+                          renderData = row[col.dataIndex];
+                          break;
+                        case 'function':
+                          renderData = col.render(row[col.dataIndex], row, index);
+                          break;
+                        default:
+                          renderData = col.render;
+                          break;
+                      }
 
-                        return (
-                          <td
-                            key={colIndex}
-                            rowSpan={col.rowSpan}
-                            colSpan={col.rowSpan}
-                            style={{ padding: col.padding }}
-                          >
-                            {renderData}
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  ))}
-                </>
-              )}
-            </tbody>
-          </TableStyled>
-        </TableScroll>
-        {isPagination && !emptyData && (
-          <PaginationStyled>
-            <ShowItem>
-              <span>Show items per page</span>
-              <Select defaultValue={meta.pageSize} onChange={handlePageSizeChange}>
-                {options?.map((item: any, index: number) => {
-                  return (
-                    <Option value={item.value} key={index}>
-                      {item.value}
-                    </Option>
-                  );
-                })}
-              </Select>
-            </ShowItem>
-            <RecordInfo>{recordsInfoText}</RecordInfo>
-            <Pagination>
-              <PaginationTotal>
-                <Input
-                  type="number"
-                  value={pageInput}
-                  onChange={handleChangePage}
-                  onKeyPress={handlePressEnterPageInput}
-                  min={1}
-                  max={meta.totalPages}
-                />
-                <span>of {meta.totalPages} pages</span>
-              </PaginationTotal>
-              <Button icon="angle-left" onClick={handlePrev} isDisabled={meta.page === 1} />
-              <Button
-                icon="angle-right"
-                onClick={handleNext}
-                isDisabled={meta.page === meta.totalPages}
+                      return (
+                        <td
+                          key={colIndex}
+                          rowSpan={col.rowSpan}
+                          colSpan={col.rowSpan}
+                          style={{ padding: col.padding }}
+                        >
+                          {renderData}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </>
+            )}
+          </tbody>
+        </TableStyled>
+      </TableScroll>
+      {isPagination && !emptyData && (
+        <PaginationStyled>
+          <ShowItem>
+            <span>Show items per page</span>
+            <Select defaultValue={meta.pageSize} onChange={handlePageSizeChange}>
+              {options?.map((item: any, index: number) => {
+                return (
+                  <Option value={item.value} key={index}>
+                    {item.value}
+                  </Option>
+                );
+              })}
+            </Select>
+          </ShowItem>
+          <RecordInfo>{recordsInfoText}</RecordInfo>
+          <Pagination>
+            <PaginationTotal>
+              <Input
+                type="number"
+                value={pageInput}
+                onChange={handleChangePage}
+                onKeyPress={handlePressEnterPageInput}
+                min={1}
+                max={meta.totalPages}
               />
-            </Pagination>
-          </PaginationStyled>
-        )}
-      </TableWrapper>
-    </Spin>
+              <span>of {meta.totalPages} pages</span>
+            </PaginationTotal>
+            <Button icon="angle-left" onClick={handlePrev} isDisabled={meta.page === 1} />
+            <Button
+              icon="angle-right"
+              onClick={handleNext}
+              isDisabled={meta.page === meta.totalPages}
+            />
+          </Pagination>
+        </PaginationStyled>
+      )}
+    </TableWrapper>
   );
 };
 
