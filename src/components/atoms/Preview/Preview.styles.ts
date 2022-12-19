@@ -10,6 +10,28 @@ export const PreviewStyled = styled.div<IPreview>(({ boxHeight, boxWidth }) => (
   height: boxHeight,
   position: 'relative',
   padding: 8,
+  '&::before': {
+    height: 0,
+    content: '""',
+    display: 'block',
+    paddingBottom: '100%',
+  },
+  '& > *:not(style)': {
+    overflow: 'hidden',
+    position: 'absolute',
+    top: '0',
+    right: '0',
+    bottom: '0',
+    left: '0',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    height: '100%',
+  },
+  '& > img, & > video': {
+    objectFit: 'cover',
+  },
 }));
 
 export const IconWrapper = styled.div({
