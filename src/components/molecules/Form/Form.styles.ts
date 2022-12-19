@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import Color from '../../../themes/Color';
 import { IForm, IFormItem } from './Form.types';
 
-export const FormStyled = styled.form<IForm>(({ layout, formWidth = '200px 386px' }) => {
+export const FormStyled = styled.form<IForm>(({ layout, formWidth = '200px 386px', gap = 32 }) => {
   let cssTmp: object = {
     position: 'relative',
     fontFamily: `-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'`,
@@ -22,7 +22,7 @@ export const FormStyled = styled.form<IForm>(({ layout, formWidth = '200px 386px
       ...cssTmp,
       '& .form-item': {
         gridTemplateColumns: formWidth,
-        gap: 32,
+        gap: gap,
       },
       '& .label-item': {
         textAlign: 'right',
