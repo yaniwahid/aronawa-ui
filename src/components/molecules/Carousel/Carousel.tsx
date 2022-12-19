@@ -78,14 +78,15 @@ const Carousel: FC<ICarousel> = ({
     return undefined;
   };
 
-  const settings = {
-    nextArrow: withNextCustomArrow('next') ?? <NextArrow />,
-    prevArrow: withNextCustomArrow('prev') ?? <PrevArrow />,
-  };
-
   return (
     <CarouselStyled>
-      <Slider ref={handleRef} data-testid={teid} {...settings} {...props}>
+      <Slider
+        ref={handleRef}
+        data-testid={teid}
+        nextArrow={withNextCustomArrow('next') ?? <NextArrow />}
+        prevArrow={withNextCustomArrow('prev') ?? <PrevArrow />}
+        {...props}
+      >
         {slides()}
       </Slider>
     </CarouselStyled>

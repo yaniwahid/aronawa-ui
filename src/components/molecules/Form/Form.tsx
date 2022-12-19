@@ -74,10 +74,11 @@ const Form: FC<IForm> = ({
   children,
   formWidth = '200px 386px',
   teid = 'from',
+  gap,
   ...props
 }) => {
   return (
-    <FormStyled data-testid={teid} layout={layout} formWidth={formWidth} {...props}>
+    <FormStyled data-testid={teid} layout={layout} formWidth={formWidth} gap={gap} {...props}>
       {children}
     </FormStyled>
   );

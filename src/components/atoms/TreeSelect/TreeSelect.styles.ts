@@ -123,7 +123,9 @@ export const TreeSelectStyled = css`
     background: transparent;
     color: #121212;
   }
-  .aronawa-tree-select-single.aronawa-tree-select-show-search:not(.aronawa-tree-select-customize-input)
+  .aronawa-tree-select-single.aronawa-tree-select-show-search:not(
+      .aronawa-tree-select-customize-input
+    )
     .aronawa-tree-select-selector
     .aronawa-tree-select-selection-search-input {
     cursor: text;

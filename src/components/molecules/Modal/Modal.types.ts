@@ -23,4 +23,5 @@ export interface IModal extends DialogProps {
   isCloseable?: boolean;
   children?: ReactNode;
   footer?: ReactNode;
+  isDrawer?: boolean;
 }

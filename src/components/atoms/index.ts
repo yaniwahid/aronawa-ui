@@ -18,4 +18,5 @@ export { default as Switch } from './Switch';
 export { default as Textarea } from './Textarea';
 export { toast, toastBody } from './Toast';
 export { default as Tooltip } from './Tooltip';
+export { default as TreeSelect } from './TreeSelect';
 export { default as Upload } from './Upload';

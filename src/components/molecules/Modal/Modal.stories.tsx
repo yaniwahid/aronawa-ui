@@ -68,6 +68,18 @@ export default {
         type: 'boolean',
       },
     },
+    isDrawer: {
+      name: 'isDrawer',
+      defaultValue: false,
+      description: 'Use the isDrawer prop to change the isDrawer of the Modal',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+      control: {
+        type: 'boolean',
+      },
+    },
     okText: {
       name: 'okText',
       defaultValue: 'Submit',

@@ -229,4 +229,43 @@ export const ModalStyled = css`
       opacity: 0;
     }
   }
+
+  @keyframes aronawaModalSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes aronawaModalSlideOut {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+  @media (max-width: 767.98px) {
+    .aronawa-modal.aronawa-modal-drawer {
+      margin: 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .aronawa-modal-drawer .aronawa-modal-content {
+      border-radius: 0;
+    }
+    .aronawa-modal-drawer.aronawa-modal-zoom-enter.aronawa-modal-zoom-enter-active,
+    .aronawa-modal-drawer.aronawa-modal-zoom-appear.aronawa-modal-zoom-appear-active {
+      animation-name: aronawaModalSlideIn;
+    }
+    .aronawa-modal-drawer.aronawa-modal-zoom-leave.aronawa-modal-zoom-leave-active {
+      animation-name: aronawaModalSlideOut;
+    }
+  }
 `;

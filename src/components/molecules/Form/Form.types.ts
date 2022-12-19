@@ -5,6 +5,7 @@ export interface IForm extends React.HTMLAttributes<HTMLFormElement> {
   formWidth?: string;
   teid?: string;
   children?: ReactNode;
+  gap?: number;
 }
 
 export interface IFormItem {

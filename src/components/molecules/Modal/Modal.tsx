@@ -25,12 +25,14 @@ const Modal: FC<IModal> = ({
   variant = 'clean',
   isCloseable = true,
   footer,
+  isDrawer,
   ...props
 }) => {
   const classSize = `aronawa-modal-${size}`;
   const classVariant = `aronawa-modal-${variant}`;
   const classTitle = !title ? `aronawa-modal-no-title` : '';
   const classFooter = isNoFooter ? `aronawa-modal-no-footer` : '';
+  const classDrawer = isDrawer ? `aronawa-modal-drawer` : '';
   return (
     <>
       <Global styles={ModalStyled} />
@@ -43,7 +45,7 @@ const Modal: FC<IModal> = ({
         closeIcon={<Icon name="cross" size={24} />}
         closable={isCloseable}
         prefixCls="aronawa-modal"
-        className={`${classSize} ${classVariant} ${classTitle} ${classFooter}`}
+        className={`${classSize} ${classVariant} ${classTitle} ${classFooter} ${classDrawer}`}
         footer={
           isNoFooter ? null : footer ? (
             footer

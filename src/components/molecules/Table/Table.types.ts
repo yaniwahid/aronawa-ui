@@ -51,6 +51,7 @@ export interface ITable extends React.HTMLAttributes<HTMLDivElement> {
   emptyData?: ReactNode;
   isStipred?: boolean;
   isLoading?: boolean;
+  skeletonData?: number;
 }
 
 export interface IStyle {
