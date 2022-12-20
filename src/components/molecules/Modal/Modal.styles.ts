@@ -163,13 +163,23 @@ export const ModalStyled = css`
     .aronawa-modal-body {
       max-height: calc(100vh - 56px - 64px - 128px);
     }
+    .aronawa-modal-default .aronawa-modal-body {
+      max-height: calc(100vh - 57px - 65px - 128px);
+    }
     .aronawa-modal-no-title .aronawa-modal-body {
       padding-top: 16px;
-      max-height: calc(100vh - 128px - 128px);
+      max-height: calc(100vh - 64px - 128px);
+    }
+    .aronawa-modal-no-title.aronawa-modal-default .aronawa-modal-body {
+      padding-top: 16px;
+      max-height: calc(100vh - 65px - 128px);
     }
     .aronawa-modal-no-footer .aronawa-modal-body {
       padding-bottom: 16px;
       max-height: calc(100vh - 56px - 128px);
+    }
+    .aronawa-modal-no-footer.aronawa-modal-default .aronawa-modal-body {
+      max-height: calc(100vh - 57px - 128px);
     }
     .aronawa-modal-no-title.aronawa-modal-no-footer .aronawa-modal-body {
       padding-bottom: 16px;

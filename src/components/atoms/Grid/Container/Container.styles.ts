@@ -7,9 +7,6 @@ export const ContainerStyled = styled.div<IContainer>(({ gutter, noPadding, isFu
   if (!isFullWidth) {
     cssTmp = {
       ...cssTmp,
-      [`${Breakpoints.smMin}`]: {
-        maxWidth: '540px',
-      },
       [`${Breakpoints.mdMin}`]: {
         maxWidth: '720px',
       },
