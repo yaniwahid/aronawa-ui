@@ -26,6 +26,7 @@ const Modal: FC<IModal> = ({
   isCloseable = true,
   footer,
   isDrawer,
+  maxBody,
   ...props
 }) => {
   const classSize = `aronawa-modal-${size}`;
@@ -46,6 +47,11 @@ const Modal: FC<IModal> = ({
         closable={isCloseable}
         prefixCls="aronawa-modal"
         className={`${classSize} ${classVariant} ${classTitle} ${classFooter} ${classDrawer}`}
+        {...(maxBody && {
+          bodyStyle: {
+            maxHeight: maxBody,
+          },
+        })}
         footer={
           isNoFooter ? null : footer ? (
             footer
