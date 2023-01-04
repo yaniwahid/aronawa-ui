@@ -212,6 +212,8 @@ export const SelectStyled = css`
     cursor: pointer;
     background-color: #d7dade;
     border-radius: 50%;
+    width: 14px;
+    height: 14px;
   }
   .aronawa-select-show-arrow.aronawa-select-multiple .aronawa-select-selector {
     padding-right: 32px;

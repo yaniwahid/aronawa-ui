@@ -26,7 +26,7 @@ const Select: FC<ISelect> = ({
         <SelectComponent
           prefixCls="aronawa-select"
           inputIcon={<Icon name={isSearchable ? 'search' : 'angle-down'} size={18} />}
-          clearIcon={<Icon name="cross" size={16} />}
+          clearIcon={<Icon name="cross" size={12} />}
           disabled={isDisabled}
           loading={isLoading}
           menuItemSelectedIcon={<Icon name="check" color="#2f78cf" size={16} />}

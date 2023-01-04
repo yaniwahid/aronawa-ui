@@ -25,7 +25,7 @@ const TreeSelect: FC<ITreeSelect> = ({
         <TreeSelectComponent
           prefixCls="aronawa-tree-select"
           inputIcon={<Icon name={isSearchable ? 'search' : 'angle-down'} size={18} />}
-          clearIcon={<Icon name="cross" size={16} />}
+          clearIcon={<Icon name="cross" size={12} />}
           disabled={isDisabled}
           treeLine
           {...(width && {
