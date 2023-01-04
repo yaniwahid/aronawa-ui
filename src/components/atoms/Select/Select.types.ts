@@ -7,4 +7,5 @@ export interface ISelect extends SelectProps {
   isSearchable?: boolean;
   children?: ReactNode;
   teid?: string;
+  isLoading?: boolean;
 }

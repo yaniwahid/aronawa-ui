@@ -19,6 +19,18 @@ export default {
         type: 'boolean',
       },
     },
+    isLoading: {
+      name: 'isLoading',
+      defaultValue: false,
+      description: 'Use the isLoading prop to change the checked of the Select',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+      control: {
+        type: 'boolean',
+      },
+    },
   },
 } as ComponentMeta<typeof Select>;
 

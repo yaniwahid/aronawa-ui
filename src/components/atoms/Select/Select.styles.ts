@@ -18,7 +18,7 @@ export const SelectStyled = css`
     background: #e3e5e8 !important;
     cursor: not-allowed !important;
   }
-  .aronawa-select-show-arrow.aronawa-select-loading .aronawa-select-arrow-icon::after {
+  .aronawa-select-show-arrow.aronawa-select-arrow-loading .aronawa-select-arrow-icon::after {
     box-sizing: border-box;
     width: 12px;
     height: 12px;
