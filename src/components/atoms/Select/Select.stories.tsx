@@ -43,7 +43,7 @@ export const Basic = (args: ISelect) => (
 );
 
 export const Multiple = (args: ISelect) => (
-  <Select placeholder="Select Name" mode="multiple" allowClear showArrow {...args}>
+  <Select placeholder="Select Name" mode="multiple" allowClear showArrow showSearch {...args}>
     <Option value="jack">jack</Option>
     <Option value="lucy">lucy</Option>
     <Option value="yiminghe">yiminghe</Option>
