@@ -42,12 +42,7 @@ export const FormItem: FC<IFormItem> = ({
   };
 
   return (
-    <FormItemStyled
-      isInvalid={isInvalid}
-      formWidth={formWidth}
-      className="form-item"
-      data-testid={teid}
-    >
+    <FormItemStyled formWidth={formWidth} className="form-item" data-testid={teid}>
       {label && (
         <Label className="label-item">
           {label} {isRequired && <Req>*</Req>}

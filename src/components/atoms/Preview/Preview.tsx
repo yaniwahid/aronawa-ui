@@ -13,6 +13,7 @@ export const Preview: FC<IPreview> = ({
   boxWidth = '104px',
   teid = 'preview',
   buttonTeid = 'preview-clear',
+  isInvalid,
   ...props
 }) => {
   return (
@@ -21,6 +22,7 @@ export const Preview: FC<IPreview> = ({
       boxWidth={boxWidth}
       imageUrl={imageUrl}
       data-testid={teid}
+      isInvalid={isInvalid}
       {...props}
     >
       {isClearable && (

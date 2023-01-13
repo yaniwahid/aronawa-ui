@@ -10,4 +10,5 @@ export interface IPreview {
   children?: ReactNode;
   teid?: string;
   buttonTeid?: string;
+  isInvalid?: boolean;
 }
