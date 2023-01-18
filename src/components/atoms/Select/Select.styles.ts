@@ -50,6 +50,9 @@ export const SelectStyled = css`
   .aronawa-select .aronawa-select-selection-search-input {
     appearance: none;
   }
+  .aronawa-select.aronawa-select-invalid .aronawa-select-selector {
+    border-color: #cc292e !important;
+  }
   .aronawa-select .aronawa-select-selection-search-input::-webkit-search-cancel-button {
     display: none;
     appearance: none;

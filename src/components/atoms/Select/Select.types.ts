@@ -8,4 +8,5 @@ export interface ISelect extends SelectProps {
   children?: ReactNode;
   teid?: string;
   isLoading?: boolean;
+  isInvalid?: boolean;
 }

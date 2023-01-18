@@ -19,6 +19,18 @@ export default {
         type: 'boolean',
       },
     },
+    isInvalid: {
+      name: 'isInvalid',
+      defaultValue: false,
+      description: 'Use the isInvalid prop to change the checked of the Select',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+      control: {
+        type: 'boolean',
+      },
+    },
     isLoading: {
       name: 'isLoading',
       defaultValue: false,
