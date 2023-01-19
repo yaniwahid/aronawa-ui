@@ -18,17 +18,22 @@ export const SelectStyled = css`
     background: #e3e5e8 !important;
     cursor: not-allowed !important;
   }
-  .aronawa-select-show-arrow.aronawa-select-loading .aronawa-select-arrow-icon::after {
-    box-sizing: border-box;
-    width: 12px;
+  .aronawa-select-arrow.aronawa-select-arrow-loading > div {
     height: 12px;
-    border-radius: 100%;
-    border: 2px solid #a5aab0;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-    transform: none;
-    margin-top: 4px;
-    animation: aronawaSelectLoadingIcon 0.5s infinite;
+    width: 12px;
+    background-color: transparent;
+    border-radius: 50%;
+    border-top: 2px solid #121212;
+    border-left: 2px solid #121212;
+    border-bottom: 2px solid #121212;
+    border-right: 2px solid transparent;
+    animation-name: aronawaSelectLoadingIcon;
+    animation-duration: 0.45s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .aronawa-select-arrow.aronawa-select-arrow-loading > div i {
+    display: none;
   }
   .aronawa-select.aronawa-select-multiple .aronawa-select-selection-placeholder {
     position: absolute;
@@ -44,6 +49,9 @@ export const SelectStyled = css`
   }
   .aronawa-select .aronawa-select-selection-search-input {
     appearance: none;
+  }
+  .aronawa-select.aronawa-select-invalid .aronawa-select-selector {
+    border-color: #cc292e !important;
   }
   .aronawa-select .aronawa-select-selection-search-input::-webkit-search-cancel-button {
     display: none;
@@ -207,6 +215,8 @@ export const SelectStyled = css`
     cursor: pointer;
     background-color: #d7dade;
     border-radius: 50%;
+    width: 14px;
+    height: 14px;
   }
   .aronawa-select-show-arrow.aronawa-select-multiple .aronawa-select-selector {
     padding-right: 32px;
@@ -263,13 +273,16 @@ export const SelectStyled = css`
   }
   .aronawa-select-item-option-selected {
     color: #225db2;
+    padding-right: 32px;
   }
   .aronawa-select-item-option .aronawa-select-item-option-state {
     position: absolute;
-    right: 0;
-    top: 4px;
+    right: 8px;
     pointer-events: none;
-    display: none;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
   }
   .aronawa-select-item-option-active {
     background: #f5f7fa;
@@ -360,10 +373,10 @@ export const SelectStyled = css`
     }
   }
   @keyframes aronawaSelectLoadingIcon {
-    0% {
-      transform: rotate(0);
+    from {
+      transform: rotate(0deg);
     }
-    100% {
+    to {
       transform: rotate(360deg);
     }
   }

@@ -19,6 +19,18 @@ export default {
         type: 'boolean',
       },
     },
+    isInvalid: {
+      name: 'isInvalid',
+      defaultValue: false,
+      description: 'Use the isInvalid prop to change the isInvalid of the Preview',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+      control: {
+        type: 'boolean',
+      },
+    },
     imageUrl: {
       name: 'imageUrl',
       description: 'Use the imageUrl prop to change the imageUrl of the Preview',

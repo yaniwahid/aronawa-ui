@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { HTMLAttributeAnchorTarget, ReactNode } from 'react';
 
 export type TColorButton = 'neutral' | 'primary' | 'secondary' | 'approval' | 'danger' | 'light';
 export type TVariantButton = 'solid' | 'outline' | 'ghost' | 'link' | 'text';
@@ -8,7 +8,7 @@ export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   color?: TColorButton;
   variant?: TVariantButton;
   size?: TSizeButton;
-  target?: '_self' | '_blank' | '_parent' | '_top';
+  target?: HTMLAttributeAnchorTarget;
   type?: 'button' | 'submit' | 'reset';
   isDisabled?: boolean;
   isFullWidth?: boolean;

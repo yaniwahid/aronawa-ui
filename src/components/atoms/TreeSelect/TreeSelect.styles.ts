@@ -227,6 +227,8 @@ export const TreeSelectStyled = css`
     cursor: pointer;
     background-color: #d7dade;
     border-radius: 50%;
+    width: 14px;
+    height: 14px;
   }
   .aronawa-tree-select-show-arrow.aronawa-tree-select-multiple .aronawa-tree-select-selector {
     padding-right: 32px;

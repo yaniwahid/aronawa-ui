@@ -3,9 +3,9 @@ import styled from '@emotion/styled';
 import Color from '../../../themes/Color';
 import { IPreview } from './Preview.types';
 
-export const PreviewStyled = styled.div<IPreview>(({ boxHeight, boxWidth }) => ({
+export const PreviewStyled = styled.div<IPreview>(({ boxHeight, boxWidth, isInvalid }) => ({
   backgroundColor: Color.slate[100],
-  border: `1px solid ${Color.slate[300]}`,
+  border: `1px solid ${isInvalid ? Color.danger.default : Color.slate[300]}`,
   width: boxWidth,
   height: boxHeight,
   position: 'relative',

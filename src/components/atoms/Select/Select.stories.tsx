@@ -19,6 +19,30 @@ export default {
         type: 'boolean',
       },
     },
+    isInvalid: {
+      name: 'isInvalid',
+      defaultValue: false,
+      description: 'Use the isInvalid prop to change the checked of the Select',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+      control: {
+        type: 'boolean',
+      },
+    },
+    isLoading: {
+      name: 'isLoading',
+      defaultValue: false,
+      description: 'Use the isLoading prop to change the checked of the Select',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+      control: {
+        type: 'boolean',
+      },
+    },
   },
 } as ComponentMeta<typeof Select>;
 
@@ -31,7 +55,7 @@ export const Basic = (args: ISelect) => (
 );
 
 export const Multiple = (args: ISelect) => (
-  <Select placeholder="Select Name" mode="multiple" allowClear showArrow {...args}>
+  <Select placeholder="Select Name" mode="multiple" allowClear showArrow showSearch {...args}>
     <Option value="jack">jack</Option>
     <Option value="lucy">lucy</Option>
     <Option value="yiminghe">yiminghe</Option>

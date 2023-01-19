@@ -11,8 +11,11 @@ const Select: FC<ISelect> = ({
   width,
   isSearchable,
   teid = 'select',
+  isLoading,
+  isInvalid,
   ...props
 }) => {
+  const classInvalid = isInvalid ? 'aronawa-select-invalid' : '';
   return (
     <>
       <Global styles={SelectStyled} />
@@ -24,9 +27,12 @@ const Select: FC<ISelect> = ({
       >
         <SelectComponent
           prefixCls="aronawa-select"
+          className={`${classInvalid}`}
           inputIcon={<Icon name={isSearchable ? 'search' : 'angle-down'} size={18} />}
-          clearIcon={<Icon name="cross" size={16} />}
+          clearIcon={<Icon name="cross" size={12} />}
           disabled={isDisabled}
+          loading={isLoading}
+          menuItemSelectedIcon={<Icon name="check" color="#2f78cf" size={16} />}
           {...(width && {
             style: { minWidth: width, maxWidth: width },
           })}

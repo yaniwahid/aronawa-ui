@@ -34,15 +34,12 @@ export const FormStyled = styled.form<IForm>(({ layout, formWidth = '200px 386px
   return { ...cssTmp };
 });
 
-export const FormItemStyled = styled.div<IFormItem>(({ isInvalid, formWidth }) => ({
+export const FormItemStyled = styled.div<IFormItem>(({ formWidth }) => ({
   position: 'relative',
   display: 'grid',
   p: {
     margin: 0,
   },
-  ...(isInvalid && {
-    color: Color.danger.default,
-  }),
   ...(formWidth && {
     gridTemplateColumns: `${formWidth} !important`,
   }),
