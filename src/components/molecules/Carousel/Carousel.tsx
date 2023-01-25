@@ -41,6 +41,7 @@ const Carousel: FC<ICarousel> = ({
             href={item.link}
             target={newTab()}
             onClick={() => handleClickImage(item?.imageAlt || item?.imageUrl)}
+            aria-label="Image"
           >
             <img src={item.imageUrl} alt={item.imageAlt} width={width} height={height} />
           </a>
