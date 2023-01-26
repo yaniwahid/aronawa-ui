@@ -1,4 +1,5 @@
 import React from 'react';
+import RenderIf from '../../../helpers/RenderIf';
 import PageHeader from '../../molecules/PageHeader';
 import Navbar from '../../organisms/Navbar';
 import SideMenu from '../../organisms/SideMenu';
@@ -17,6 +18,7 @@ const Layout: React.FC<ILayout> = ({
   sideMenu,
   back,
   children,
+  hasSideMenu = true,
 }) => {
   return (
     <LayoutStyled>
@@ -27,8 +29,10 @@ const Layout: React.FC<ILayout> = ({
         username={username}
         userMenu={userMenu}
       />
-      <SideMenu>{sideMenu}</SideMenu>
-      <ContentStyled>
+      <RenderIf isTrue={!!hasSideMenu}>
+        <SideMenu>{sideMenu}</SideMenu>
+      </RenderIf>
+      <ContentStyled hasSideMenu={hasSideMenu}>
         {title && (
           <PageHeader title={title} subtitle={subtitle} back={back}>
             {action}

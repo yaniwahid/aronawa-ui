@@ -12,4 +12,5 @@ export interface ILayout {
   userMenu?: ReactNode;
   sideMenu?: ReactNode;
   children?: ReactNode;
+  hasSideMenu?: boolean;
 }

@@ -14,14 +14,28 @@ import { FormAction } from '../../molecules/Form/Form';
 import Tabs, { TabItem } from '../../molecules/Tabs';
 import { SideMenuItem, SideMenuSub } from '../../organisms/SideMenu';
 import Layout from './Layout';
+import { ILayout } from './Layout.types';
 
 export default {
   title: 'Templates/Layout',
   component: Layout,
-  argTypes: {},
+  argTypes: {
+    hasSideMenu: {
+      name: 'hasSideMenu',
+      defaultValue: true,
+      description: 'Use the hasSideMenu prop to change the hasSideMenu of the Layout',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: true },
+      },
+      control: {
+        type: 'boolean',
+      },
+    },
+  },
 } as ComponentMeta<typeof Layout>;
 
-export const Basic = () => {
+export const Basic = (args: ILayout) => {
   const [{ color, isOpen }, updateArgs] = useArgs();
   const onClose = () => {
     updateArgs({ isOpen: !isOpen });
@@ -30,6 +44,7 @@ export const Basic = () => {
   const onChange = () => updateArgs({ color: color });
   return (
     <Layout
+      {...args}
       avatarUrl="https://bit.ly/dan-abramov"
       username="Dan Abrahmov"
       userMenu={
