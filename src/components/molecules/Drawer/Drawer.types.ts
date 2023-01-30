@@ -25,4 +25,5 @@ export interface IDrawer extends DrawerProps {
   background?: string;
   children?: ReactNode;
   top?: number;
+  isFullHeight?: boolean;
 }

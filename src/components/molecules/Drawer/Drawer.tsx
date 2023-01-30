@@ -35,6 +35,7 @@ const Drawer: FC<IDrawer> = ({
   closeIcon,
   background,
   top,
+  isFullHeight,
   ...props
 }) => {
   const Width = (size?: 'sm' | 'md' | 'lg') => {
@@ -66,6 +67,7 @@ const Drawer: FC<IDrawer> = ({
   const classSize = `aronawa-drawer-${size}`;
   const classTitle = !title && !isCloseable ? `aronawa-drawer-no-title` : '';
   const classFooter = isNoFooter ? `aronawa-drawer-no-footer` : '';
+  const classFullHeight = isFullHeight ? `aronawa-drawer-full-height` : '';
 
   return (
     <>
@@ -74,7 +76,7 @@ const Drawer: FC<IDrawer> = ({
         open={isOpen}
         onClose={onClose}
         prefixCls="aronawa-drawer"
-        className={`${classSize} ${classTitle} ${classFooter}`}
+        className={`${classSize} ${classTitle} ${classFooter} ${classFullHeight}`}
         width={Width(size) ?? props.width}
         {...(isMaskBlack && {
           maskStyle: {
@@ -88,7 +90,7 @@ const Drawer: FC<IDrawer> = ({
             height: `calc(100vh - ${top}px)`,
           },
         })}
-        contentWrapperStyle={{ background: background }}
+        contentWrapperStyle={{ background: background, ...(isFullHeight && { top: 0, bottom: 0 }) }}
         {...motionProps}
         {...props}
       >

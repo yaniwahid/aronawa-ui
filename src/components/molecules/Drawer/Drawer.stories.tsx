@@ -181,6 +181,31 @@ export default {
         type: 'boolean',
       },
     },
+    isFullHeight: {
+      name: 'isFullHeight',
+      defaultValue: false,
+      description: 'Use the isFullHeight prop to change the isFullHeight of the Drawer',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+      control: {
+        type: 'boolean',
+      },
+    },
+    placement: {
+      name: 'placement',
+      defaultValue: 'right',
+      description: 'Use the placement prop to change the placement of the Drawer',
+      table: {
+        type: { summary: 'top | right | bottom | left' },
+        defaultValue: { summary: 'right' },
+      },
+      control: {
+        type: 'radio',
+        options: ['top', 'right', 'bottom', 'left'],
+      },
+    },
   },
 } as ComponentMeta<typeof Drawer>;
 
@@ -193,12 +218,7 @@ export const Basic = (args: IDrawer) => {
         Open Drawer
       </Button>
       <Drawer {...args} onClose={onClose}>
-        In the morning I walked down the Boulevard to the rue Soufflot for coffee and brioche. It
-        was a fine morning. The horse-chestnut trees in the Luxembourg gardens were in bloom. There
-        was the pleasant early-morning feeling of a hot day. I read the papers with the coffee and
-        then smoked a cigarette. The flower-women were coming up from the market and arranging their
-        daily stock. Students went by going up to the law school, or down to the Sorbonne. The
-        Boulevard was busy with trams and people going to work.
+        In the morning I walked down the Boulevard
       </Drawer>
     </>
   );
